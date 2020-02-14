@@ -11,13 +11,13 @@ E-Paper (Electronic paper) ကို Electrophoretic display လို့လည�
 
 ![Electronic Shelf Labels]({{site.baseurl}}/assets/img/EPD/esl.jpg)
 
-* ပုံ ၊ Electronic Shelf Labels*
+* ပုံ ၊ Electronic Shelf Labels
 
 ဒါပေမယ့် E-paper display က Low Power Consumption ဖြစ်ခြင်း၊ 170° အထိ viewing angle ရှိခြင်း၊ အခြား display တွေနဲ့ မတူပဲ နေရောင်ပြင်းပြင်း အောက်မှာပင် ဒေတာအချက်အလက်တွေ မြင်ရနိုင်ခြင်း၊ display module ကို ပါဝါဖြုတ်လိုက်သော်လည်း ဖော်ပြထားတဲ့အချက်အလက်တွေ ကျန်ရှိနေခြင်း စတဲ့ အားသာချက်များစွာ ရှိပါတယ်။ အရွယ်အစားအမျိုးမျိုးရှိတဲ့ E-paper တွေကို Newspaper, E-book reader တွေသာမက digital photo frame တွေ၊ digital signage တွေ၊ information board တွေ အဖြစ် အသုံးပြုကြပြီး အထက်ပါပုံမှာ ဖော်ပြထားသလို အလွယ်တကူ ဈေးနှုန်း update လုပ်နိုင်တဲ့ Electronic Shelf Labels တွေ အဖြစ်လည်း အသုံးပြုကြပါတယ်။
 
 ![Electronic Papers]({{site.baseurl}}/assets/img/EPD/epd.jpg)
 
-> ပုံ ၊ E-paper Display Module အရွယ်အစားအမျိုးမျိုး
+* ပုံ ၊ E-paper Display Module အရွယ်အစားအမျိုးမျိုး
 
 E-paper display ကို Raspberry Pi နဲ့ ချိတ်ဆက်အသုံးပြုဖို့ Waveshare က ထုတ်တဲ့ display module အရွယ်အစားမျိုးစုံကို အသုံးပြုနိုင်ပြီး ယခု အသုံးပြု ပြသွားမှာက 296×128 pixels, 2.9inch အရွယ်အစားရှိတဲ့ E-paper display module ဖြစ်ပါတယ်။ SPI interface နဲ့ ချိတ်ဆက်ရမှာ ဖြစ်ပြီးတော့ display color အနေနဲ့ အနီရောင်၊ အနက်ရောင်နဲ့ နောက်ခံအဖြူရောင် ဖော်ပြနိုင်ပါတယ်။ Ultra low power consumption ဖြစ်ပြီး ပုံမှန်အားဖြင့် display refresh ပြုလုပ်တဲ့ အချိန်မှသာ 26.4mW ခန့်ပဲ သုံးစွဲပါတယ်။ Display Module ရဲ့ Pin တွေကို Raspberry Pi နဲ့ အောက်ပါအတိုင်း ချိတ်ဆက်ပေးရပါမယ်။
 
@@ -34,19 +34,19 @@ E-paper display ကို Raspberry Pi နဲ့ ချိတ်ဆက်အသ�
 
 ချိတ်ဆက်ပြီးရင် Waveshare E-paper အရွယ်အစားမျိုးစုံအတွက် Python Library တွေကို အောက်ပါ command အတိုင်း download ဆွဲယူထားလိုက်ပါ။
 
-$ git clone https://github.com/soonuse/epd-library-python
+`$ git clone https://github.com/soonuse/epd-library-python`
 
 Python Library ဖိုင်တွေ ရယူပြီးသွားရင် cd command နဲ့ directory ပြောင်းပြီး list ခေါ်ကြည့်ပါက E-paper မျိုးစုံအတွက် Folder တွေ တွေ့ရပါမယ်။
 
 ![cli1]({{site.baseurl}}/assets/img/EPD/cli1.png)
 
-> ပုံ ၊ epd-library-python Directory သို့ ဝင်ရောက်ခြင်း
+* ပုံ ၊ epd-library-python Directory သို့ ဝင်ရောက်ခြင်း
 
 ကိုယ်အသုံးပြုတဲ့ display အရွယ်အစားပေါ်မူတည်ပြီး directory ထပ်မံရွေးချယ် ဝင်ရောက်နိုင်ပါတယ်။ ယခု ဖော်ပြမယ့် display က 2.9inch e-paper Model B အမျိုးအစားဖြစ်လို့ အောက်ပါအတိုင်း directory ဝင်ရောက်လိုက်ပါတယ်။
 
 ![cli2]({{site.baseurl}}/assets/img/EPD/cli2.png)
 
-> ပုံ ၊ 2.9inch_e-paper_b Directory သို့ ဝင်ရောက်ခြင်း
+* ပုံ ၊ 2.9inch_e-paper_b Directory သို့ ဝင်ရောက်ခြင်း
 
 2.9inch_e-paper_b အောက်က raspberrypi/python အထိ ဝင်ရောက်ပြီးလို့ list ခေါက်ကြည့်လိုက်ရင် တွေ့ရတဲ့ main.py ဆိုတဲ့ဖိုင်ကို run ကြည့်ရင် Waveshare Logo ကို E-paper Display မှာ ဖော်ပြပေးတာကို တွေ့ရပါလိမ့်မယ်။
 
@@ -54,7 +54,7 @@ Python Library ဖိုင်တွေ ရယူပြီးသွားရင�
 
 ![waveshare]({{site.baseurl}}/assets/img/EPD/waveshare.jpg)
 
-> ပုံ ၊ E-paper display တွင် Waveshare Logo ဖော်ပြခြင်း
+* ပုံ ၊ E-paper display တွင် Waveshare Logo ဖော်ပြခြင်း
 
 E-paper ချိတ်ဆက်မှုအဆင်ပြေပြီး Logo ဖော်ပြနိုင်ပြီဆိုရင် စာသားဖော်ပြဖို့ ဒီ Directory အောက်မှာပဲ ePaperDemo.py ဆိုတဲ့ ဖိုင်တည်ဆောက်ပြီး အောက်ပါ program တွေကို ကူးထည့်ကာ စမ်းသပ်ကြည့်ပါ။
 
@@ -71,8 +71,8 @@ def main():
     epd.set_rotate(1)
     frame_black = [0xFF] * (epd.width * epd.height / 8)
     frame_red = [0xFF] * (epd.width * epd.height / 8)
-    font = ImageFont.truetype(‘/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf’, 30)
-    epd.draw_string_at(frame_black, 10, 5,”e-Paper Demo”, font, COLORED)
+    font = ImageFont.truetype('/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf', 30)
+    epd.draw_string_at(frame_black, 10, 5,"e-Paper Demo", font, COLORED)
     epd.draw_string_at(frame_red, 10, 30, “Hello world!”, font, COLORED)
     epd.draw_string_at(frame_black, 10, 55, “Kaung Htet Htun”, font, COLORED)
     epd.draw_string_at(frame_red, 10, 80,  “Phoewa Science”, font, COLORED)
@@ -113,6 +113,6 @@ if __name__ == ‘__main__’:
 
 ![epdrpi]({{site.baseurl}}/assets/img/EPD/epdrpi.jpg)
 
-> ပုံ ၊ E-paper တွင် image များ ဖော်ပြခြင်း
+* ပုံ ၊ E-paper တွင် image များ ဖော်ပြခြင်း
 
 ဒီလိုနည်းအတိုင်း တခြား image file တွေကိုလည်း E-paper မှာ ပြသနိုင်ပါတယ်။
