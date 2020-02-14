@@ -73,11 +73,11 @@ def main():
     frame_red = [0xFF] * (epd.width * epd.height / 8)
     font = ImageFont.truetype('/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf', 30)
     epd.draw_string_at(frame_black, 10, 5,"e-Paper Demo", font, COLORED)
-    epd.draw_string_at(frame_red, 10, 30, “Hello world!”, font, COLORED)
-    epd.draw_string_at(frame_black, 10, 55, “Kaung Htet Htun”, font, COLORED)
-    epd.draw_string_at(frame_red, 10, 80,  “Phoewa Science”, font, COLORED)
+    epd.draw_string_at(frame_red, 10, 30, "Hello world!", font, COLORED)
+    epd.draw_string_at(frame_black, 10, 55, "Kaung Htet Htun", font, COLORED)
+    epd.draw_string_at(frame_red, 10, 80,  "Phoewa Science", font, COLORED)
     epd.display_frame(frame_black, frame_red)
-if __name__ == ‘__main__’:
+if __name__ == '__main__':
     main()
 {% endhighlight %}
 
@@ -102,10 +102,10 @@ def main():
     #epd.set_rotate(1)
     frame_black = [0xFF] * (epd.width * epd.height / 8)
     frame_red = [0xFF] * (epd.width * epd.height / 8)
-    frame_black = epd.get_frame_buffer(Image.open(‘black.jpg’))
-    frame_red = epd.get_frame_buffer (Image.open(‘red.jpg’))
+    frame_black = epd.get_frame_buffer(Image.open('black.jpg'))
+    frame_red = epd.get_frame_buffer (Image.open('red.jpg'))
     epd.display_frame(frame_black, frame_red)
-if __name__ == ‘__main__’:
+if __name__ == '__main__':
     main()
 {% endhighlight %}
 
