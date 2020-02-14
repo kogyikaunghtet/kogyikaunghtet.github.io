@@ -34,3 +34,85 @@ E-paper display ကို Raspberry Pi နဲ့ ချိတ်ဆက်အသ�
 
 ချိတ်ဆက်ပြီးရင် Waveshare E-paper အရွယ်အစားမျိုးစုံအတွက် Python Library တွေကို အောက်ပါ command အတိုင်း download ဆွဲယူထားလိုက်ပါ။
 
+$ git clone https://github.com/soonuse/epd-library-python
+
+Python Library ဖိုင်တွေ ရယူပြီးသွားရင် cd command နဲ့ directory ပြောင်းပြီး list ခေါ်ကြည့်ပါက E-paper မျိုးစုံအတွက် Folder တွေ တွေ့ရပါမယ်။
+
+![cli1]({{site.baseurl}}/assets/img/EPD/cli1.jpg)
+
+> ပုံ ၊ epd-library-python Directory သို့ ဝင်ရောက်ခြင်း
+
+ကိုယ်အသုံးပြုတဲ့ display အရွယ်အစားပေါ်မူတည်ပြီး directory ထပ်မံရွေးချယ် ဝင်ရောက်နိုင်ပါတယ်။ ယခု ဖော်ပြမယ့် display က 2.9inch e-paper Model B အမျိုးအစားဖြစ်လို့ အောက်ပါအတိုင်း directory ဝင်ရောက်လိုက်ပါတယ်။
+
+![cli2]({{site.baseurl}}/assets/img/EPD/cli2.jpg)
+
+> ပုံ ၊ 2.9inch_e-paper_b Directory သို့ ဝင်ရောက်ခြင်း
+
+2.9inch_e-paper_b အောက်က raspberrypi/python အထိ ဝင်ရောက်ပြီးလို့ list ခေါက်ကြည့်လိုက်ရင် တွေ့ရတဲ့ main.py ဆိုတဲ့ဖိုင်ကို run ကြည့်ရင် Waveshare Logo ကို E-paper Display မှာ ဖော်ပြပေးတာကို တွေ့ရပါလိမ့်မယ်။
+
+$ sudo python main.py
+
+![waveshare]({{site.baseurl}}/assets/img/EPD/waveshare.jpg)
+
+> ပုံ ၊ E-paper display တွင် Waveshare Logo ဖော်ပြခြင်း
+
+E-paper ချိတ်ဆက်မှုအဆင်ပြေပြီး Logo ဖော်ပြနိုင်ပြီဆိုရင် စာသားဖော်ပြဖို့ ဒီ Directory အောက်မှာပဲ ePaperDemo.py ဆိုတဲ့ ဖိုင်တည်ဆောက်ပြီး အောက်ပါ program တွေကို ကူးထည့်ကာ စမ်းသပ်ကြည့်ပါ။
+
+`$ sudo nano ePaperDemo.py`
+
+{% highlight python %}
+import epd2in9b
+from PIL import Image, ImageFont, ImageDraw
+COLORED = 1
+UNCOLORED = 0
+def main():
+    epd = epd2in9b.EPD()
+    epd.init()
+    epd.set_rotate(1)
+    frame_black = [0xFF] * (epd.width * epd.height / 8)
+    frame_red = [0xFF] * (epd.width * epd.height / 8)
+    font = ImageFont.truetype(‘/usr/share/fonts/truetype/freefont/FreeMonoBold.ttf’, 30)
+    epd.draw_string_at(frame_black, 10, 5,”e-Paper Demo”, font, COLORED)
+    epd.draw_string_at(frame_red, 10, 30, “Hello world!”, font, COLORED)
+    epd.draw_string_at(frame_black, 10, 55, “Kaung Htet Htun”, font, COLORED)
+    epd.draw_string_at(frame_red, 10, 80,  “Phoewa Science”, font, COLORED)
+    epd.display_frame(frame_black, frame_red)
+if __name__ == ‘__main__’:
+    main()
+{% endhighlight %}
+
+`$ sudo python ePaperDemo.py`
+
+Program ရဲ့ ထိပ်ဆုံးမှာ import ထားတဲ့ epd2in9b ဖိုင်က 2.9inch_e-paper_b အောက်က raspberrypi/python Directory အောက်မှာပဲ တည်ရှိနေပြီး E-paper မှာ ဒေတာတွေ ဖော်ပြဖို့အတွက် လိုအပ်တဲ့ အချက်အလက်အားလုံးကို ဒီဖိုင်ထဲမှာ ရေးထားပါတယ်။ image တွေ၊ font တွေ ဖော်ပြဖို့အတွက်လိုအပ်တဲ့ PIL (Pillow Library) ကိုတော့ OLED display စမ်းသပ်စဉ်က ထည့်သွင်းခဲ့ပြီးသား ဖြစ်ပါတယ်။ epd.set_rotate(1) မှာ တန်ဖိုးတွေ ပြောင်းထည့်ပြီး Display orientation ကို သတ်မှတ်နိုင်ပါတယ်။ ပုံမှန်အားဖြင့် ဒီ Function မထည့်ရင် E-paper မှာ ဖော်ပြမယ့် စာသားတွေက ဒေါင်လိုက်ဖြစ်နေမှာဖြစ်ပြီး 90° ပြောင်းလိုရင် 1, 180° ပြောင်းလိုရင် 2, 270° ပြောင်းလိုရင် 3 လို့ သတ်မှတ်ပြီး display ကို လှည့်နိုင်ပါတယ်။ frame_black = [0xFF] * (epd.width * epd.height / 8) နဲ့ frame_red = [0xFF] * (epd.width * epd.height / 8) ကတော့ display ကို clear ဖို့ ဖြစ်ပါတယ်။
+
+အသုံးပြုလိုတဲ့ Font ကို ImageFont.truetype နဲ့ path လမ်းကြောင်းခေါ်ယူပြီး Font size 30 လို့ သတ်မှတ်လိုက်ပါတယ်။ ပြီးတဲ့နောက် draw_string_at နဲ့ စာသား ရေးထုတ်ရုံပဲဖြစ်ပါတယ်။ frame_black နဲ့ frame_red က အရောင် ရွေးချယ်ပြသဖို့ ဖြစ်ပြီး ဂဏာန်းတွေက pixel အကွက် တန်ဖိုးတွေ ဖြစ်ပါတယ်။ နောက်ဆုံးက COLORED ကို UNCOLORED လို့ ပြောင်းပြီး မဖော်ပြလိုတဲ့ စာသားတွေကို ပိတ်လို့ရပါတယ်။ display_frame ကတော့ သတ်မှတ်ထားတဲ့ frame တွေကို display မှာ ပြသဖို့အတွက် သုံးရပါတယ်။
+
+ကိုယ့်စိတ်ကြိုက် ပုံတွေ E-Paper မှာ ပြသနိုင်ဖို့ကတော့ width နဲ့ height တန်ဖိုး 296×128 pixels ရှိတဲ့ ပုံတွေ ဖန်တီးရပါမယ်။ ပုံတွေ ဖန်တီးတဲ့အခါမှာလည်း အရောင် ၂ရောင်တည်း ရှိတဲ့ ရိုးရိုးရှင်းရှင်းပုံတွေ ဖြစ်ဖို့ လိုပါတယ်။ အောက်ပါ နမူနာမှာ Raspberry Pi Logo ရဲ့ အနီရောင်အသီး အလုံးလေးတွေကို တစ်ပုံသီးသန့် ဖန်တီးပြီး၊ အနက်ရောင်နဲ့ စာသားတွေကို တစ်ပုံသီးသန့် ဖန်တီး လိုက်ပါတယ်။ အနီရောင်ပေါ်စေလိုတဲ့ ပုံကို red.jpg ၊ အနက်ရောင်ပေါ်စေလိုတဲ့ ပုံကို black.jpg ဆိုတဲ့ နာမည်တွေ ပေးပါ။ ပြီးရင် pi_logo_epd.py Program ဖိုင်နဲ့အတူ directory တစ်ခုတည်းမှာ ပုံတွေကို ဒေါင်လိုက်အနေအထား (128×296 pixels) ပုံစံနဲ့ ထည့်ပေးရပါမယ်။ ပုံတွေ ထည့်ပြီးသွားရင် အောက်ပါ program ကို ကူးယူစမ်းသပ်ကြည့်ပါ။
+
+`$ sudo nano pi_logo_epd.py`
+
+{% highlight python %}
+import epd2in9b
+from PIL import Image, ImageFont, ImageDraw
+COLORED = 1
+UNCOLORED = 0
+def main():
+    epd = epd2in9b.EPD()
+    epd.init()
+    #epd.set_rotate(1)
+    frame_black = [0xFF] * (epd.width * epd.height / 8)
+    frame_red = [0xFF] * (epd.width * epd.height / 8)
+    frame_black = epd.get_frame_buffer(Image.open(‘black.jpg’))
+    frame_red = epd.get_frame_buffer (Image.open(‘red.jpg’))
+    epd.display_frame(frame_black, frame_red)
+if __name__ == ‘__main__’:
+    main()
+{% endhighlight %}
+
+`$ sudo python pi_logo_epd.py`
+
+![epdrpi]({{site.baseurl}}/assets/img/EPD/epdrpi.jpg)
+
+> ပုံ ၊ E-paper တွင် image များ ဖော်ပြခြင်း
+
+ဒီလိုနည်းအတိုင်း တခြား image file တွေကိုလည်း E-paper မှာ ပြသနိုင်ပါတယ်။
