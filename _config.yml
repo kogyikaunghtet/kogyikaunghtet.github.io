@@ -8,9 +8,8 @@ permalink: ':title/'
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
-# Author Settings
 author: Kaung Htet Htun
-author-img: david-freeman.jpg # add your photo
+author-img: khh.jpg 
 about-author: I am a web developer focusing on front-end development. Always hungry to keep learning.
 social-twitter: # add your Twitter handle
 social-facebook: kaung2013
