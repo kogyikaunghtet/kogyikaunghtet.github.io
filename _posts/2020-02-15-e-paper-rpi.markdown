@@ -40,6 +40,7 @@ Python Library ဖိုင်တွေ ရယူပြီးသွားရင�
 
 <p align="center">
 <img src="/assets/img/EPD/cli1.png">
+<a>ပုံ ၊ epd-library-python Directory သို့ ဝင်ရောက်ခြင်း</a>
 </p>
 
 * ပုံ ၊ epd-library-python Directory သို့ ဝင်ရောက်ခြင်း
