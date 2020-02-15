@@ -9,15 +9,19 @@ tags: [Raspberry Pi, Displays]
 ---
 E-Paper (Electronic paper) ကို Electrophoretic display လို့လည်း ခေါ်ဆိုပြီး display device အမျိုးအစားတစ်ခု ဖြစ်ပါတယ်။ E-ink (Electronic ink) လို့လည်း ခေါ်ဆိုကြပါတယ်။ အခြား display အမျိုးအစားတွေက အလင်းကို ထုတ်လွှတ်တာ ဖြစ်ပေမယ့် E-paper က စာရွက်ကဲ့သို့ အလင်းကို ရောင်ပြန်ဟပ်ပြီး မြင်ရစေတဲ့ display မျိုး ဖြစ်လို့ နေရောင်ထဲမှာတောင် display ပေါ်မှာပြထားတဲ့ ဒေတာ အချက်အလက်တွေကို ကောင်းစွာမြင်ရပါတယ်။ ဒါပေမယ့် E-paper နည်းပညာ က ဒေတာ ဖော်ပြတဲ့အခါ LCD ကဲ့သို့ low power display နည်းပညာတွေနဲ့ နှိုင်းယှဉ်ရင် refresh rate လွန်စွာနှေးလို့ mouse cursor blink တို့၊ စာသား scroll ပြခြင်းတို့လို fast moving ဖြစ်ရမယ့် အသုံးချနေရာတွေမှာဆို အဆင်မပြေပါဘူး။ ယခု အသုံးပြုမယ့် Waveshare ကထုတ်တဲ့ E-paper display module ဆိုရင် full refresh time က ၁၅စက္ကန့်တောင် ကြာပါတယ်။ Amazon က ထုတ်တဲ့ Kindle Tablet ကလည်း E-ink system ကို သုံးထားတဲ့ display အမျိုးအစားဖြစ်ပြီးတော့ ယခုအချိန်မှာ 67times per second အထိ refresh rate မြန်တဲ့ E-paper prototype တွေတောင် ထွက်ရှိနေပါပြီ။ 
 
-![Electronic Shelf Labels]({{site.baseurl}}/assets/img/EPD/esl.jpg)
-
-* ပုံ ၊ Electronic Shelf Labels
+<p align="center">
+<img src="/assets/img/EPD/esl.jpg">
+<br>
+<a>ပုံ ၊ Electronic Shelf Labels</a>
+</p>
 
 ဒါပေမယ့် E-paper display က Low Power Consumption ဖြစ်ခြင်း၊ 170° အထိ viewing angle ရှိခြင်း၊ အခြား display တွေနဲ့ မတူပဲ နေရောင်ပြင်းပြင်း အောက်မှာပင် ဒေတာအချက်အလက်တွေ မြင်ရနိုင်ခြင်း၊ display module ကို ပါဝါဖြုတ်လိုက်သော်လည်း ဖော်ပြထားတဲ့အချက်အလက်တွေ ကျန်ရှိနေခြင်း စတဲ့ အားသာချက်များစွာ ရှိပါတယ်။ အရွယ်အစားအမျိုးမျိုးရှိတဲ့ E-paper တွေကို Newspaper, E-book reader တွေသာမက digital photo frame တွေ၊ digital signage တွေ၊ information board တွေ အဖြစ် အသုံးပြုကြပြီး အထက်ပါပုံမှာ ဖော်ပြထားသလို အလွယ်တကူ ဈေးနှုန်း update လုပ်နိုင်တဲ့ Electronic Shelf Labels တွေ အဖြစ်လည်း အသုံးပြုကြပါတယ်။
 
-![Electronic Papers]({{site.baseurl}}/assets/img/EPD/epd.jpg)
-
-* ပုံ ၊ E-paper Display Module အရွယ်အစားအမျိုးမျိုး
+<p align="center">
+<img src="/assets/img/EPD/epd.jpg">
+<br>
+<a>ပုံ ၊ E-paper Display Module အရွယ်အစားအမျိုးမျိုး</a>
+</p>
 
 E-paper display ကို Raspberry Pi နဲ့ ချိတ်ဆက်အသုံးပြုဖို့ Waveshare က ထုတ်တဲ့ display module အရွယ်အစားမျိုးစုံကို အသုံးပြုနိုင်ပြီး ယခု အသုံးပြု ပြသွားမှာက 296×128 pixels, 2.9inch အရွယ်အစားရှိတဲ့ E-paper display module ဖြစ်ပါတယ်။ SPI interface နဲ့ ချိတ်ဆက်ရမှာ ဖြစ်ပြီးတော့ display color အနေနဲ့ အနီရောင်၊ အနက်ရောင်နဲ့ နောက်ခံအဖြူရောင် ဖော်ပြနိုင်ပါတယ်။ Ultra low power consumption ဖြစ်ပြီး ပုံမှန်အားဖြင့် display refresh ပြုလုပ်တဲ့ အချိန်မှသာ 26.4mW ခန့်ပဲ သုံးစွဲပါတယ်။ Display Module ရဲ့ Pin တွေကို Raspberry Pi နဲ့ အောက်ပါအတိုင်း ချိတ်ဆက်ပေးရပါမယ်။
 
@@ -44,23 +48,23 @@ Python Library ဖိုင်တွေ ရယူပြီးသွားရင�
 <a>ပုံ ၊ epd-library-python Directory သို့ ဝင်ရောက်ခြင်း</a>
 </p>
 
-* ပုံ ၊ epd-library-python Directory သို့ ဝင်ရောက်ခြင်း
-
 ကိုယ်အသုံးပြုတဲ့ display အရွယ်အစားပေါ်မူတည်ပြီး directory ထပ်မံရွေးချယ် ဝင်ရောက်နိုင်ပါတယ်။ ယခု ဖော်ပြမယ့် display က 2.9inch e-paper Model B အမျိုးအစားဖြစ်လို့ အောက်ပါအတိုင်း directory ဝင်ရောက်လိုက်ပါတယ်။
 
 <p align="center">
 <img src="/assets/img/EPD/cli2.png">
+<br>
+<a>ပုံ ၊ 2.9inch_e-paper_b Directory သို့ ဝင်ရောက်ခြင်း</a>
 </p>
-
-* ပုံ ၊ 2.9inch_e-paper_b Directory သို့ ဝင်ရောက်ခြင်း
 
 2.9inch_e-paper_b အောက်က raspberrypi/python အထိ ဝင်ရောက်ပြီးလို့ list ခေါက်ကြည့်လိုက်ရင် တွေ့ရတဲ့ main.py ဆိုတဲ့ဖိုင်ကို run ကြည့်ရင် Waveshare Logo ကို E-paper Display မှာ ဖော်ပြပေးတာကို တွေ့ရပါလိမ့်မယ်။
 
 `$ sudo python main.py`
 
-![waveshare]({{site.baseurl}}/assets/img/EPD/waveshare.jpg)
-
-* ပုံ ၊ E-paper display တွင် Waveshare Logo ဖော်ပြခြင်း
+<p align="center">
+<img src="/assets/img/EPD/waveshare.jpg">
+<br>
+<a>ပုံ ၊ E-paper display တွင် Waveshare Logo ဖော်ပြခြင်း</a>
+</p>
 
 E-paper ချိတ်ဆက်မှုအဆင်ပြေပြီး Logo ဖော်ပြနိုင်ပြီဆိုရင် စာသားဖော်ပြဖို့ ဒီ Directory အောက်မှာပဲ ePaperDemo.py ဆိုတဲ့ ဖိုင်တည်ဆောက်ပြီး အောက်ပါ program တွေကို ကူးထည့်ကာ စမ်းသပ်ကြည့်ပါ။
 
@@ -117,8 +121,10 @@ if __name__ == '__main__':
 
 `$ sudo python pi_logo_epd.py`
 
-![epdrpi]({{site.baseurl}}/assets/img/EPD/epdrpi.jpg)
-
-* ပုံ ၊ E-paper တွင် image များ ဖော်ပြခြင်း
+<p align="center">
+<img src="/assets/img/EPD/epdrpi.jpg">
+<br>
+<a>ပုံ ၊ E-paper တွင် image များ ဖော်ပြခြင်း</a>
+</p>
 
 ဒီလိုနည်းအတိုင်း တခြား image file တွေကိုလည်း E-paper မှာ ပြသနိုင်ပါတယ်။
