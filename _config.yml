@@ -18,7 +18,7 @@ social-linkedin: kogyikaunghtet
 social-email: kogyikaunghtet@gmail.com
 
 # Disqus
-discus-identifier: mr-brown # add your discus identifier
+discus-identifier: kogyikaunghtet.github.io
 
 # Tracker
 analytics: # Google Analytics
@@ -30,7 +30,7 @@ plugins:
   - jekyll-paginate
   - jemoji
 
-paginate: 3
+paginate: 8
 paginate_path: "/page/:num"
 
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
