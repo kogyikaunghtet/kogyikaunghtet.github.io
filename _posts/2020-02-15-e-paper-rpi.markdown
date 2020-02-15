@@ -122,7 +122,7 @@ if __name__ == '__main__':
 `$ sudo python pi_logo_epd.py`
 
 <p align="center">
-<img src="/assets/img/EPD/epdrpi.jpg">
+<img width="600" height="237" src="/assets/img/EPD/epdrpi.jpg">
 <br>
 <a>ပုံ ၊ E-paper တွင် image များ ဖော်ပြခြင်း</a>
 </p>
