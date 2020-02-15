@@ -46,7 +46,9 @@ Python Library ဖိုင်တွေ ရယူပြီးသွားရင�
 
 ကိုယ်အသုံးပြုတဲ့ display အရွယ်အစားပေါ်မူတည်ပြီး directory ထပ်မံရွေးချယ် ဝင်ရောက်နိုင်ပါတယ်။ ယခု ဖော်ပြမယ့် display က 2.9inch e-paper Model B အမျိုးအစားဖြစ်လို့ အောက်ပါအတိုင်း directory ဝင်ရောက်လိုက်ပါတယ်။
 
-![cli2]({{site.baseurl}}/assets/img/EPD/cli2.png)
+<p align="center">
+<img src="/assets/img/EPD/cli2.png">
+</p>
 
 * ပုံ ၊ 2.9inch_e-paper_b Directory သို့ ဝင်ရောက်ခြင်း
 
