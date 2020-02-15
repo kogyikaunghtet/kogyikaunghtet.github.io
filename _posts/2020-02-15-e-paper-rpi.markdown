@@ -18,7 +18,7 @@ E-Paper (Electronic paper) ကို Electrophoretic display လို့လည�
 ဒါပေမယ့် E-paper display က Low Power Consumption ဖြစ်ခြင်း၊ 170° အထိ viewing angle ရှိခြင်း၊ အခြား display တွေနဲ့ မတူပဲ နေရောင်ပြင်းပြင်း အောက်မှာပင် ဒေတာအချက်အလက်တွေ မြင်ရနိုင်ခြင်း၊ display module ကို ပါဝါဖြုတ်လိုက်သော်လည်း ဖော်ပြထားတဲ့အချက်အလက်တွေ ကျန်ရှိနေခြင်း စတဲ့ အားသာချက်များစွာ ရှိပါတယ်။ အရွယ်အစားအမျိုးမျိုးရှိတဲ့ E-paper တွေကို Newspaper, E-book reader တွေသာမက digital photo frame တွေ၊ digital signage တွေ၊ information board တွေ အဖြစ် အသုံးပြုကြပြီး အထက်ပါပုံမှာ ဖော်ပြထားသလို အလွယ်တကူ ဈေးနှုန်း update လုပ်နိုင်တဲ့ Electronic Shelf Labels တွေ အဖြစ်လည်း အသုံးပြုကြပါတယ်။
 
 <p align="center">
-<img src="/assets/img/EPD/epd.jpg">
+<img width="534" height="421" src="/assets/img/EPD/epd.jpg">
 <br>
 <a>ပုံ ၊ E-paper Display Module အရွယ်အစားအမျိုးမျိုး</a>
 </p>
