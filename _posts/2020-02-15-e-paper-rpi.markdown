@@ -61,7 +61,7 @@ Python Library ဖိုင်တွေ ရယူပြီးသွားရင�
 `$ sudo python main.py`
 
 <p align="center">
-<img src="/assets/img/EPD/waveshare.jpg">
+<img width="480" height="359" src="/assets/img/EPD/waveshare.jpg">
 <br>
 <a>ပုံ ၊ E-paper display တွင် Waveshare Logo ဖော်ပြခြင်း</a>
 </p>
@@ -122,7 +122,7 @@ if __name__ == '__main__':
 `$ sudo python pi_logo_epd.py`
 
 <p align="center">
-<img width="800" height="598" src="/assets/img/EPD/epdrpi.jpg">
+<img width="480" height="359" src="/assets/img/EPD/epdrpi.jpg">
 <br>
 <a>ပုံ ၊ E-paper တွင် image များ ဖော်ပြခြင်း</a>
 </p>
