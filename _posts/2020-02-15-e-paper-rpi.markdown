@@ -10,7 +10,7 @@ tags: [Raspberry Pi, Displays]
 E-Paper (Electronic paper) ကို Electrophoretic display လို့လည်း ခေါ်ဆိုပြီး display device အမျိုးအစားတစ်ခု ဖြစ်ပါတယ်။ E-ink (Electronic ink) လို့လည်း ခေါ်ဆိုကြပါတယ်။ အခြား display အမျိုးအစားတွေက အလင်းကို ထုတ်လွှတ်တာ ဖြစ်ပေမယ့် E-paper က စာရွက်ကဲ့သို့ အလင်းကို ရောင်ပြန်ဟပ်ပြီး မြင်ရစေတဲ့ display မျိုး ဖြစ်လို့ နေရောင်ထဲမှာတောင် display ပေါ်မှာပြထားတဲ့ ဒေတာ အချက်အလက်တွေကို ကောင်းစွာမြင်ရပါတယ်။ ဒါပေမယ့် E-paper နည်းပညာ က ဒေတာ ဖော်ပြတဲ့အခါ LCD ကဲ့သို့ low power display နည်းပညာတွေနဲ့ နှိုင်းယှဉ်ရင် refresh rate လွန်စွာနှေးလို့ mouse cursor blink တို့၊ စာသား scroll ပြခြင်းတို့လို fast moving ဖြစ်ရမယ့် အသုံးချနေရာတွေမှာဆို အဆင်မပြေပါဘူး။ ယခု အသုံးပြုမယ့် Waveshare ကထုတ်တဲ့ E-paper display module ဆိုရင် full refresh time က ၁၅စက္ကန့်တောင် ကြာပါတယ်။ Amazon က ထုတ်တဲ့ Kindle Tablet ကလည်း E-ink system ကို သုံးထားတဲ့ display အမျိုးအစားဖြစ်ပြီးတော့ ယခုအချိန်မှာ 67times per second အထိ refresh rate မြန်တဲ့ E-paper prototype တွေတောင် ထွက်ရှိနေပါပြီ။ 
 
 <p align="center">
-<img src="/assets/img/EPD/esl.jpg">
+<img width="496" height="330" src="/assets/img/EPD/esl.jpg">
 <br>
 <a>ပုံ ၊ Electronic Shelf Labels</a>
 </p>
