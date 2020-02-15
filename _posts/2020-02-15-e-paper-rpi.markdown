@@ -38,7 +38,7 @@ E-paper display ကို Raspberry Pi နဲ့ ချိတ်ဆက်အသ�
 
 Python Library ဖိုင်တွေ ရယူပြီးသွားရင် cd command နဲ့ directory ပြောင်းပြီး list ခေါ်ကြည့်ပါက E-paper မျိုးစုံအတွက် Folder တွေ တွေ့ရပါမယ်။
 
-![cli1]({{site.baseurl}}/assets/img/EPD/cli1.png)
+![cli1]({{site.baseurl}}/assets/img/EPD/cli1.png?style=centerme)
 
 * ပုံ ၊ epd-library-python Directory သို့ ဝင်ရောက်ခြင်း
 
