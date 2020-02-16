@@ -10,7 +10,7 @@ tags: [Raspberry Pi, Displays]
 E-Paper (Electronic paper) ကို Electrophoretic display လို့လည်း ခေါ်ဆိုပြီး display device အမျိုးအစားတစ်ခု ဖြစ်ပါတယ်။ E-ink (Electronic ink) လို့လည်း ခေါ်ဆိုကြပါတယ်။ အခြား display အမျိုးအစားတွေက အလင်းကို ထုတ်လွှတ်တာ ဖြစ်ပေမယ့် E-paper က စာရွက်ကဲ့သို့ အလင်းကို ရောင်ပြန်ဟပ်ပြီး မြင်ရစေတဲ့ display မျိုး ဖြစ်လို့ နေရောင်ထဲမှာတောင် display ပေါ်မှာပြထားတဲ့ ဒေတာ အချက်အလက်တွေကို ကောင်းစွာမြင်ရပါတယ်။ ဒါပေမယ့် E-paper နည်းပညာ က ဒေတာ ဖော်ပြတဲ့အခါ LCD ကဲ့သို့ low power display နည်းပညာတွေနဲ့ နှိုင်းယှဉ်ရင် refresh rate လွန်စွာနှေးလို့ mouse cursor blink တို့၊ စာသား scroll ပြခြင်းတို့လို fast moving ဖြစ်ရမယ့် အသုံးချနေရာတွေမှာဆို အဆင်မပြေပါဘူး။ ယခု အသုံးပြုမယ့် Waveshare ကထုတ်တဲ့ E-paper display module ဆိုရင် full refresh time က ၁၅စက္ကန့်တောင် ကြာပါတယ်။ Amazon က ထုတ်တဲ့ Kindle Tablet ကလည်း E-ink system ကို သုံးထားတဲ့ display အမျိုးအစားဖြစ်ပြီးတော့ ယခုအချိန်မှာ 67times per second အထိ refresh rate မြန်တဲ့ E-paper prototype တွေတောင် ထွက်ရှိနေပါပြီ။ 
 
 <p align="center">
-<img width="496" height="330" src="/assets/img/EPD/esl.jpg">
+<img src="/assets/img/EPD/esl.jpg">
 <br>
 <a>ပုံ ၊ Electronic Shelf Labels</a>
 </p>
@@ -18,7 +18,7 @@ E-Paper (Electronic paper) ကို Electrophoretic display လို့လည�
 ဒါပေမယ့် E-paper display က Low Power Consumption ဖြစ်ခြင်း၊ 170° အထိ viewing angle ရှိခြင်း၊ အခြား display တွေနဲ့ မတူပဲ နေရောင်ပြင်းပြင်း အောက်မှာပင် ဒေတာအချက်အလက်တွေ မြင်ရနိုင်ခြင်း၊ display module ကို ပါဝါဖြုတ်လိုက်သော်လည်း ဖော်ပြထားတဲ့အချက်အလက်တွေ ကျန်ရှိနေခြင်း စတဲ့ အားသာချက်များစွာ ရှိပါတယ်။ အရွယ်အစားအမျိုးမျိုးရှိတဲ့ E-paper တွေကို Newspaper, E-book reader တွေသာမက digital photo frame တွေ၊ digital signage တွေ၊ information board တွေ အဖြစ် အသုံးပြုကြပြီး အထက်ပါပုံမှာ ဖော်ပြထားသလို အလွယ်တကူ ဈေးနှုန်း update လုပ်နိုင်တဲ့ Electronic Shelf Labels တွေ အဖြစ်လည်း အသုံးပြုကြပါတယ်။
 
 <p align="center">
-<img width="534" height="421" src="/assets/img/EPD/epd.jpg">
+<img src="/assets/img/EPD/epd.jpg">
 <br>
 <a>ပုံ ၊ E-paper Display Module အရွယ်အစားအမျိုးမျိုး</a>
 </p>
@@ -61,7 +61,7 @@ Python Library ဖိုင်တွေ ရယူပြီးသွားရင�
 `$ sudo python main.py`
 
 <p align="center">
-<img width="480" height="359" src="/assets/img/EPD/waveshare.jpg">
+<img src="/assets/img/EPD/waveshare.jpg">
 <br>
 <a>ပုံ ၊ E-paper display တွင် Waveshare Logo ဖော်ပြခြင်း</a>
 </p>
@@ -122,7 +122,7 @@ if __name__ == '__main__':
 `$ sudo python pi_logo_epd.py`
 
 <p align="center">
-<img width="480" height="359" src="/assets/img/EPD/epdrpi.jpg">
+<img src="/assets/img/EPD/epdrpi.jpg">
 <br>
 <a>ပုံ ၊ E-paper တွင် image များ ဖော်ပြခြင်း</a>
 </p>
