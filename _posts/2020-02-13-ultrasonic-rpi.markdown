@@ -35,3 +35,99 @@ Ultrasonic Sensor ကို Power Supply ပေးတဲ့အခါ သူ့�
 <br>
 
 <center><img src="https://latex.codecogs.com/svg.latex?\Large&space;V out=5V x\frac{1.5KΩ}}{680Ω + 1.5KΩ}=3.44V" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" /></center>
+
+<p align="center">
+<img src="/assets/img/ultrasonic/ult_rpi.jpg">
+<br>
+<a>ပုံ၊ Raspberry Pi နှင့် Ultrasonic Sensor ချိတ်ဆက်ခြင်း</a>
+</p>
+
+ပုံ(၇.၁၈) ကအတိုင်း Ultrasonic Sensor နဲ့ Raspberry Pi ကို ချိတ်ဆက်ပြီး အောက်ပါ Python Program နဲ့ စမ်းသပ်ကြည့်ပါ။
+
+`$ sudo nano ultrasonic.py`
+
+{% highlight python %}
+import RPi.GPIO as GPIO
+import time
+GPIO.setmode(GPIO.BCM)
+trig = 23
+echo = 24
+GPIO.setup(trig,GPIO.OUT)
+GPIO.setup(echo,GPIO.IN)
+GPIO.output(trig,GPIO.LOW)
+try:
+    while 1:
+       GPIO.output(trig,GPIO.HIGH)
+       time.sleep(0.00001)
+       GPIO.output(trig,GPIO.LOW)
+
+       while GPIO.input(echo)==0:
+          pulse_start = time.time()
+       while GPIO.input(echo)==1:
+          pulse_end = time.time()
+
+       pulse_duration = pulse_end - pulse_start
+       distance = pulse_duration * 17150
+       distance = round(distance, 2)
+       print "Distance:",distance,"cm"
+       time.sleep(0.5)
+except KeyboardInterrupt:
+     GPIO.cleanup()
+{% endhighlight %}
+
+`$ sudo python ultrasonic.py`
+
+Program ကို run ကြည့်လိုက်ရင် ပုံ(၇.၁၉) က အတိုင်း Distance တန်ဖိုးတွေကို တွေ့မြင်ရပါမယ်။ Program ထဲမှာ ပထမဦးစွာ Trigger Pin ကို Frequency မထွက်အောင် Low signal ပေးထားပြီးမှ 10µs (0.00001 second) ကြာအောင် High ပေးပါတယ်။ High နဲ့ Low ကို တစ်လှည့်စီ ထုတ်ပေးခြင်းအားဖြင့် နေရာ အပြောင်းအလဲ ရွေ့နေတဲ့ Solid Object တွေဆီကို Frequency အသစ်တွေ သွားရိုက်ခတ်ပြီး Duration အသစ်နဲ့ Distance တန်ဖိုးအသစ်တွေ ထုတ်ပေး စေမှာ ဖြစ်ပါတယ်။ pulse duration ရဖို့အတွက်တော့ Unit က second နဲ့ floating point တန်ဖိုးတွေ ပေးတဲ့ time method သုံးပြီး ထုတ်လိုက်ပါတယ်။ Echo pin ဆီကို pulse ပြန်ဝင်လာလို့ 1 (High) ဖြစ်သွားတဲ့အချိန် ရောက်မှ duration end ဖြစ်ပြီး start duration ထဲက နှုတ်လိုက်ပါတယ်။
+Distance တန်ဖိုးတွေကို ဒဿမနောက်မှာ ၂လုံးသာ ဖော်ပြစေ လိုတာ ဖြစ်လို့ Python ရဲ့ built-in function တစ်ခုဖြစ်တဲ့ round() နဲ့ floating point number ၂ခုသာ သတ်မှတ်ထားပါတယ်။
+
+<p align="center">
+<img src="/assets/img/ultrasonic/ss.png">
+<br>
+<a>ပုံ၊ Ultrasonic Sensor မှ Distance တန်ဖိုး ဖတ်ခြင်း</a>
+</p>
+
+ဆက်လက်ပြီး LED အနီရောင်တစ်လုံးနဲ့ အစိမ်းရောင်တစ်လုံးကို GPIO 17 နဲ့ 27 မှာ တပ်ဆင်ပြီး distance တန်ဖိုး 10cm အောက်ကို ရောက်ရင် အနီလင်း၊ အစိမ်း ပိတ်ကာ 10cm အထက်ဖြစ်သွားပါက အနီပိတ်၊ အစိမ်းလင်းစေတဲ့ project လေးကို ပြုလုပ်ကြည့်နိုင်ပါတယ်။
+
+`$ sudo nano ultrasonicLED.py`
+
+{% highlight python %}
+import RPi.GPIO as GPIO
+import time
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BCM)
+trig = 23
+echo = 24
+red = 17
+green = 27
+GPIO.setup(trig,GPIO.OUT)
+GPIO.setup(echo,GPIO.IN)
+GPIO.setup(red,GPIO.OUT)
+GPIO.setup(green,GPIO.OUT)
+GPIO.output(trig,GPIO.LOW)
+
+try:
+    while 1:
+       GPIO.output(trig,GPIO.HIGH)
+       time.sleep(0.00001)
+       GPIO.output(trig,GPIO.LOW)
+       while GPIO.input(echo)==0:
+          pulse_start = time.time()
+       while GPIO.input(echo)==1:
+          pulse_end = time.time()
+       pulse_duration = pulse_end - pulse_start
+       distance = pulse_duration * 17150
+       distance = round(distance, 2)
+       print "Distance:",distance,"cm"
+       time.sleep(0.5)
+       if distance < 10:
+          GPIO.output(red,GPIO.HIGH)
+          GPIO.output(green,GPIO.LOW)
+       else:
+          GPIO.output(red,GPIO.LOW)
+          GPIO.output(green,GPIO.HIGH)
+
+except KeyboardInterrupt:
+     GPIO.cleanup()
+{% endhighlight %}
+
+`$ sudo python ultrasonicLED.py`
