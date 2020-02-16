@@ -28,13 +28,13 @@ Transmitter pin ဖြစ်တဲ့ Trig pin ကနေ Ultrasound Wave တစ�
 
 <center><img src="https://latex.codecogs.com/svg.latex?\Large&space;Frequency=\frac{1}{0.00001 second}=0.1MHz" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" /></center>
 
-Ultrasonic Sensor ကို Power Supply ပေးတဲ့အခါ သူ့ရဲ့ working voltage က 5V အပြည့်အဝ ရမှ အလုပ်လုပ်ဆောင်နိုင်တာဖြစ်လို့ Vcc ကို Raspberry Pi ရဲ့ 5V သို့ ချိတ်ဆက်ပေးရပါမယ်။ သို့ပေမယ့် Raspberry Pi ရဲ့ GPIO pin တွေက logic voltage 3.3V သာလျှင်ရှိတာကြောင့် သတိပြုရမယ့်အချက်တွေ ရှိပါတယ်။ Echo pin က sensor ကနေ output ထွက်မယ့် pin ဖြစ်ပြီး Raspberry Pi ဆီသို့ input signal အနေနဲ့ ဝင်မှာဖြစ်လို့ 5V signal pulse တွေ ဝင်ခိုင်းလို့ မရပါဘူး။ ဒါကြောင့် Raspberry Pi ရဲ့ GPIO pin ဆီကို ချိတ်ဆက်တဲ့အခါ အခန်း(၅)မှာ ဖော်ပြခဲ့သလိုမျိုး resistor ၂လုံး သုံးပြီး Potential divider တည်ဆောက်ကာ ချိတ်ဆက်ပေးရပါမယ်။ R1 တန်ဖိုးကို 1.5KΩ အသုံးပြုပြီး၊ R2 တန်ဖိုးကို 680Ω အသုံးပြုပါက 3.44V ဝန်းကျင်ရမှာ ဖြစ်လို့ Echo pin ကို Raspberry Pi ရဲ့ GPIO မှာ ချိတ်ဆက်ဖို့ အဆင်ပြေသွားပါလိမ့်မယ်။
+Ultrasonic Sensor ကို Power Supply ပေးတဲ့အခါ သူ့ရဲ့ working voltage က 5V အပြည့်အဝ ရမှ အလုပ်လုပ်ဆောင်နိုင်တာဖြစ်လို့ Vcc ကို Raspberry Pi ရဲ့ 5V သို့ ချိတ်ဆက်ပေးရပါမယ်။ သို့ပေမယ့် Raspberry Pi ရဲ့ GPIO pin တွေက logic voltage 3.3V သာလျှင်ရှိတာကြောင့် သတိပြုရမယ့်အချက်တွေ ရှိပါတယ်။ Echo pin က sensor ကနေ output ထွက်မယ့် pin ဖြစ်ပြီး Raspberry Pi ဆီသို့ input signal အနေနဲ့ ဝင်မှာဖြစ်လို့ 5V signal pulse တွေ ဝင်ခိုင်းလို့ မရပါဘူး။ ဒါကြောင့် Raspberry Pi ရဲ့ GPIO pin ဆီကို ချိတ်ဆက်တဲ့အခါ All About Raspberry Pi စာအုပ်ရဲ့ အခန်း(၅)မှာ ဖော်ပြခဲ့သလိုမျိုး resistor ၂လုံး သုံးပြီး Potential divider တည်ဆောက်ကာ ချိတ်ဆက်ပေးရပါမယ်။ R1 တန်ဖိုးကို 1.5KΩ အသုံးပြုပြီး၊ R2 တန်ဖိုးကို 680Ω အသုံးပြုပါက 3.44V ဝန်းကျင်ရမှာ ဖြစ်လို့ Echo pin ကို Raspberry Pi ရဲ့ GPIO မှာ ချိတ်ဆက်ဖို့ အဆင်ပြေသွားပါလိမ့်မယ်။
 
-<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;Vo ut=V in x \frac{R2}{R1 + R2}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" /></center>
+<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;Vo ut=V in\frac{R2}{R1 + R2}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" /></center>
 
 <br>
 
-<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;V out=5V x\frac{1.5KΩ}{680Ω + 1.5KΩ}=3.44V" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" /></center>
+<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;V out=5V \frac{1.5KΩ}{680Ω + 1.5KΩ}=3.44V" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" /></center>
 
 <p align="center">
 <img src="/assets/img/ultrasonic/ult_rpi.jpg">
@@ -42,7 +42,7 @@ Ultrasonic Sensor ကို Power Supply ပေးတဲ့အခါ သူ့�
 <a>ပုံ၊ Raspberry Pi နှင့် Ultrasonic Sensor ချိတ်ဆက်ခြင်း</a>
 </p>
 
-ပုံ(၇.၁၈) ကအတိုင်း Ultrasonic Sensor နဲ့ Raspberry Pi ကို ချိတ်ဆက်ပြီး အောက်ပါ Python Program နဲ့ စမ်းသပ်ကြည့်ပါ။
+အထက်ပါ ပုံအတိုင်း Ultrasonic Sensor နဲ့ Raspberry Pi ကို ချိတ်ဆက်ပြီး အောက်ပါ Python Program နဲ့ စမ်းသပ်ကြည့်ပါ။
 
 `$ sudo nano ultrasonic.py`
 
@@ -77,7 +77,7 @@ except KeyboardInterrupt:
 
 `$ sudo python ultrasonic.py`
 
-Program ကို run ကြည့်လိုက်ရင် ပုံ(၇.၁၉) က အတိုင်း Distance တန်ဖိုးတွေကို တွေ့မြင်ရပါမယ်။ Program ထဲမှာ ပထမဦးစွာ Trigger Pin ကို Frequency မထွက်အောင် Low signal ပေးထားပြီးမှ 10µs (0.00001 second) ကြာအောင် High ပေးပါတယ်။ High နဲ့ Low ကို တစ်လှည့်စီ ထုတ်ပေးခြင်းအားဖြင့် နေရာ အပြောင်းအလဲ ရွေ့နေတဲ့ Solid Object တွေဆီကို Frequency အသစ်တွေ သွားရိုက်ခတ်ပြီး Duration အသစ်နဲ့ Distance တန်ဖိုးအသစ်တွေ ထုတ်ပေး စေမှာ ဖြစ်ပါတယ်။ pulse duration ရဖို့အတွက်တော့ Unit က second နဲ့ floating point တန်ဖိုးတွေ ပေးတဲ့ time method သုံးပြီး ထုတ်လိုက်ပါတယ်။ Echo pin ဆီကို pulse ပြန်ဝင်လာလို့ 1 (High) ဖြစ်သွားတဲ့အချိန် ရောက်မှ duration end ဖြစ်ပြီး start duration ထဲက နှုတ်လိုက်ပါတယ်။
+Program ကို run ကြည့်လိုက်ရင် အောက်ဖော်ပြပါ ပုံအတိုင်း Distance တန်ဖိုးတွေကို တွေ့မြင်ရပါမယ်။ Program ထဲမှာ ပထမဦးစွာ Trigger Pin ကို Frequency မထွက်အောင် Low signal ပေးထားပြီးမှ 10µs (0.00001 second) ကြာအောင် High ပေးပါတယ်။ High နဲ့ Low ကို တစ်လှည့်စီ ထုတ်ပေးခြင်းအားဖြင့် နေရာ အပြောင်းအလဲ ရွေ့နေတဲ့ Solid Object တွေဆီကို Frequency အသစ်တွေ သွားရိုက်ခတ်ပြီး Duration အသစ်နဲ့ Distance တန်ဖိုးအသစ်တွေ ထုတ်ပေး စေမှာ ဖြစ်ပါတယ်။ pulse duration ရဖို့အတွက်တော့ Unit က second နဲ့ floating point တန်ဖိုးတွေ ပေးတဲ့ time method သုံးပြီး ထုတ်လိုက်ပါတယ်။ Echo pin ဆီကို pulse ပြန်ဝင်လာလို့ 1 (High) ဖြစ်သွားတဲ့အချိန် ရောက်မှ duration end ဖြစ်ပြီး start duration ထဲက နှုတ်လိုက်ပါတယ်။
 Distance တန်ဖိုးတွေကို ဒဿမနောက်မှာ ၂လုံးသာ ဖော်ပြစေ လိုတာ ဖြစ်လို့ Python ရဲ့ built-in function တစ်ခုဖြစ်တဲ့ round() နဲ့ floating point number ၂ခုသာ သတ်မှတ်ထားပါတယ်။
 
 <p align="center">
