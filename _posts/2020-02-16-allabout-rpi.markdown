@@ -50,7 +50,7 @@ Raspberry Pi မှာ အသုံးပြုမယ့် Operating System အ
 
 အမြဲတမ်း version အသစ်တွေ ထွက်ရှိနေတဲ့ Software တွေ၊ image ဖိုင်တွေကို နောက်ဆုံးထွက် update တွေ download ရယူ အသုံးပြုနိုင်စေဖို့နဲ့၊ Source Code တွေကိုလည်း Open Source ဖြစ်စေဖို့ လက်တွေ့ စမ်းသပ်ရာမှာ လိုအပ်တဲ့ Software တွေ၊ Code တွေအတွက် CD, DVD တွေ ထည့်ပေးမထားပါဘူး။ စာအုပ်ထဲမှာ ဖော်ပြထားတဲ့ Source Code တွေကို Code Hosting Platform တစ်ခု ဖြစ်တဲ့ Github မှာ တင်ပေးထားပြီး ထပ်တိုး Program တွေ update တွေ ရှိခဲ့ရင်လည်း အောက်ဖော်ပြပါ Github repository မှာ ပေါင်းထည့်ပေးသွားမှာ ဖြစ်ပါတယ်။
 
-> https://github.com/kogyikaunghtet/allaboutRpi`
+> https://github.com/kogyikaunghtet/allaboutRpi
 
 Source Code တွေကို အထက်ပါ လင့်ခ်ကနေ Download ရယူထားပြီးမှ ဖတ်ရှု စမ်းသပ်ကြစေလိုပါတယ်။ Raspberry Pi နဲ့ ပတ်သက်တဲ့ သိသင့်သိထိုက်တာ အားလုံးချုံငုံမိအောင် ရေးသားဖော်ပြပေးထားပေမယ့် အီလက်ထရောနစ် အခြေခံ၊ Linux အခြေခံအနည်းငယ် ရှိသူတွေနဲ့ Arduino ကို အသုံးပြုဖူးထားသူတွေ အတွက် ဒီစာအုပ်ကို ဖတ်ရှုရတာ ပိုမို အဆင်ပြေပါလိမ့်မယ်။
 
