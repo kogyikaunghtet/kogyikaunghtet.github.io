@@ -2,7 +2,7 @@
 layout: post
 title: all about Raspberry Pi
 date: 2020-02-15 13:32:20 +0300
-description: Raspberry Pi အား Python ဖြင့် အသုံးပြုခြင်း စာအုပ်
+description:
 img: rpi_book.jpg
 fig-caption: # Add figcaption (optional)
 tags: [Raspberry Pi]
