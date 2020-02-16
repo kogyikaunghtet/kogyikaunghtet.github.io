@@ -42,7 +42,7 @@ Sensor data တွေကို LCD မှာ ပြပေးတဲ့ Arduino Sk
 
 `Download – http://bit.ly/2Zrg7tQ`
 
-{% highlight arduino %}
+{% highlight C++ %}
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
