@@ -3,7 +3,7 @@ layout: post
 title: Ultrasonic Sensor အား Raspberry Pi ဖြင့် အသုံးပြုခြင်း
 date: 2020-02-14 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: turbidity/clear.jpg
+img: 
 fig-caption: # Add figcaption (optional)
 tags: [Raspberry Pi, Sensors]
 ---
