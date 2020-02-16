@@ -3,7 +3,7 @@ layout: post
 title: Turbidity Sensor အား Arduino ဖြင့် အသုံးပြုခြင်း
 date: 2020-02-14 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: EPD/phoewa.jpg # Add image post (optional)
+img: turbidity/clear.jpg
 fig-caption: # Add figcaption (optional)
 tags: [Raspberry Pi, Displays]
 ---
@@ -13,10 +13,6 @@ Turbidity ဆိုသည်မှာ ရေထဲတွင်ရှိနေသ
 * (3) ရေတိုက်စားခြင်းကြောင့် ဖြစ်ပေါ်လာတဲ့ အနယ်အနှစ်များကြောင့်
 * (4) ရေဆိုးစွန့်ထုတ်မှုများကြောင့်
 * (5) အိမ်သုံးရေစွန့်ထုတ်မှုများကြောင့် – စသည်တို့ကြောင့် အဓိက ဖြစ်ရပါတယ်။
-
-<p align="center">
-<img src="/assets/img/turbidity/clear.jpg">
-</p>
 
 ### Turbidity များရင် ဘာဖြစ်နိုင်လဲ?
 
