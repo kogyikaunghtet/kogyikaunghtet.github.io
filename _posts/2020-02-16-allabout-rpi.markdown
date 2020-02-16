@@ -5,7 +5,7 @@ date: 2020-02-16 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: book.jpg
 fig-caption: # Add figcaption (optional)
-tags: [Raspberry Pi]
+tags: [Raspberry Pi, Book]
 ---
 <p style="text-align:center;"><b>ဒေါက်တာ ရန်နိုင်အေး၏ အမှာစာ</b></p>
 ဒီနေ့ခေတ်မှာ ကွန်ပျူတာ ပရိုဂရမ် ရေးသားမှုကလည်း မရှိမဖြစ် တတ်မြောက်ဖို့ လိုအပ်တဲ့ ကျွမ်းကျင်မှုတစ်ခုလို့ ပြောရလောက်အောင် အရေးကြီးလာပါပြီ။ တချို့ နိုင်ငံတွေမှာလည်း မူလတန်း ကျောင်းတွေမှာကတည်းက ကုဒ်ရေးသားမှုကို ထည့်သွင်း သင်ကြားလာကြပါတယ်။ ပရိုဂရမ် ရေးသားတဲ့အခါမှာ အသုံးပြုကြတဲ့ Programming Language တွေ အမြောက်အများ ရှိတဲ့ထဲက ခေတ်အစားဆုံးလို့ ပြောလို့ရတဲ့ Language တွေထဲမှာ Python ပါဝင်ပါတယ်။ နောက်တစ်ခါ Internet of Things လို့ ခေါ်တဲ့ ပစ္စည်း ကိရိယာတွေကို ချိတ်ဆက် အသုံးပြုမှု ခေတ်စားလာတဲ့အတွက် အီလက်ထရောနစ် ပစ္စည်းကိရိယာတွေကို တွဲသုံးလေ့ရှိတဲ့ Embedded System တွေကလည်း ပိုမို အရေးပါလာပါတယ်။
