@@ -30,11 +30,11 @@ Transmitter pin ဖြစ်တဲ့ Trig pin ကနေ Ultrasound Wave တစ�
 
 Ultrasonic Sensor ကို Power Supply ပေးတဲ့အခါ သူ့ရဲ့ working voltage က 5V အပြည့်အဝ ရမှ အလုပ်လုပ်ဆောင်နိုင်တာဖြစ်လို့ Vcc ကို Raspberry Pi ရဲ့ 5V သို့ ချိတ်ဆက်ပေးရပါမယ်။ သို့ပေမယ့် Raspberry Pi ရဲ့ GPIO pin တွေက logic voltage 3.3V သာလျှင်ရှိတာကြောင့် သတိပြုရမယ့်အချက်တွေ ရှိပါတယ်။ Echo pin က sensor ကနေ output ထွက်မယ့် pin ဖြစ်ပြီး Raspberry Pi ဆီသို့ input signal အနေနဲ့ ဝင်မှာဖြစ်လို့ 5V signal pulse တွေ ဝင်ခိုင်းလို့ မရပါဘူး။ ဒါကြောင့် Raspberry Pi ရဲ့ GPIO pin ဆီကို ချိတ်ဆက်တဲ့အခါ အခန်း(၅)မှာ ဖော်ပြခဲ့သလိုမျိုး resistor ၂လုံး သုံးပြီး Potential divider တည်ဆောက်ကာ ချိတ်ဆက်ပေးရပါမယ်။ R1 တန်ဖိုးကို 1.5KΩ အသုံးပြုပြီး၊ R2 တန်ဖိုးကို 680Ω အသုံးပြုပါက 3.44V ဝန်းကျင်ရမှာ ဖြစ်လို့ Echo pin ကို Raspberry Pi ရဲ့ GPIO မှာ ချိတ်ဆက်ဖို့ အဆင်ပြေသွားပါလိမ့်မယ်။
 
-<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;V out=V in x \frac{R2}}{R1 + R2}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" /></center>
+<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;Vo ut=V in x \frac{R2}{R1 + R2}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" /></center>
 
 <br>
 
-<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;V out=5V x\frac{1.5KΩ}}{680Ω + 1.5KΩ}=3.44V" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" /></center>
+<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;V out=5V x\frac{1.5KΩ}{680Ω + 1.5KΩ}=3.44V" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" /></center>
 
 <p align="center">
 <img src="/assets/img/ultrasonic/ult_rpi.jpg">
