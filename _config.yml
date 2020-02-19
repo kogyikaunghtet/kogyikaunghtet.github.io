@@ -1,11 +1,8 @@
 title: Kaung Htet Htun
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: > You cannot create experience. You must undergo it.
 permalink: ':title/'
 #baseurl: "/flexible-jekyll" # the subpath of your site, e.g. /blog
-#url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://kogyikaunghtet.ubuntu-mm.net/" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
 author: Kaung Htet Htun
