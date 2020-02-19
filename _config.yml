@@ -1,8 +1,8 @@
 title: Kaung Htet Htun
 description: > You cannot create experience. You must undergo it.
 permalink: ':title/'
-#baseurl: "/flexible-jekyll" # the subpath of your site, e.g. /blog
-url: "https://kogyikaunghtet.ubuntu-mm.net/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "https://kogyikaunghtet.ubuntu-mm.net" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
 author: Kaung Htet Htun
