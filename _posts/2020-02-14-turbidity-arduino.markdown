@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Turbidity Sensor အား Arduino ဖြင့် အသုံးပြုခြင်း
-date: 2020-02-14 13:32:20 +0300
+date: 2020-02-14 13:32:20 +0630
 description: 
 img: turbidity/clear.jpg
 fig-caption: # Add figcaption (optional)
