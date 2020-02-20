@@ -9,6 +9,7 @@ tags: [Raspberry Pi, Book]
 ---
 <p align="center" width="128px" height="128px" border-radius="50%">
 <img src="/assets/img/yan.jpg">
+yan
 </p>
 
 <p align="center">
