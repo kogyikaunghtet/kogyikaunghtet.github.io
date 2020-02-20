@@ -1,7 +1,7 @@
 ---
 layout: post
 title: all about Raspberry Pi
-date: 2020-02-16 13:32:20 +0300
+date: 2020-02-16 13:32:20 +0630
 description: Raspberry Pi အား Python ဖြင့် အသုံးပြုခြင်း
 img: book.jpg
 fig-caption: # Add figcaption (optional)
@@ -27,6 +27,8 @@ Nanyang Technological University, Singapore
 ၁၁၊ ဖေဖော်ဝါရီ၊ ၂၀၂၀
 </p>
 
+<br>
+
 <p align="center" >
 <img width="128px" height="128px" style="border-radius:50%" src="/assets/img/chit.jpg">
 </p>
@@ -44,6 +46,8 @@ Ubuntu Myanmar LoCo Team
 <br>
 ၄၊ ဖေဖော်ဝါရီ၊ ၂၀၂၀
 </p>
+
+<br>
 
 <p align="center">
 <b>စာရေးသူ၏ အမှာစာ</b>
