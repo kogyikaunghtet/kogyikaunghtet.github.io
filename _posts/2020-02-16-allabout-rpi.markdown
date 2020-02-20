@@ -12,6 +12,16 @@ tags: [Raspberry Pi, Book]
 yan
 </p>
 
+img[src~="thumbnail"] {
+   width:128;
+   height:128;
+}
+img[src~="bordered"] {
+   border: 1px solid black;
+}
+
+![yan9a](/assets/img/yan.jpg){:.thumbnail.bordered}
+
 <p align="center">
 <b>ဒေါက်တာ ရန်နိုင်အေး၏ အမှာစာ</b>
 </p>
