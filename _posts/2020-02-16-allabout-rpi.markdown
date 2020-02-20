@@ -8,7 +8,7 @@ fig-caption: # Add figcaption (optional)
 tags: [Raspberry Pi, Book]
 ---
 <p align="center" >
-<img width="128px" height="128px" border-radius="50%" src="/assets/img/yan.jpg">
+<img width="128px" height="128px" style="border-radius:50%" src="/assets/img/yan.jpg">
 yan
 </p>
 
