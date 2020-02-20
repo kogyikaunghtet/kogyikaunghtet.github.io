@@ -7,6 +7,10 @@ img: book.jpg
 fig-caption: # Add figcaption (optional)
 tags: [Raspberry Pi, Book]
 ---
+<p align="center" width="128px" height="128px" border-radius="50%">
+<img src="/assets/img/yan.jpg">
+</p>
+
 <p align="center">
 <b>ဒေါက်တာ ရန်နိုင်အေး၏ အမှာစာ</b>
 </p>
