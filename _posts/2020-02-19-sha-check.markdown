@@ -17,17 +17,19 @@ Raspberry Pi မှာ Raspbian image တပ်ဆင်ဖို့ micro SD ca
 
 တကယ်လို့ Raspbian ကို မရယူပဲ Noobs ကို download ရယူမယ်ဆိုရင်တော့ SD card ထဲကို ထည့်သွင်းတဲ့ အခါ bootable ဖြစ်အောင် လုပ်စရာမလိုပါဘူး။ ရရှိလာတဲ့ Noobs Zip File ကို SD card ထဲ extract ပြုလုပ် ပေးလိုက်ရုံပဲ ဖြစ်ပါတယ်။ Raspbian Buster with desktop ကို Download ရယူတဲ့အခါ အောက် ကပ်လျက်မှာ ပေးထားတဲ့ SHA-256 ကတော့ ကိုယ် Download လုပ်ထားတဲ့ OS File size ပြည့် မပြည့်၊ ပျက်စီးမှုရှိ မရှိကို စစ်ဆေးဖို့ ဖြစ်ပါတယ်။ Secure Hash Algorithms (SHA) checksums အသုံးပြုပြီး စစ်ဆေးရန်အတွက် Terminal ကို ဖွင့်ပြီး hashalot ကို install ပြုလုပ်ပါ။
 
-ubuntu@computer:~$ sudo apt install hashalot
+> ubuntu@computer:~$ sudo apt install hashalot
 
 install လုပ်ပြီးတဲ့အခါ Raspbian image zip file Download ပြုလုပ်ထားတဲ့ directory ကို ဝင်ပြီး အောက်ပါ command နဲ့ စစ်ဆေးပါ။
 
-ubuntu@computer:~$ cd ~/Downloads/
+> ubuntu@computer:~$ cd ~/Downloads/
 
-ubuntu@computer:~/Downloads$ sha256sum 2019-07-10-raspbian-buster.zip
+> ubuntu@computer:~/Downloads$ sha256sum 2019-07-10-raspbian-buster.zip
 
 Raspbian Download စာမျက်နှာမှာ ပေးထားတဲ့ SHA checksum passphrase ဟာ .zip အတွက်ပဲ ပေးထားတဲ့အတွက် .zip File ကိုပဲ စစ်ဆေးပေးရမှာ ဖြစ်ပါတယ်။ အချိန်ခဏ စောင့်ပြီးတဲ့အခါ အောက်မှာ SHA- 256 checksums passphrase တွေပေါ်လာမှာ ဖြစ်ပြီး Download စာမျက်နှာမှာ ပေးထားတဲ့ passphrase နဲ့ ကိုက်ညီတယ်ဆိုရင် OS File size မပျက်စီးဘူးဆိုတာ သိနိုင်ပါတယ်။
 
-
+<p align="center">
+<img src="/assets/img/rpibook/sha-cmd.png">
+</p>
 
 Windows အသုံးပြုသူများ အနေနဲ့ SHA checksums စစ်ဆေးဖို့ကတော့ ကွန်ပျူတာမှာ 7-zip ဆော့ဝဲ နောက်ဆုံး version ကို ထည့်သွင်းထားဖို့ လိုပါမယ်။ ဖိုင်ကို Right click ထောက်လိုက်ပြီး CRC SHA အောက်က SHA-256 ကို နှိပ်ပြီး စစ်ဆေးနိုင်ပါတယ်။
 
