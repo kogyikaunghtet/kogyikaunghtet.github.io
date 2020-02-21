@@ -24,7 +24,7 @@ tags: [Raspberry Pi, Book]
 {% highlight python %}
 from time import sleep
 while 1:
-  temp = int(open('/sys/class/thermal/ thermal_zone0/temp').read()) / 1e3
+  temp = int(open('/sys/class/thermal/thermal_zone0/temp').read()) / 1e3
   print temp
   sleep(1)
 {% endhighlight %}
@@ -39,4 +39,4 @@ while 1:
 <a>ပုံ(၁.၂၈) ၊ CPU temperature စစ်ဆေးခြင်း</a>
 </p>
 
-အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://rpibook.github.io">၁.၅ Raspbian OS အား PC တွင် အသုံးပြုခြင်း</a>
+အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://kogyikaunghtet.github.io/rpi-pc-os/">၁.၅ Raspbian OS အား PC တွင် အသုံးပြုခြင်း</a>
