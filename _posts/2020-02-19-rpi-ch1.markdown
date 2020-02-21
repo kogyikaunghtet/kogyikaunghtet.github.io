@@ -7,7 +7,7 @@ img: rpibook/raspberry-pi.jpg
 fig-caption: # Add figcaption (optional)
 tags: [Raspberry Pi, Book]
 ---
-Raspberry Pi ဆိုတာ Credit Card အရွယ်အစားမျှသာ ရှိတဲ့ Single Board Computer (SBC) တစ်ခု ဖြစ်ပြီး ကျောင်းများနဲ့၊ ဖွံ့ဖြိုးဆဲနိုင်ငံများမှာ Computer Science သင်ကြားရာမှာ အထောက်အကူ ဖြစ်စေဖို့ UK ရှိ Raspberry Pi Foundation က စတင်ခဲ့ပါတယ်။ ၂၀၁၂၊ ဖေဖော်ဝါရီ၊ ၂၄ ရက်နေ့မှာ ပထမဦးဆုံးမျိုးဆက်ဖြစ်တဲ့ Raspberry Pi 1 Model A စတင် ထွက်ရှိခဲ့ပြီး၊ နောက်ဆုံးထွက်ရှိထားတာကတော့ ၂၀၁၉၊ ဇွန်လမှာမှ ထွက်ရှိခဲ့တဲ့ Raspberry Pi 4 Model B ဖြစ်ပါတယ်။ မြန်မာနိုင်ငံမှာတော့ ၂၀၁၃ခုနှစ်မှာ Ubuntu Myanmar LoCo Team (https://ubuntu-mm.net/) က Raspberry Pi နဲ့ Linux ကို တွဲဖက်ပြီး Linpi ဆိုတဲ့ event များ ကျင်းပကာ စတင်မိတ်ဆက်ခဲ့ပါတယ်။ 
+Raspberry Pi ဆိုတာ Credit Card အရွယ်အစားမျှသာ ရှိတဲ့ Single Board Computer (SBC) တစ်ခု ဖြစ်ပြီး ကျောင်းများနဲ့၊ ဖွံ့ဖြိုးဆဲနိုင်ငံများမှာ Computer Science သင်ကြားရာမှာ အထောက်အကူ ဖြစ်စေဖို့ UK ရှိ Raspberry Pi Foundation က စတင်ခဲ့ပါတယ်။ ၂၀၁၂၊ ဖေဖော်ဝါရီ၊ ၂၄ ရက်နေ့မှာ ပထမဦးဆုံးမျိုးဆက်ဖြစ်တဲ့ Raspberry Pi 1 Model A စတင် ထွက်ရှိခဲ့ပြီး၊ နောက်ဆုံးထွက်ရှိထားတာကတော့ ၂၀၁၉၊ ဇွန်လမှာမှ ထွက်ရှိခဲ့တဲ့ Raspberry Pi 4 Model B ဖြစ်ပါတယ်။ မြန်မာနိုင်ငံမှာတော့ ၂၀၁၃ခုနှစ်မှာ <a style="text-decoration:none" href="https://ubuntu-mm.net/">Ubuntu Myanmar LoCo Team</a> က Raspberry Pi နဲ့ Linux ကို တွဲဖက်ပြီး Linpi ဆိုတဲ့ event များ ကျင်းပကာ စတင်မိတ်ဆက်ခဲ့ပါတယ်။ 
 
 <p align="center">
 <img src="/assets/img/rpibook/eben_upton.png">
@@ -39,4 +39,4 @@ Raspberry Pi 4 မတိုင်ခင်က ထွက်ရှိခဲ့တ�
 <a>ပုံ(၁.၄) ၊ Raspberry Pi 3 Model B+</a>
 </p>
 
-ဆက်လက်ဖတ်ရှုရန် - [၁.၁ Operating Systems](https://rpibook.github.io)
+အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://rpibook.github.io">၁.၁ Operating Systems</a>
