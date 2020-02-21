@@ -9,7 +9,7 @@ tags: [Raspberry Pi, Book]
 ---
 Raspbian OS တင်ပြီးသား SD card ကို အကြောင်းအမျိုးမျိုးကြောင့် Format ချလိုရင် Gparted ဆိုတဲ့ ဆော့ဝဲ သုံးလို့ ရပါတယ်။ Ubuntu Software Center မှာ Gparted လို့ ရိုက်ရှာပြီး install ထည့်သွင်းလို့ ရသလို terminal ကနေလည်း အောက်ပါ command နဲ့ install လို့ ရပါတယ်။
 
-> $ sudo apt-get install gparted
+`$ sudo apt-get install gparted`
 
 <p align="center">
 <img src="/assets/img/rpibook/gparted1.png">

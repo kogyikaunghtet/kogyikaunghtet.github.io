@@ -47,7 +47,7 @@ Raspbian OS ထည့်သွင်းပြီးသား SD card ကို R
 
 Restart ချပြီး ပြန်တက်လာရင် Raspberry Pi ရဲ့ Configuration Tool ကို ဖွင့်ဖို့ Terminal ကနေ အောက်ပါ command ရိုက်လိုက်ပါ။
 
-> $ sudo raspi-config
+`$ sudo raspi-config`
 
 Configuration Tool မှာ mouse နဲ့ ရွှေ့လို့ click လို့ မရတဲ့အတွက် ကီးဘုတ်က မြှားနဲ့ Tab and Enter ကိုပဲ အသုံးပြုပေးပါ။ နံပါတ်(၁) မှာ user password  ပြောင်းလို့ရပါတယ်။ Welcome dialogue box မှာတုန်းက password အသစ် ပေးခဲ့တယ်ဆိုရင် ထပ်လုပ်စရာမလိုတော့ပါဘူး။ wifi အသစ် ထပ်ချိတ်ဖို့၊ default hostname ဖြစ်တဲ့ raspberrypi ကို စိတ်ကြိုက်ပြောင်းလဲသတ်မှတ်ဖို့ နံပါတ်(၂)ကို ရွေးနိုင်ပါတယ်။ နံပါတ်(၃) Boot Options မှာ boot စတက်တဲ့ အခါ Command Line Interface နဲ့ တက်မလား၊ Desktop နဲ့ တက်မလား ရွေးချယ်နိုင်ပါတယ်။ နံပါတ်(၄) Localisation Options က Welcome dialogue box မှာ သတ်မှတ်ခဲ့ပြီးသားမို့ ကျော်လိုက်ပါ။ နံပါတ်(၅) လည်း မဆိုင်သေးတာမို့ ကျော်လိုက်ပါ။ နံပါတ်(၆) Overclock ကတော့ CPU clock speed ကို မြှင့်တင်ဖို့ ဖြစ်ပြီး CPU ကို ပူလာစေနိုင်တဲ့အတွက် ကိုယ့်ရဲ့ Raspberry Pi ကို Cooling solution ကောင်းကောင်းမပေးနိုင်ဘူးဆိုရင် မပြုလုပ်သင့်ပါဘူး။ ယခု နံပါတ်(၇) Advanced Options ကို ရွေးချယ်ပြီး Enter ခေါက်လိုက်ပါ။
 
