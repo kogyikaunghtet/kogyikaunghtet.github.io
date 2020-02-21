@@ -45,4 +45,4 @@ Windows အသုံးပြုသူများ အနေနဲ့ SHA checks
 <a>ပုံ(၁.၈) ၊ SHA-256 Passphrase of Raspbian-Buster.zip</a>
 </p>
 
-အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://rpibook.github.io">၁.၁.၂ SD card ပေါ်တွင် Raspbian image တပ်ဆင်ခြင်း</a>
+အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://kogyikaunghtet.github.io/sdcard/">၁.၁.၂ SD card ပေါ်တွင် Raspbian image တပ်ဆင်ခြင်း</a>
