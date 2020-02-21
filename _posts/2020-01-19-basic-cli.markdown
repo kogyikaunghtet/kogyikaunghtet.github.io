@@ -13,10 +13,10 @@ Raspberry Pi ကို စတင်လေ့လာသူတွေ အနေန�
 
 nano ကို စတင်ဖို့ Terminal ဖွင့်ပြီး အောက်ပါအတိုင်း နှစ်သက်ရာဖိုင်တစ်ခု တည်ဆောက်လိုက်ပါ။
 
-> $ nano file.txt
+`$ nano file.txt`
 
 <p align="center">
-<img src="/assets/img/rpibook/rpi-os-pc.png">
+<img src="/assets/img/rpibook/cli1.png">
 <br>
-<a>ပုံ(၁.၃၁) ၊ Software Configuration Tool on PC</a>
+<a>ပုံ(၁.၃၂) ၊ nano text editor</a>
 </p>
