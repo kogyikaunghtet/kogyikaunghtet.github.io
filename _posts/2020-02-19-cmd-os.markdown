@@ -27,8 +27,8 @@ Download ဆွဲထားတဲ့ Raspbian image zip file ကို extract �
 
 image ကူးယူချိန် ခဏစောင့်ပြီးတဲ့အခါ အောက်ပါကဲ့သို့ status ပေါ်လာရင် SD card ကို Raspberry Pi မှာ တပ်ဆင် အသုံးပြုလို့ရပါပြီ။
 
-> 901+0 records in \
-> 901+0 records out \ 
+> 901+0 records in <br />
+> 901+0 records out <br /> 
 > 3779067904 bytes (3.8 GB, 3.5 GiB) copied, 338.135 s, 11.2 MB/s
 
 စိတ်ကြိုက် setup လုပ်ပြီးသား SD card ကို image backup လုပ်ချင်တယ် ဆိုရင်လည်း dd command ကိုပဲ input, output ပြောင်းပြီး သုံးနိုင်ပါတယ်။ 
