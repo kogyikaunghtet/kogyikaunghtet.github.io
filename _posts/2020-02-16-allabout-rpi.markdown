@@ -64,7 +64,7 @@ Ubuntu Myanmar LoCo Team
 <br>
 Ubuntu Myanmar LoCo Team
 <br>
-၄၊ ဖေဖော်ဝါရီ၊ ၂၀၂၀
+၁၉၊ ဖေဖော်ဝါရီ၊ ၂၀၂၀
 </p>
 
 <br>
