@@ -23,7 +23,7 @@ Raspbian image ကို SD card ထဲ ထည့်ဖို့ Unix utility �
 
 Download ဆွဲထားတဲ့ Raspbian image zip file ကို extract မပြုလုပ်ထားဘူး ဆိုရင်တော့ အောက်ပါ command သုံးနိုင်ပါတယ်။
 
-> $ unzip -p 2019-07-10-raspbian-buster.zip | sudo dd of=/dev/sdb1 bs=4M conv=fsync
+> $ unzip -p 2019-07-10-raspbian-buster.zip \| sudo dd of=/dev/sdb1 bs=4M conv=fsync
 
 image ကူးယူချိန် ခဏစောင့်ပြီးတဲ့အခါ အောက်ပါကဲ့သို့ status ပေါ်လာရင် SD card ကို Raspberry Pi မှာ တပ်ဆင် အသုံးပြုလို့ရပါပြီ။
 
