@@ -24,7 +24,7 @@ tags: [Raspberry Pi, Book]
 {% highlight python %}
 from time import sleep
 while 1:
-  temp = int(open('/sys/class/thermal/thermal_zone0/temp').read()) / 1e3
+  temp = int(open('/sys/class/thermal/ thermal_zone0/temp').read()) / 1e3
   print temp
   sleep(1)
 {% endhighlight %}
