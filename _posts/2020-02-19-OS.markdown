@@ -1,0 +1,25 @@
+---
+layout: post
+title: ၁.၁ Operating Systems
+date: 2020-02-19 11:32:20 +0630
+description: Raspberry Pi စာအုပ်
+img: rpibook/raspbian.png
+fig-caption: # Add figcaption (optional)
+tags: [Raspberry Pi, Book]
+---
+Raspberry Pi မှာ အသုံးပြုရမယ့် Operating System အနေနဲ့ Debian အခြေပြု Linux Distribution တစ်ခု ဖြစ်တဲ့ Raspbian OS ကို အသုံးပြုနိုင်ပြီး၊ တခြား third-party OS တွေဖြစ်တဲ့ Ubuntu, Window 10 IoT Core တို့ကိုလည်း သုံးနိုင်ပါတယ်။ Raspberry Pi ရဲ့ CPU Architecture အနေနဲ့ RISC (Reduced Instruction Set Computer) သုံးထားတာ ဖြစ်တဲ့အတွက် RISC OS ကိုလည်း တင်သုံးနိုင်ပါတယ်။ တခြား အသုံးပြုနိုင်တဲ့ OS များကို သူ့ရဲ့ Download စာမျက်နှာဖြစ်တဲ့ 
+<a style="text-decoration:none" href="https://www.raspberrypi.org/downloads/">ဒီနေရာ</a>မှာ သွားကြည့်နိုင်ပါတယ်။ ဒီစာအုပ်ထဲမှာ ရှေ့ဆက် ဖော်ပြပေးမယ့် လုပ်ငန်းစဉ် အတော်များများမှာလည်း Raspberry Pi နဲ့ ချိတ်ဆက်အသုံးပြုမယ့် ကွန်ပျူတာကို Debian အခြေပြု Linux ပဲ ဖြစ်တဲ့ Ubuntu Operating System ကို သုံးသွားမှာ ဖြစ်ပါတယ်။
+
+Raspbian ကို Mike Thompson နဲ့ Peter Green ဆိုသူ ၂ဦးက ဖန်တီးခဲ့တာ ဖြစ်ပြီးတော့ Desktop သွင်ပြင်ကို ပေါ့ပါးတဲ့၊ Open Source လည်း ဖြစ်တဲ့ LXDE, Lightweight X11 Desktop Environment နဲ့ တည်ဆောက် ထားတာ ဖြစ်ပါတယ်။ ဒီနေရာမှာ Raspberry Pi ရဲ့ Open Source နဲ့ ပတ်သက်ပြီး တစ်ခု ပြောစရာ ရှိပါတယ်။  Raspbian Operating System က Open Source Firmware တစ်ခု ဖြစ်နေပေမယ့် Board ကတော့ Open hardware မဟုတ်ပါဘူး။ Raspberry Pi ရဲ့ Schematic diagram ကိုတော့ ရရှိနိုင်ပေမယ့် Raspberry Pi က Proprietary Processor Platform ကို အခြေခံထားတာ ဖြစ်တဲ့အတွက် Processor ရဲ့ full datasheet ကို Broadcom က မပေးထားပါဘူး။ ရယူလိုတယ်ဆိုရင် Broadcom နဲ့ Non Disclosure Agreement (NDA) ကို Sign ထိုးဖို့ လိုပါမယ်။ ပြီးရင် Processor chip တွေ ဘယ်လောက်ဝယ်ယူမလဲဆိုတဲ့ ကိုယ့်ရဲ့ Business model ကို ချပြရပါမယ်။ ဒါကြောင့် ခု ဝယ်ယူလို့ ရနေတဲ့ Raspberry Pi တွေအားလုံးဟာ Raspberry Pi Foundation က ထုတ်တဲ့ အစစ်တွေပဲ ဖြစ်ပါတယ်။ Arduino Board ကဲ့သို့ Clone ထုတ်ခြင်းမျိုးတွေ မရှိပါဘူး။ ထွက်ရှိပြီးသမျှ Raspberry Pi တွေရဲ့ Schematic Diagram များကို အောက်ပါ Link မှာ သွားရောက်ကြည့်ရှုနိုင်ပါတယ်။
+
+<a style="text-decoration:none" href="https://www.raspberrypi.org/documentation/hardware/raspberrypi ">Schematic Diagram များ ကြည့်ရှုရန်</a>
+
+<p align="center">
+<img src="/assets/img/rpibook/Raspbian-OS.jpeg">
+<br>
+<a>ပုံ(၁.၅) ၊ Raspbian Operating System Logo</a>
+</p>
+
+Raspbian OS နဲ့ ပတ်သက်ပြီး ဗဟုသုတအနေနဲ့ နောက်ထပ်သိထားသင့်တဲ့ တစ်ချက်ကတော့ version name တွေပဲ ဖြစ်ပါတယ်။ Debian Linux Distro (Distro: Distribution ရဲ့ အတိုကောက်) ကို အခြေပြု ထုတ်ထားတဲ့ Raspbian ဟာ Debian ရဲ့ code name တွေ ပြောင်းလဲတာနဲ့အမျှ သူ့နာမည် နောက်မှာလည်း အဆိုပါ code name လေးတွေ လိုက်ထည့်ပါတယ်။ နည်းပညာအသစ်တွေ ပါဝင်လာတဲ့ version အသစ်တွေကို Debian က ၂နှစ် တစ်ခါ ထုတ်ဝေပါတယ်။ Raspberry Pi ထွက်ရှိပြီး မကြာခင်၊ ၂၀၁၃ ခုနှစ်မှာ ထွက်ခဲ့တဲ့ Debian ရဲ့ code name ဟာ wheezy ဖြစ်ပါတယ်။ ဒါကြောင့် Raspberry Pi ရဲ့ ပထမဆုံး OS ဟာ Raspbian wheezy ဖြစ်ပါတယ်။ အဲ့ဒီနောက် Raspbian jessie, Raspbian stretch တို့ ၂နှစ်တစ်ခါ ထွက်ရှိခဲ့ပြီး၊ ၆နှစ်ကြာခဲ့ပြီဖြစ်တဲ့ ၂၀၁၉ ခုနှစ် မှာတော့ Raspbian buster ထွက်ရှိ လာပါတယ်။ အဲ့ဒီ buster ဆိုတဲ့ နာမည်လေးကတော့ Toy Story ကာတွန်း ဇာတ်လမ်းထဲက ဇာတ်ကောင်ခွေးကလေးရဲ့ နာမည်ကို ယူထားတာလည်း ဖြစ်ပါတယ်။ debian.org ရဲ့ ကြေငြာချက် အရ နောက်ထပ် ထွက်ရှိလာမယ့် OS name ဟာ Raspbian bullseye ဖြစ်လာပါလိမ့်မယ်။
+
+အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://rpibook.github.io">၁.၁.၁ Raspbian image ရယူခြင်းနှင့် SHA checksums စစ်ဆေးခြင်း</a>
