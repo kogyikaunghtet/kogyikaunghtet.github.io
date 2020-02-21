@@ -1,0 +1,42 @@
+---
+layout: post
+title: ၁.၄ CPU Temperature စစ်ဆေးခြင်း
+date: 2020-02-19 17:32:20 +0630
+description: Raspberry Pi စာအုပ်
+img: rpibook/raspberry-pi.jpg
+fig-caption: # Add figcaption (optional)
+tags: [Raspberry Pi, Book]
+---
+ပုံမှန်အားဖြင့် Raspberry Pi အသုံးပြုတဲ့အခါ CPU မှာ heatsink တွေ၊ cooling fan တွေ မတပ်ထားလည်း CPU ကို safe temperature မှာ ရှိနေဖို့ Rapsberry Pi က ထိန်းညှိပေးတဲ့အတွက် သုံးလို့ အဆင်ပြေပါတယ်။ ဒါပေမယ့် Face Recognition လို Project တွေ လုပ်ဖို့ OpenCV တင် run တဲ့အခါ CPU usage က 100% ထိ ဖြစ်လာနိုင်ပြီး 85°C လောက်ထိ ပူလာနိုင်ပါတယ်။ heatsink နဲ့ 5V cooling fan လေးတွေက ဈေးလည်း သိပ်မကြီးတဲ့အတွက် တပ်သုံးကြဖို့ အကြံပြုလိုပါတယ်။ အောက်ပါ command ကို Raspberry Pi ရဲ့ Terminal မှာ ရိုက်ထည့်ပြီး CPU temperature ကို စစ်ဆေးကြည့်နိုင်ပါတယ်။
+
+> $ /opt/vc/bin/vcgencmd measure_temp <br />
+> temp=37.0'C
+
+အောက်ပါ command ကို run ရင်တော့ ဒီဂရီ စင်တီဂရိတ်ကို milli တန်ဖိုးနဲ့ ဖော်ပြပေးပါလိမ့်မယ်။
+
+> $ cat /sys/class/thermal/thermal_zone0/temp <br />
+> 37014
+
+အဲ့ဒီ milli degrees centigrade တန်ဖိုးကို 1000 နဲ့ စားပြီး print ထုတ်ပြပေးတဲ့ python program လေးကို ရေးပေးလိုက်ပါတယ်။ cpu.py ဆိုတဲ့ ဖိုင်ကို အောက်ပါ command နဲ့ တည်ဆောက်ပြီး python code တွေကို ထည့်ပေးလိုက်ပါ။
+
+> $ sudo nano cpu.py
+
+{% highlight python %}
+from time import sleep
+while 1:
+  temp = int(open('/sys/class/thermal/thermal_zone0/temp').read()) / 1e3
+  print temp
+  sleep(1)
+{% endhighlight %}
+
+တည်ဆောက်ပြီးရင် အောက်ပါ command အတိုင်း run ကြည့်လိုက်ပါ။ ရပ်လိုရင် Ctrl+C ကို နှိပ်ပါ။
+
+> $ sudo python cpu.py
+
+<p align="center">
+<img src="/assets/img/rpibook/cpu.png">
+<br>
+<a>ပုံ(၁.၂၈) ၊ CPU temperature စစ်ဆေးခြင်း</a>
+</p>
+
+အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://rpibook.github.io">၁.၅ Raspbian OS အား PC တွင် အသုံးပြုခြင်း</a>

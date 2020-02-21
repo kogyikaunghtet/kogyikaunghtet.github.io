@@ -81,4 +81,4 @@ unallocated ဖြစ်သွားရင် အပေါင်းသင်္�
 <a>ပုံ(၁.၂၇) ၊ SD card Volume Name သတ်မှတ်ပြီး Format ချခြင်း</a>
 </p>
 
-အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://rpibook.github.io">၁.၄ CPU Temperature စစ်ဆေးခြင်း</a>
+အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://kogyikaunghtet.github.io/cpu-temp/">၁.၄ CPU Temperature စစ်ဆေးခြင်း</a>
