@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ၁.၃ SD card အား Gparted ဖြင့် format ချခြင်း
-date: 2020-02-19 16:32:20 +0630
+date: 2020-01-19 16:32:20 +0630
 description: Raspberry Pi စာအုပ်
 img: rpibook/raspberry-pi.jpg
 fig-caption: # Add figcaption (optional)

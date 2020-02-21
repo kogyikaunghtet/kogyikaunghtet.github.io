@@ -1,0 +1,22 @@
+---
+layout: post
+title: ၁.၆ Nano Text Editor နှင့် သိမှတ်ဖွယ်ရာ အခြေခံ Command များ
+date: 2020-01-19 19:32:20 +0630
+description: Raspberry Pi စာအုပ်
+img: rpibook/raspberry-pi.jpg
+fig-caption: # Add figcaption (optional)
+tags: [Raspberry Pi, Book]
+---
+Raspberry Pi ကို စတင်လေ့လာသူတွေ အနေနဲ့ အရင်က Linux Operating System တစ်ခုခုကို မသုံးခဲ့ဖူးရင် Terminal တွေ၊ Command Line တွေက အစိမ်းသက်သက်ကြီး ဖြစ်နေနိုင်ပါတယ်။ Raspbian OS ရဲ့ Desktop GUI ပေါ်မှာလည်း Application တွေ အသုံးပြုနိုင်ပေမယ့် လုပ်ဆောင်ချက် အတော်များများကို Command Line Interface (CLI) မှသာလျှင် စီမံနိုင်မှာ ဖြစ်ပါတယ်။ ရှေ့ဆက်ပြီးတော့လည်း Raspberry Pi မှာ File တွေ၊ Directory တွေ တည်ဆောက်တာကအစ GPIO တွေ ထိန်းချုပ်ခြင်း၊ Server တည်ဆောက်ခြင်းတွေ အထိ command line တွေပဲ အသုံးပြုသွားမှာ ဖြစ်လို့ မသိမဖြစ် လိုအပ်တဲ့ Command တချို့ကို ဖော်ပြပေးသွားပါ့မယ်။
+
+ပထမဦးစွာ nano text editor အကြောင်း ပြောပြလိုပါတယ်။ CLI မှာ System file တစ်ခုရဲ့ စာသားများ ပြုပြင်ခြင်း၊ ဖိုင်တည်ဆောက်ခြင်းတို့အတွက် text editor အနေနဲ့ nano အပြင် vim ဆိုတဲ့ editor ကိုလည်း သုံးလို့ရပါတယ်။ vim က ပိုမို powerful ဖြစ်ပေမယ့် ခုမှစသုံးမယ့်သူတွေအတွက် ရှုပ်ထွေးစေနိုင်လို့  advanced user တွေအတွက်ပဲ အဆင်ပြေပါတယ်။  nano text editor ကတော့ အသုံးပြုရ လွယ်ကူလို့ စတင်အသုံးပြုမယ့်သူတွေ အတွက် အသင့်တော်ဆုံး ဖြစ်ပါတယ်။ nano မှာ program file တွေ ရေးသား တည်ဆောက်တဲ့ အခါမှာလည်း Syntax colouring စနစ်ပါဝင်လို့ code တွေကို ဖတ်ရှုရ အဆင်ပြေစေပါတယ်။
+
+nano ကို စတင်ဖို့ Terminal ဖွင့်ပြီး အောက်ပါအတိုင်း နှစ်သက်ရာဖိုင်တစ်ခု တည်ဆောက်လိုက်ပါ။
+
+> $ nano file.txt
+
+<p align="center">
+<img src="/assets/img/rpibook/rpi-os-pc.png">
+<br>
+<a>ပုံ(၁.၃၁) ၊ Software Configuration Tool on PC</a>
+</p>
