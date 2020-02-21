@@ -27,4 +27,4 @@ Windows ကနေ Raspbian image ကို SD card မှာ bootable ဖြစ�
 <a>ပုံ(၁.၁၀) ၊ Win32 Disk Imager အသုံးပြုခြင်း</a>
 </p>
 
-အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://kogyikaunghtet.github.io/os-cmd/">၁.၁.၃ Command Line မှတဆင့် Raspbian image တပ်ဆင်ခြင်း</a>
+အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://kogyikaunghtet.github.io/cmd-os/">၁.၁.၃ Command Line မှတဆင့် Raspbian image တပ်ဆင်ခြင်း</a>
