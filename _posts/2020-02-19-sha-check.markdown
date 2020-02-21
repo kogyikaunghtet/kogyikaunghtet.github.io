@@ -3,7 +3,7 @@ layout: post
 title: ၁.၁.၁ Raspbian image ရယူခြင်းနှင့် SHA checksums စစ်ဆေးခြင်း
 date: 2020-02-19 12:32:20 +0630
 description: Raspberry Pi စာအုပ်
-img: rpibook/raspbian.png
+img: rpibook/raspberry-pi.jpg
 fig-caption: # Add figcaption (optional)
 tags: [Raspberry Pi, Book]
 ---
