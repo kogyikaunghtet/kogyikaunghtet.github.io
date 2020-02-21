@@ -35,4 +35,4 @@ image ကူးယူချိန် ခဏစောင့်ပြီးတဲ�
 
 > $ sudo dd bs=4M if=/dev/sdb1 of=/home/phoewa/raspberry.img
 
-အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://rpibook.github.io">၁.၂ Raspberry Pi အား Setup ပြုလုပ်ခြင်း</a>
+အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://kogyikaunghtet.github.io/rpi-setup/">၁.၂ Raspberry Pi အား Setup ပြုလုပ်ခြင်း</a>
