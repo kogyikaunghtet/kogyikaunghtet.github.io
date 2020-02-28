@@ -37,4 +37,4 @@ Raspbian OS ကို board ပေါ်မှာ တပ်ဆင်အသုံ
 
 ယခု Raspbian Desktop OS ကလည်း lightweight PIXEL desktop environment ပေါ်မှာ အခြေပြုတည်ဆောက်ထားတဲ့ Debian distribution တစ်ခု ဖြစ်ပါတယ်။ ဒါကြောင့် old computer တွေမှာ bootable USB drive တစ်ခုနဲ့ Live OS အဖြစ် အသုံးပြုပြီး နောက်အခန်းမှာ ဖော်ပြမယ့် နက်ဝက် ချိတ်ဆက်ခြင်းမျိုးတွေကို Raspberry Pi board မရှိသော်လည်း ဆက်လက် လေ့လာနိုင်ပါတယ်။
 
-အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://rpibook.github.io">၁.၆ Nano Text Editor နှင့် သိမှတ်ဖွယ်ရာ အခြေခံ Command များ</a>
+အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://kogyikaunghtet.github.io/basic-cli/">၁.၆ Nano Text Editor နှင့် သိမှတ်ဖွယ်ရာ အခြေခံ Command များ</a>
