@@ -1,0 +1,68 @@
+---
+layout: post
+title: ၁.၂ Raspberry Pi အား Setup ပြုလုပ်ခြင်း
+date: 2020-01-19 15:32:20 +0630
+description: Raspberry Pi စာအုပ်
+img: rpibook/raspberry-pi.jpg
+fig-caption: # Add figcaption (optional)
+tags: [Raspberry Pi, Book]
+---
+Raspbian OS ထည့်သွင်းပြီးသား SD card ကို Raspberry Pi ရဲ့ SD card slot ထဲ ထည့်ပါ။ USB port တွေမှာ Keyboard, Mouse တွေ ချိတ်ဆက်၊ HDMI port မှာ Monitor ကို ချိတ်ဆက်ပြီး Raspberry Pi ကို ပါဝါ ပေးလိုက်ရင် Raspbian OS တက်လာပါမယ်။ Raspbian Desktop GUI တက်လာတဲ့အခါ Welcome dialogue box ကို တွေ့ရပါမယ်။ Next ကိုနှိပ်ပြီး Location တွေ Timezone တွေ တခါတည်း သတ်မှတ်ခဲ့လို့ ရပါတယ်။
+
+<p align="center">
+<img src="/assets/img/rpibook/welcome1.png">
+<br>
+<a>ပုံ(၁.၁၁) ၊ Welcome dialogue box</a>
+</p>
+
+<p align="center">
+<img src="/assets/img/rpibook/welcome2.png">
+<br>
+<a>ပုံ(၁.၁၂) ၊ Location ရွေးချယ်သတ်မှတ်ခြင်း</a>
+</p>
+
+<p align="center">
+<img src="/assets/img/rpibook/welcome3.png">
+<br>
+<a>ပုံ(၁.၁၃) ၊ Password သတ်မှတ်ခြင်း</a>
+</p>
+
+<p align="center">
+<img src="/assets/img/rpibook/welcome4.png">
+<br>
+<a>ပုံ(၁.၁၄) ၊ Wifi ချိတ်ဆက်ခြင်း</a>
+</p>
+
+<p align="center">
+<img src="/assets/img/rpibook/welcome5.png">
+<br>
+<a>ပုံ(၁.၁၅) ၊ Software Update ပြုလုပ်ခြင်း</a>
+</p>
+
+<p align="center">
+<img src="/assets/img/rpibook/welcome6.png">
+<br>
+<a>ပုံ(၁.၁၆) ၊ Setup Complete</a>
+</p>
+
+Restart ချပြီး ပြန်တက်လာရင် Raspberry Pi ရဲ့ Configuration Tool ကို ဖွင့်ဖို့ Terminal ကနေ အောက်ပါ command ရိုက်လိုက်ပါ။
+
+`$ sudo raspi-config`
+
+Configuration Tool မှာ mouse နဲ့ ရွှေ့လို့ click လို့ မရတဲ့အတွက် ကီးဘုတ်က မြှားနဲ့ Tab and Enter ကိုပဲ အသုံးပြုပေးပါ။ နံပါတ်(၁) မှာ user password  ပြောင်းလို့ရပါတယ်။ Welcome dialogue box မှာတုန်းက password အသစ် ပေးခဲ့တယ်ဆိုရင် ထပ်လုပ်စရာမလိုတော့ပါဘူး။ wifi အသစ် ထပ်ချိတ်ဖို့၊ default hostname ဖြစ်တဲ့ raspberrypi ကို စိတ်ကြိုက်ပြောင်းလဲသတ်မှတ်ဖို့ နံပါတ်(၂)ကို ရွေးနိုင်ပါတယ်။ နံပါတ်(၃) Boot Options မှာ boot စတက်တဲ့ အခါ Command Line Interface နဲ့ တက်မလား၊ Desktop နဲ့ တက်မလား ရွေးချယ်နိုင်ပါတယ်။ နံပါတ်(၄) Localisation Options က Welcome dialogue box မှာ သတ်မှတ်ခဲ့ပြီးသားမို့ ကျော်လိုက်ပါ။ နံပါတ်(၅) လည်း မဆိုင်သေးတာမို့ ကျော်လိုက်ပါ။ နံပါတ်(၆) Overclock ကတော့ CPU clock speed ကို မြှင့်တင်ဖို့ ဖြစ်ပြီး CPU ကို ပူလာစေနိုင်တဲ့အတွက် ကိုယ့်ရဲ့ Raspberry Pi ကို Cooling solution ကောင်းကောင်းမပေးနိုင်ဘူးဆိုရင် မပြုလုပ်သင့်ပါဘူး။ ယခု နံပါတ်(၇) Advanced Options ကို ရွေးချယ်ပြီး Enter ခေါက်လိုက်ပါ။
+
+<p align="center">
+<img src="/assets/img/rpibook/advanced-op.png">
+<br>
+<a>ပုံ(၁.၁၇) ၊ Advanced Options</a>
+</p>
+
+ထိပ်ဆုံးက Expand Filesystem ကို ရွေးပြီး Enter ခေါက်ပေးလိုက်ရင် SD card Storage ကို root partition မှာ အပြည့်အဝ သုံးနိုင်အောင် resize လုပ်ပေးသွားပါလိမ့်မယ်။ ပြီးသွားပြီဆိုရင် ကီးဘုတ်က Tab ကို နှိပ်ပြီး Finish ရွေးကာ Enter ခေါက်လိုက်ပါ။ reboot ချခိုင်းရင် ချပေးလိုက်ပါ။
+
+<p align="center">
+<img src="/assets/img/rpibook/expand-filesystem.png">
+<br>
+<a>ပုံ(၁.၁၈) ၊ Expand Filesystem ကို ရွေးချယ်ခြင်း</a>
+</p>
+
+အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://kogyikaunghtet.github.io/gparted-format/">၁.၃ SD card အား Gparted ဖြင့် format ချခြင်း</a>

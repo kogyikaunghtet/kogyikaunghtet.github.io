@@ -1,0 +1,222 @@
+---
+layout: post
+title: ၁.၆ Nano Text Editor နှင့် သိမှတ်ဖွယ်ရာ အခြေခံ Command များ
+date: 2020-01-19 19:32:20 +0630
+description: Raspberry Pi စာအုပ်
+img: rpibook/raspberry-pi.jpg
+fig-caption: # Add figcaption (optional)
+tags: [Raspberry Pi, Book]
+---
+Raspberry Pi ကို စတင်လေ့လာသူတွေ အနေနဲ့ အရင်က Linux Operating System တစ်ခုခုကို မသုံးခဲ့ဖူးရင် Terminal တွေ၊ Command Line တွေက အစိမ်းသက်သက်ကြီး ဖြစ်နေနိုင်ပါတယ်။ Raspbian OS ရဲ့ Desktop GUI ပေါ်မှာလည်း Application တွေ အသုံးပြုနိုင်ပေမယ့် လုပ်ဆောင်ချက် အတော်များများကို Command Line Interface (CLI) မှသာလျှင် စီမံနိုင်မှာ ဖြစ်ပါတယ်။ ရှေ့ဆက်ပြီးတော့လည်း Raspberry Pi မှာ File တွေ၊ Directory တွေ တည်ဆောက်တာကအစ GPIO တွေ ထိန်းချုပ်ခြင်း၊ Server တည်ဆောက်ခြင်းတွေ အထိ command line တွေပဲ အသုံးပြုသွားမှာ ဖြစ်လို့ မသိမဖြစ် လိုအပ်တဲ့ Command တချို့ကို ဖော်ပြပေးသွားပါ့မယ်။
+
+ပထမဦးစွာ nano text editor အကြောင်း ပြောပြလိုပါတယ်။ CLI မှာ System file တစ်ခုရဲ့ စာသားများ ပြုပြင်ခြင်း၊ ဖိုင်တည်ဆောက်ခြင်းတို့အတွက် text editor အနေနဲ့ nano အပြင် vim ဆိုတဲ့ editor ကိုလည်း သုံးလို့ရပါတယ်။ vim က ပိုမို powerful ဖြစ်ပေမယ့် ခုမှစသုံးမယ့်သူတွေအတွက် ရှုပ်ထွေးစေနိုင်လို့  advanced user တွေအတွက်ပဲ အဆင်ပြေပါတယ်။  nano text editor ကတော့ အသုံးပြုရ လွယ်ကူလို့ စတင်အသုံးပြုမယ့်သူတွေ အတွက် အသင့်တော်ဆုံး ဖြစ်ပါတယ်။ nano မှာ program file တွေ ရေးသား တည်ဆောက်တဲ့ အခါမှာလည်း Syntax colouring စနစ်ပါဝင်လို့ code တွေကို ဖတ်ရှုရ အဆင်ပြေစေပါတယ်။
+
+nano ကို စတင်ဖို့ Terminal ဖွင့်ပြီး အောက်ပါအတိုင်း နှစ်သက်ရာဖိုင်တစ်ခု တည်ဆောက်လိုက်ပါ။
+
+`$ nano file.txt`
+
+<p align="center">
+<img src="/assets/img/rpibook/cli1.png">
+<br>
+<a>ပုံ(၁.၃၂) ၊ nano text editor</a>
+</p>
+
+စာသားများ ဖြည့်စွက်ပြီးနောက် Ctrl+O (Ctrl key ကို ဖိနှိပ်ထားပြီး O ကို နှိပ်) နှိပ်ကာ Write Out (save) လုပ်နိုင်ပါတယ်။ File Name ပြောင်းမှာလား မေးရင် Enter ကိုပဲ ခေါက်ပေးလိုက်ပါ။ text editor ကနေ ထွက်ဖို့ကိုတော့ Ctrl+X ကို နှိပ်ရပါမယ်။ Ctrl+O နှိပ်ကာ Write Out မလုပ်ပဲ Ctrl+X တခါတည်းနှိပ်ရင် Save modified buffer? ဆိုပြီး File save မှာလားလို့ မေးပါလိမ့်မယ်။ save မယ်ဆိုရင် Y လို့ ရိုက်ပြီး Enter ခေါက်ကာ ထွက်နိုင်ပါတယ်။
+
+Directory တစ်ခုခုအောက်မှာ ရှိတဲ့ File ကို ဖွင့်လိုရင်လည်း ဖိုင်ရှေ့မှာ Path လမ်းကြောင်း အပြည့်အစုံရိုက်ထည့်ပြီး တိုက်ရိုက်ဖွင့်လို့ရပါတယ်။ အောက်ပါ နမူနာကို ကြည့်ပါ။
+
+`$ nano /home/pi/phoewa/file.txt`
+
+nano ထဲမှာပဲ Ctrl+G ကို နှိပ်ကြည့်လိုက်ရင် Short-cut Key တွေကို ဖော်ပြ ပေးထားတဲ့ အကူအညီဖိုင်ကို ဖတ်လို့ရပါတယ်။ ပြန်ထွက်ဖို့ Ctrl+X ဒါမှမဟုတ် Ctrl+G ကိုပဲ ထပ်နှိပ်ပြီး ထွက်နိုင်ပါတယ်။
+
+<p align="center">
+<img src="/assets/img/rpibook/cli2.png">
+<br>
+<a>ပုံ(၁.၃၃) ၊ Main nano help text</a>
+</p>
+
+Terminal နဲ့ Nano text editor ထဲမှာ Copy, Paste လုပ်ဖို့ Short-cut အနေနဲ့ Ctrl+Shift+C, Ctrl+Shift+V သုံးရမှာ ဖြစ်ပါတယ်။ Nano ထဲမှာတော့ တခြား Short-cut အနေနဲ့ စာသားလိုင်းတစ်ခုလုံးကို Copy ကူးဖို့ Alt+6 ကို သုံးနိုင်ပြီး၊ Cut လုပ်ဖို့ Ctrl+K သုံးနိုင်ပါတယ်။ အဲဒီ့ ကူးယူထားတဲ့ လိုင်းကို တခြား တစ်နေရာမှာ Paste လုပ်ဖို့ Ctrl+U နှိပ်ပေးရပါမယ်။ တကယ်လို့ လိုင်းတစ်ခုလုံးကို Copy/Cut လုပ်ချင်တာ မဟုတ်ပဲ ကိုယ်လိုချင်တဲ့ နေရာလောက်ပဲ ကြားဖြတ် ကူးယူချင်ရင်လည်း စာသားတွေကို Select လုပ်လို့ ရပါတယ်။ ကိုယ်ကူးချင်တဲ့ နေရာမှာ Cursor ချပြီး Ctrl+6 ကို နှိပ်လိုက်ပါ။ ပြီးရင် ကီးဘုတ်ပေါ်က မြှားနဲ့ဖြစ်စေ လိုချင်တဲ့နေရာအထိ ရွှေ့ပြီး Copy/Cut လုပ်နိုင်ပါတယ်။
+
+မောက်စ် သုံးပြီးတော့လည်း Cursor ချလို့ မရတာကြောင့် ကီးဘုတ်က အပေါ်အောက် ဘယ်ညာမြှားတွေကို သုံးပေးရပါမယ်။ မြှားတွေ မသုံးချင်ရင် စာကြောင်းတစ်ခုလုံးရဲ့ ရှေ့ဆုံးကို Cursor ချဖို့ Ctrl+A ၊ နောက်ဆုံးကို Cursor ချဖို့ Ctrl+E ၊ အပေါ် လိုင်းတစ်လိုင်း တက်ဖို့ Ctrl+P ၊ အောက်လိုင်းကို ဆင်းဖို့  Ctrl+N သုံးနိုင်ပါတယ်။ စာပိုဒ် တစ်ခုလုံးရဲ့ ထိပ်ဆုံးလိုင်းကို သွားချင်ရင် Ctrl+Y နဲ့ အောက်ဆုံးလိုင်းကို သွားချင်ရင် Ctrl+V သုံးလို့ရပါတယ်။
+
+nano ထဲမှာ ကိုယ့်ရဲ့ Mouse Pointer Cursor ဘယ်နား ရောက်နေမှန်း မသိရင် Ctrl+C ကို နှိပ်ပြီး လိုင်းနံပါတ်ကို ကြည့်နိုင်ပါတယ်။ တခြား text editor တွေကဲ့သို့ လိုင်းနံပါတ်တွေပါ ဖော်ပြစေလိုရင် Alt+# ကို နှိပ်ပေးရမှာပါ။ ကီးဘုတ်မှာ ရိုက်တဲ့အခါ Alt+Shift+3 ကို ရိုက်ရင် ရပါပြီ။ လိုင်းနံပါတ်တွေ ပြန်ပျောက်စေချင်ရင်လည်း At+Shift+3 ပဲ ပြန်နှိပ်ပေးလိုက်ပါ။ ပုံ(၁.၃၄) မှာ ကြည့်ရင် Mouse Cursor က လိုင်းနံပါတ် ၅မှာ ရှိနေတာကြောင့် Ctrl+C နှိပ်ကြည့်ထားတဲ့အတွက် line ⅚ လို့ ပြနေတာ တွေ့ရမှာ ဖြစ်ပါတယ်။
+
+<p align="center">
+<img src="/assets/img/rpibook/cli3.png">
+<br>
+<a>ပုံ(၁.၃၄) ၊ nano တွင် Line နံပါတ် ပြသခြင်း</a>
+</p>
+
+ဖိုင်ထဲမှာ စာသားတွေများပြားလာတဲ့အခါ လိုချင်တဲ့စာကို ရှာဖွေဖို့ Ctrl+W ကို နှိပ်ပါ။ ပြီးရင် ကိုယ်ရှာချင်တဲ့စာ ရိုက်ထည့်ပြီး ရှာနိုင်ပါတယ်။ Ctrl+W နှိပ်ပြီး စာသား ရှာဖွေပြီးနောက် Alt+W ကို ဆက်နှိပ်သွားရင် ရှာထားတဲ့စာသား ရှိတဲ့ တခြားနေရာတွေကိုပါ ဆက်ပြသွားမှာ ဖြစ်ပါတယ်။ စာသားရှာဖွေပြီး တခြားစာနဲ့ replace လုပ်လိုရင် Alt+R သုံးနိုင်ပါတယ်။ Alt+R ကိုနှိပ်ပြီး ရှာချင်တဲ့ စာသား ထည့်ပါ။ ပြီးရင် Replace with: နေရာမှာ အစားထိုးချင်တဲ့ စာသားအသစ် ရေးပြီး Enter ခေါက်ကာ Yes (Y) ရွေးပြီး replace လုပ်သွားနိုင်ပါတယ်။
+
+များပြားလှတဲ့ Short-cut Key တွေကို ပြန်ကြည့်ရတာ အဆင်ပြေအောင် ဇယားနဲ့ ဖော်ပြပေးလိုက်ပါတယ်။
+
+
+Short-cut | ဖော်ပြချက်
+Ctrl+X | Nano Text Editor မှ ထွက်ရန်
+Ctrl+O | စာရေးပြီးနောက် ဖိုင် Save (Write Out) လုပ်ရန်
+Ctrl+G | Short-cut key များကြည့်ရန်
+Ctrl+Shift+C | Terminal နှင့် Nano အတွင်း Copy ကူးရန်
+Ctrl+Shift+V | Terminal နှင့် Nano အတွင်း Paste ချရန်
+Alt+6 | Nano အတွင်း လိုင်းတစ်ခုလုံး Copy ကူးရန်
+Ctrl+K | Nano အတွင်း လိုင်းတစ်ခုလုံး Cut လုပ်ရန်
+Ctrl+U | Nano အတွင်း Paste ချရန်
+Ctrl+6 | Nano အတွင်း စာသား Select လုပ်ရန်
+Ctrl+A | လက်ရှိလိုင်းရဲ့ ရှေ့ဆုံးမှာ Cursor ချရန်
+Ctrl+E | လက်ရှိလိုင်းရဲ့ နောက်ဆုံးမှာ Cursor ချရန်
+Ctrl+P | အပေါ်လိုင်းသို့ တက်ရန်
+Ctrl+N | အောက်လိုင်းသို့ ဆင်းရန်
+Ctrl+Y | စာပိုဒ်တစ်ခုလုံးရဲ့ အပေါ်ဆုံးလိုင်းသို့ တက်ရန်
+Ctrl+V | စာပိုဒ်တစ်ခုလုံးရဲ့ အောက်ဆုံးလိုင်းသို့ ဆင်းရန်
+Ctrl+C | Mouse Cursor ရှာရန်
+Alt+Shift+3 | Nano အတွင်း လိုင်းနံပါတ်များ ဖော်ပြရန်
+Ctrl+W | စာသားရှာဖွေရန်
+Alt+W | တူညီသော စာသား ဆက်ရှာရန်
+Alt+R | စာသား ရှာဖွေပြီး အစားထိုးရန်
+Ctrl+J | စာသားများ Justify လုပ်ရန်
+Ctrl+_ | Line နံပါတ်၊ Column နံပါတ် ရိုက်ထည့်ပြီး Cursor ချရန်
+Ctrl+F | ရှေ့သို့ Character တစ်လုံးစာ Cursor ရွှေ့ရန်
+Ctrl+B | နောက်သို့ Character တစ်လုံးစာ Cursor ရွှေ့ရန်
+Ctrl+Space | ရှေ့သို့ word တစ်လုံးစာ Cursor ရွှေ့ရန်
+Ctrl+I | Cursor ချထားသောနေရာတွင် Tab တစ်ခု ထည့်ရန်
+Ctrl+M | Cursor ချထားသောနေရာတွင် New Line ထည့်ရန်
+Ctrl+D | Cursor အောက်မှ Character ကို ဖျက်ရန်
+Ctrl+H | Cursor ရဲ့ ဘယ်ဘက်မှ Character ကို ဖျက်ရန်
+
+Command Line တွေ စတင်လေ့လာနိုင်ဖို့အတွက် Raspberry Pi ရဲ့ Terminal ကို ဖွင့်လိုက်ပါ။ ဆက်လက်ဖော်ပြမယ့် Screenshot ပုံတွေက Raspberry Pi ကို Ubuntu OS တင်ထားတဲ့ ကွန်ပျူတာကနေ SSH နဲ့ ချိတ်ဆက်ပြီး သုံးနေတာ ဖြစ်လို့ Terminal ပုံစံက Ubuntu Terminal ပုံစံတွေ ဖြစ်နေပါလိမ့်မယ်။ Raspbian Desktop သွင်ပြင်ပေါ်က Terminal နဲ့ အတူတူပဲ ဖြစ်ပါတယ်။ SSH ချိတ်ဆက် အသုံးပြုပုံကိုတော့ <b>အခန်း(၂)၊ Network ချိတ်ဆက်ခြင်း</b> မှာ ဆက်လက် လေ့လာနိုင်ပါတယ်။
+
+Terminal မှာ `pwd` လို့ ရိုက်ကြည့်လိုက်ရင် လက်ရှိ ကိုယ်ရောက်ရှိနေတဲ့ directory ကို ပြသပါလိမ့်မယ်။ pwd က Print Working Directory ဖြစ်ပါတယ်။
+
+<p align="center">
+<img src="/assets/img/rpibook/cli4.png">
+<br>
+<a>ပုံ(၁.၃၅) ၊ pwd command</a>
+</p>
+
+ယခု ရောက်ရှိနေတဲ့ /home/pi ဆိုတဲ့ directory အောက်မှာပဲ `ls` command ရိုက်ကြည့်လိုက်ရင် directory ထဲမှာ ရှိနေတဲ့ File တွေ၊ Folder တွေရဲ့ စာရင်းကို list အဖြစ် မြင်ရပါမယ်။ `ls` command နောက်မှာ `-l` option ထည့်ပေးလိုက်ရင် ဖိုင်စာရင်းကို permission information တွေအပြင် file ownership တွေကိုပါ ပူးတွဲပြသပေးပါလိမ့်မယ်။
+
+<p align="center">
+<img src="/assets/img/rpibook/cli6.png">
+<br>
+<a>ပုံ(၁.၃၆) ၊ ls and ls -l command</a>
+</p>
+
+ဒီ Home Directory အောက်မှာ ရှိနေတဲ့ Downloads Folder ထဲကို ဝင်ချင်ရင် `cd` command နဲ့ ဝင်နိုင်ပါတယ်။ `cd` က Change Directory ဖြစ်ပါတယ်။
+
+<p align="center">
+<img src="/assets/img/rpibook/cli7.png">
+<br>
+<a>ပုံ(၁.၃၇) ၊ cd command</a>
+</p>
+
+Downloads directory အောက်မှာပဲ `cd` လို့ ထပ်ရိုက်လိုက်ရင် Home ကို ပြန်ရောက်သွားပါလိမ့်မယ်။ တကယ်လို့ directory ၃၊ ၄ဆင့် ဝင်ထားတယ်ဆိုရင် `cd ..` လို့ ရိုက်ပြီး Parent Directory တစ်ခုချင်းဆီကို ပြန်ထွက်နိုင်ပါတယ်။
+
+<p align="center">
+<img src="/assets/img/rpibook/cli8.png">
+<br>
+<a>ပုံ(၁.၃၈) ၊ cd .. command</a>
+</p>
+
+ဆက်လက်ပြီး သိထားရမယ့် အချက်ကတော့ Terminal ထဲမှာ မြင်နေရတဲ့ $ sign ရဲ့ ကပ်လျက် ~ သင်္ကေတလေးက /home/pi directory ကို ကိုယ်စားပြုပါတယ်။ forward slash ( / ) က root directory ကို ကိုယ်စားပြုပါတယ်။ `cd /` လို့ ရိုက်ကြည့်ပါက root အောက်ကို ဝင်သွားမှာဖြစ်ပြီး list ခေါက်ကြည့်ရင် Raspbian OS ရဲ့ System file တွေကို မြင်ရမှာ ဖြစ်ပါတယ်။
+
+<p align="center">
+<img src="/assets/img/rpibook/cli9.png">
+<br>
+<a>ပုံ(၁.၃၉) ၊ root directory သို့ ဝင်ရောက်ခြင်း</a>
+</p>
+
+Raspberry Pi မှာ SD card တပ်ဆင်ပြီးနောက် ပထမဆုံးပြုလုပ်ရမှာက Raspbian OS ကို system update, upgrade ပြုလုပ်ခြင်း ဖြစ်ပါတယ်။ update ပြုလုပ်ခြင်းကတော့ Raspbian OS ထဲမှာ ရှိနေတဲ့ Software တွေရဲ့ version အသစ် အချက်အလက်တွေ၊ package list တွေကို သက်ဆိုင်ရာ repositories များမှတဆင့် download ရယူခြင်းဖြစ်ပါတယ်။ update ပြုလုပ်ပြီးတော့မှ ရရှိလာတဲ့ package အသစ်တွေကို upgrade ဆက်လက်ပြုလုပ်ပြီး install ပြုလုပ်ရခြင်း ဖြစ်ပါတယ်။  software အသစ်တစ်ခု install ပြုလုပ်တိုင်း update အရင် ပြုလုပ်ပေးသင့်ပါတယ်။ အောက်ပါ command တွေနဲ့ ပြုလုပ်နိုင်ပါတယ်။
+
+`$ sudo apt-get update`
+
+`$ sudo apt-get upgrade`
+
+Upgrade ပြုလုပ်တဲ့အခါ download ရယူမယ့် ဖိုင်ဆိုဒ်ကိုပါ တပါတည်း ပြသပေးမှာ ဖြစ်ပြီး install ပြုလုပ်လိုပါက Y ကို ရိုက်ပေးရပါမယ်။ ဒီလို confirm ပြုလုပ်ခိုင်းတဲ့ မေးခွန်း မမေးစေလိုပါက -y option ကို ထည့်ပေးထားနိုင်ပါတယ်။
+
+`$ sudo apt-get upgrade -y`
+
+ဒီနေရာမှာ apt ရဲ့ အဓိပ္ပါယ်က Advanced Package Tool ဖြစ်ပြီး Ubuntu နဲ့ Raspbian OS ကဲ့သို့ Debian based OS တွေမှာ ဆော့ဝဲတွေ install ပြုလုပ်ခြင်း၊ remove ပြုလုပ်ခြင်းတို့အတွက် အသုံးပြုရတဲ့ user interface command တစ်ခု ဖြစ်ပါတယ်။ sudo ကတော့ Superuser do ဖြစ်ပြီး root user အနေနဲ့ အလုပ် လုပ်မယ်ဆိုတဲ့ အဓိပ္ပါယ်ဖြစ်ပါတယ်။ ယခုလက်ရှိ Raspberry Pi ကို login ဝင်ထားတဲ့ user က pi ဖြစ်ပါတယ်။ `whoami` ဆိုတဲ့ command နဲ့ စစ်ကြည့်လိုက်ရင် လက်ရှိ user name ကို ပြသပေးမှာ ဖြစ်ပြီး root user အဖြစ် ပြောင်းလိုရင် `sudo su` command နဲ့ ပြောင်းနိုင်ပါတယ်။ root user ဖြစ်သွားရင် terminal မှာ မြင်နေရတဲ့ $ sign က # sign ဖြစ်သွားပါလိမ့်မယ်။ `whoami` command နဲ့ ထပ်စစ်ကြည့်နိုင်ပါတယ်။
+
+<p align="center">
+<img src="/assets/img/rpibook/cli10.png">
+<br>
+<a>ပုံ(၁.၄၀) ၊ whoami နှင့် sudo su command</a>
+</p>
+
+exit လို့ ရိုက်ပြီးဖြစ်စေ၊ Ctrl+D နှိပ်ပြီးဖြစ်စေ root user ကနေ pi user ဆီသို့ ပြန်ထွက်နိုင်ပါတယ်။
+
+<p align="center">
+<img src="/assets/img/rpibook/sudo.jpg">
+</p>
+
+Command တွေကို root user အဖြစ် အလုပ်လုပ်လိုရင် sudo command ခံပြီး သုံးလို့ရနေတဲ့အတွက် root user အဖြစ် ပြောင်းထားစရာ မလိုပါဘူး။ Superuser အနေနဲ့ အမြဲတမ်း command တွေကို သုံးနေရင် password အမေးအမြန်း မရှိ အလုပ် လုပ်သွားမှာ ဖြစ်လို့ command အမှားအယွင်း တစ်ခုခု ရှိခဲ့ရင် System ကို ပျက်စီးစေနိုင်တဲ့ အတွက် အန္တရာယ် များပါတယ်။ pi user name ဟာ default အနေနဲ့ sudoers file ထဲမှာ ပါဝင်တဲ့အတွက် sudo ခံပြီး command တွေကို ရိုက်လည်း password မတောင်းပဲ အလုပ် လုပ်တာကို တွေ့ရမှာဖြစ်ပါတယ်။ တကယ်လို့ Security ပိုရှိချင်ရင် pi user မှာ sudo ခံရိုက်တဲ့အခါ password တောင်းအောင် /etc/sudoers ဖိုင်ထဲမှာ သွားပြင်ထားနိုင်ပါတယ်။ /etc/sudoers ဖိုင်ကို nano နဲ့ ဖွင့်ပြီး အောက်ဆုံးမှာ `pi ALL =(ALL:ALL) ALL` လို့ ထည့်ပေးလိုက်ပါ။ ပြီးရင် `%sudo  ALL=(ALL:ALL) ALL` ဆိုတဲ့ လိုင်းရဲ့ ရှေ့မှာ # ခံပြီး comment out လုပ်ပေးလိုက်ပါ။ ဖိုင်ကို save ပြီး restart ချလိုက်ရင် pi user မှာလည်း sudo ခံသုံးရင် password တောင်းပါလိမ့်မယ်။
+
+`$ sudo nano /etc/sudoers`
+
+<p align="center">
+<img src="/assets/img/rpibook/cli11.png">
+<br>
+<a>ပုံ(၁.၄၁) ၊ /etc/sudoers File</a>
+</p>
+
+Folder တစ်ခု တည်ဆောက်လိုပါက `mkdir` (make directory) command သုံးနိုင်ပါတယ်။
+
+`$ mkdir folderName`
+
+File တွေကို ဖျက်ချင်ရင် `rm` (remove) command သုံးနိုင်ပြီး Folder တစ်ခုလုံးကို ဖျက်ချင်ရင်တော့ -r (recursive) option ထည့်ပေးရပါမယ်။
+
+`$ rm test.txt`
+
+`$ rm -r folderName`
+
+File ကို Copy ကူးချင်ရင် `cp` (copy) command သုံးရမှာဖြစ်ပြီး မူရင်းဖိုင် နာမည်နဲ့ လမ်းကြောင်းကို အရင်ရေးကာ copy ကူးယူမယ့် ဖိုင်နာမည်နဲ့ လမ်းကြောင်းကို နောက်မှာ ရေးရမှာ ဖြစ်ပါတယ်။ တစ်ဖိုဒါတည်းမှာပဲ နာမည်အသစ်နဲ့ ကူးချင်ရင်တော့ path လမ်းကြောင်း ရေးပေးစရာမလိုပါဘူး။
+
+`$ cp test.txt test1.txt`
+
+`$ cp test.txt ~/Downloads/test1.txt`
+
+ဖိုင်တွေကို ရွှေ့ဖိုတော့ `mv` (move) command သုံးနိုင်ပါတယ်။
+
+`$ mv test.txt ~/Downloads/`
+
+Raspberry Pi ကို restart ချဖို့  reboot  command သုံးနိုင်ပါတယ်။
+
+`$ sudo reboot`
+
+Shutdown ချဖို့အတွက်တော့ အောက်ပါ command ၂မျိုးလုံး သုံးနိုင်ပါတယ်။
+
+`$ sudo shutdown -h now`
+
+`$ sudo halt -h`
+
+Reboot နဲ့ Shutdown တွေက OS ရဲ့ System Binary ဖိုင်တွေ တည်ရှိရာ /sbin/ လမ်းကြောင်းအောက်မှာ ရှိတာဖြစ်လို့ sudo ခံပြီး သုံးပေးမှ ရပါမယ်။ `which` command နဲ့ command location ကို စစ်ကြည့်နိုင်ပါတယ်။
+
+<p align="center">
+<img src="/assets/img/rpibook/cli12.png">
+<br>
+<a>ပုံ(၁.၄၂) ၊ which command</a>
+</p>
+
+ဆက်လက်ပြီးမှတ်သားရမယ့် command ကတော့ `cat` (concatenate) command ဖြစ်ပါတယ်။ ဖိုင်တွေကို nano နဲ့ ဖွင့်မဖတ်ပဲ standard output အဖြစ် terminal မှာ print ပြစေချင်ရင် သုံးနိုင်ပါတယ်။ -n option ထည့်ပေးလိုက်ရင် line number နဲ့ print ပြပါလိမ့်မယ်။
+
+<p align="center">
+<img src="/assets/img/rpibook/cli13.png">
+<br>
+<a>ပုံ(၁.၄၃) ၊ cat command</a>
+</p>
+
+ယခု ဖော်ပြပေးခဲ့တဲ့ Command Line တွေက Raspberry Pi ကို ရှေ့ဆက်ပြီး လေ့လာတဲ့အခါ CLI နဲ့ ပတ်သက်ပြီး အခက်အခဲနည်းစေဖို့နဲ့ ရင်းနှီးကျွမ်းဝင် သွားစေဖို့ အခြေခံ မသိမဖြစ် command တချို့ကိုသာ ဖော်ပြပေးခဲ့ခြင်း ဖြစ်ပါတယ်။ လေ့လာလို့ မကုန်နိုင်လောက်အောင် များပြားလှတဲ့ Linux command တွေ ကျန်ရှိနေပါသေးတယ်။ မိတ်ဆက်အခန်းမှာ မပါဝင်တဲ့ command တွေကို တခြားအခန်းတွေမှာလည်း ဆက်လက်ဖော်ပြပေးသွားပါ့မယ်။ command line တွေကို အသုံးပြုနေရင်း အဓိပ္ပါယ် သိလိုတာရှိရင် Terminal မှာ အောက်ပါ command တွေ သုံးပြီး command တစ်ခုရဲ့ Usage တွေကို ဖတ်နိုင်ပါတယ်။ နမူနာအနေနဲ့ cat command ရဲ့ Usage ကို Terminal မှာ ယခုလို မေးမြန်းကြည့်နိုင်ပါတယ်။
+
+`$ man cat`
+
+`$ info cat`
+
+`$ cat --help`
+
+<a style="text-decoration:none" href="https://www.explainshell.com/">www.explainshell.com</a> လို Website မှာလည်း သိလိုတဲ့ command ကို ရိုက်ထည့်ပြီး ဖတ်ရှုနိုင်ပါတယ်။
+
+<p align="center">
+<img src="/assets/img/rpibook/explainedshell.png">
+<br>
+<a>ပုံ(၁.၄၄) ၊ explainshell website</a>
+</p>

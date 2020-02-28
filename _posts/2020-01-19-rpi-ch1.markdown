@@ -1,0 +1,42 @@
+---
+layout: post
+title: အခန်း(၁)၊ မိတ်ဆက်
+date: 2020-01-19 10:32:20 +0630
+description: Raspberry Pi စာအုပ်
+img: rpibook/raspberry-pi.jpg
+fig-caption: # Add figcaption (optional)
+tags: [Raspberry Pi, Book]
+---
+Raspberry Pi ဆိုတာ Credit Card အရွယ်အစားမျှသာ ရှိတဲ့ Single Board Computer (SBC) တစ်ခု ဖြစ်ပြီး ကျောင်းများနဲ့၊ ဖွံ့ဖြိုးဆဲနိုင်ငံများမှာ Computer Science သင်ကြားရာမှာ အထောက်အကူ ဖြစ်စေဖို့ UK ရှိ Raspberry Pi Foundation က စတင်ခဲ့ပါတယ်။ ၂၀၁၂၊ ဖေဖော်ဝါရီ၊ ၂၄ ရက်နေ့မှာ ပထမဦးဆုံးမျိုးဆက်ဖြစ်တဲ့ Raspberry Pi 1 Model A စတင် ထွက်ရှိခဲ့ပြီး၊ နောက်ဆုံးထွက်ရှိထားတာကတော့ ၂၀၁၉၊ ဇွန်လမှာမှ ထွက်ရှိခဲ့တဲ့ Raspberry Pi 4 Model B ဖြစ်ပါတယ်။ မြန်မာနိုင်ငံမှာတော့ ၂၀၁၃ခုနှစ်မှာ <a style="text-decoration:none" href="https://ubuntu-mm.net/">Ubuntu Myanmar LoCo Team</a> က Raspberry Pi နဲ့ Linux ကို တွဲဖက်ပြီး Linpi ဆိုတဲ့ event များ ကျင်းပကာ စတင်မိတ်ဆက်ခဲ့ပါတယ်။ 
+
+<p align="center">
+<img src="/assets/img/rpibook/eben_upton.png">
+<br>
+<a>ပုံ(၁.၁) ၊ Eben Christopher Upton</a>
+</p>
+
+Raspberry Pi ကို စတင် တီထွင်ဖန်တီးခဲ့သူ ကတော့ Broadcom Corporation ရဲ့ အင်ဂျင်နီ ယာတစ်ယောက် ဖြစ်တဲ့ Eben Christopher Upton ဆိုသူ ဖြစ်ပါတယ်။ Raspberry Pi Foundation ရဲ့ Founder လည်း ဖြစ်ပါတယ်။ ကင်းဘရစ် တက္ကသိုလ်ကနေ Physics နဲ့ BA ဘွဲ့ရရှိခဲ့တဲ့ Eben Upton က ကျောင်းတွေမှာ ကျောင်းသားတွေ အနေနဲ့ ကွန်ပျူတာဝယ်ယူဖို့ ငွေကြေးခက်ခဲကြတာကို သတိပြုမိခဲ့ပါတယ်။ အဲ့ဒီ အချိန်က Acorn Computers က ထုတ်တဲ့ BBC Micro Computer တစ်လုံးရဲ့ တန်ကြေးဟာ ပေါင်၃၅၀ ရှိပါတယ်။ ဒါကြောင့် သူ့ထက် တန်ဖိုး ဆယ်ဆ သက်သာပြီး သေးငယ်တဲ့ ကွန်ပျူတာကို ဖန်တီးဖို့ ၂၀၀၆ခုနှစ်မှာ Atmel processor ကို အခြေခံထားတဲ့ Prototype တစ်ခု စတင်ဖန်တီးခဲ့ပါတယ်။ ၆နှစ်ကြာခဲ့ပြီးတဲ့ နောက်မှာတော့ ပထမဆုံးမျိုးဆက် Raspberry Pi ကို ထုတ်လုပ်နိုင်ခဲ့ပြီး ခုချိန်မှာ ကျောင်းသားတွေ လက်ထဲမှာသာမက developer တွေအပြင်၊ ရုံးတွေ အလုပ်ရုံတွေမှာပါ အသုံးပြုနေကြပါပြီ။
+
+<p align="center">
+<img src="/assets/img/rpibook/pi_prototype.png">
+<br>
+<a>ပုံ(၁.၂) ၊ Eben Upton prototype based on Atmel processor</a>
+</p>
+
+Raspberry Pi တွေထွက်ရှိလာတာ ခုဆိုရင် မျိုးဆက်၄ခုမြောက် ရှိသွားပါပြီ။ ပထမဆုံးထွက်ရှိခဲ့တဲ့ Raspberry Pi က BCM2835 System on Chip (SoC) ပေါ်မှာ အခြေခံ ထုတ်လုပ်ထားပြီး၊ Raspberry Pi Zero နဲ့ wifi ပါတဲ့ Zero W မှာလည်း BCM2835 SoC ကိုပဲ သုံးထားတာ ဖြစ်ပါတယ်။ နောက်ဆုံးထွက် Raspberry Pi 4 မှာတော့ ARM Cortex-A72 processor ပါဝင်တဲ့ Broadcom BCM2711 SoC သုံးထားပါတယ်။ RAM ကိုလည်း 4GB အထိ ထုတ်လုပ်လိုက်ပြီ ဖြစ်တဲ့အပြင် 1GB, 2GB တွေလည်း ရွေးချယ်အသုံးပြုနိုင်ပါသေးတယ်။ USB 2.0 ၂ခု၊ USB 3.0 ၂ခု ပါဝင်ပြီး network port က Gigabit Ethernet အဖြစ် အဆင့်မြှင့်တင်ထားပါတယ်။ Bluetooth ကလည်း 5.0 ဖြစ်သွားတဲ့အပြင်၊ wifi ကိုလည်း dual-band 802.11ac wifi ကို သုံးထားပါတယ်။ HDMI port က အရင် model တွေလို ပုံမှန်အရွယ်အစား မဟုတ်တော့ပဲ micro HDMI ၂ခု အစားထိုး ပါဝင်လာပြီး 4K video ကို monitor ၂ခုနဲ့ dual displays သုံးလို့ ရတဲ့အထိ မြှင့်တင်ထားပါတယ်။ Power Supply ပေးရမယ့် USB adapter ကလည်း 15W USB Type-C ဖြစ်သွားပါတယ်။
+
+<p align="center">
+<img src="/assets/img/rpibook/pi4.png">
+<br>
+<a>ပုံ(၁.၃) ၊ Raspberry Pi 4 Model B</a>
+</p>
+
+Raspberry Pi 4 မတိုင်ခင်က ထွက်ရှိခဲ့တဲ့ Pi 3 Model B+ နဲ့ ဈေးနှုန်းချင်း ယှဉ်မယ်ဆိုရင်တော့ ထက်ဝက်နီးပါး ကွာဟနေတဲ့အတွက် ခုမှ စတင် ဝယ်ယူလေ့လာမယ့်သူတွေ အနေနဲ့ Raspberry Pi 3 Model B သို့မဟုတ် B+ ကိုပဲ ဝယ်ယူဖို့ အကြံပြုလိုပါတယ်။ Pi 3 Model B+ ကတော့ 1.4GHz 64-bit quad-core processor သုံးထားပြီး၊ RAM ကတော့ 1GB ပဲ ရနိုင်ပါတယ်။ Bluetooth 4.2 နဲ့ dual-band wifi ပါပါတယ်။ USB port ၄ခုလုံးက 2.0 ဖြစ်ပြီး HDMI port က ပုံမှန် size ဖြစ်ပါတယ်။ Power Supply အတွက်က micro USB type-B သုံးရမှာပါ။ 5V, 2.5A ပေးနိုင်ပါတယ်။
+
+<p align="center">
+<img src="/assets/img/rpibook/pi3.png">
+<br>
+<a>ပုံ(၁.၄) ၊ Raspberry Pi 3 Model B+</a>
+</p>
+
+အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://kogyikaunghtet.github.io/OS/">၁.၁ Operating Systems</a>
