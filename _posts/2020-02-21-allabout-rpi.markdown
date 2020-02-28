@@ -1,7 +1,7 @@
 ---
 layout: post
 title: all about Raspberry Pi
-date: 2020-02-20 13:32:20 +0630
+date: 2020-02-21 13:32:20 +0630
 description: Raspberry Pi အား Python ဖြင့် အသုံးပြုခြင်း
 img: book.jpg
 fig-caption: # Add figcaption (optional)
