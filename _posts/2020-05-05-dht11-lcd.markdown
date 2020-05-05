@@ -210,3 +210,13 @@ Program ထဲမှာ ထည့်ထားတဲ့ error_code ကတော�
 <br>
 <a>ပုံ(၇.၃) ၊ DHT11 Sensor စမ်းသပ်ခြင်း</a>
 </p>
+
+LCD မှာ ဖော်ပြနိုင်ဖို့အတွက်ကတော့ Raspberry Pi မှာ LCD အတွက် RPLCD Library ထည့်သွင်းထားဖို့လိုမှာ ဖြစ်ပြီး Program အပြည့်အစုံကို အောက်ပါ Repository မှာ ဒေါင်းလုပ်ရယူပြီး စမ်းသပ်ကြည့်နိုင်ပါတယ်။ LCD ကိုတော့ 8bit I/O Expander Module နဲ့ တွဲဖက် အသုံးပြုပြထားပါတယ်။
+
+`git clone https://github.com/kogyikaunghtet/dht11_with_lcd`
+
+အထက်ပါအတိုင်း ဒေါင်းလုပ်ရယူပြီးရင် dht11_with_lcd directory ထဲသို့ ဝင်ပြီး စမ်းသပ်ကြည့်နိုင်ပါပြီ။
+
+`cd dht11_with_lcd`
+
+`sudo python dht11_with_lcd.py`
