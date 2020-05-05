@@ -1,0 +1,212 @@
+---
+layout: post
+title: DHT11 with LCD
+date: 2020-05-05 13:32:20 +0630
+description: DHT11 Temperature and Humidity Sensor data on LCD using Raspberry Pi
+img: dht11/dht11_lcd.png
+fig-caption: # Add figcaption (optional)
+tags: [Raspberry Pi, Book]
+---
+DHT11 က temperature အပြင် လေထုထဲမှာ ပါဝင်တဲ့ water vapour ပမာဏ၊ humidity (လေထုစိုထိုင်းဆ) ကိုပါ တိုင်းတာပေးနိုင်တဲ့ sensor ဖြစ်ပါတယ်။ အပူချိန်အနေနဲ့ 0 - 50ºC အထိ တိုင်းတာနိုင်ပြီး တိကျမှန်ကန်မှုအနေနဲ့တော့ ± 2% ဖြစ်လို့ တကယ့် အပူချိန်တန်ဖိုးနဲ့ အနည်းငယ် ကွဲလွဲနေနိုင်ပါတယ်။ လေထု စိုထိုင်းဆကိုတော့ 20% ကနေ 90% အထိ တိုင်းတာနိုင်ပြီး accuracy က ± 5% ရှိပါတယ်။ temperature နဲ့ humidity ကို DHT11 ထက် ပိုမိုတိကျစွာ တိုင်းတာ လိုရင်တော့ DHT22 ကို သုံးနိုင်ပါတယ်။ DHT22 ကတော့ အပူချိန် -40°C ကနေ +125°C အထိ တိုင်းတာနိုင်ပြီး accuracy ကလည်း ± 0.5% သာ ဖြစ်လို့ DHT11 ထက် ၄ဆ ပိုမိုတိကျစွာ တိုင်းတာနိုင်ပါတယ်။ humidity ကိုလည်း 0 - 100% ထိ တိုင်းတာနိုင်ပြီး accuracy က ± 2% ဖြစ်ပါတယ်။ တိကျမှန်ကန်မှုနှုန်းက ပိုမြင့်သလို ဈေးနှုန်းကလည်း DHT11 ထက် ၄ဆခန့် ပိုများလို့ ဈေးနှုန်းသင့်တဲ့ DHT11 ကိုပဲ အသုံးပြုကြပါမယ်။
+
+DHT11 ရဲ့ pin တွေအနေနဲ့ ၄ပင်ပါရှိမှာ ဖြစ်ပြီးတော့ ဇကာပေါက်ဘက်ခြမ်းကို မျက်နှာချင်းဆိုင် ကြည့်ရင် ဘယ်ဘက်ပထမဆုံးပင်က Vcc နဲ့၊ နောက်ဆုံးက Gnd ဖြစ်ပါတယ်။ Supply voltage အနေနဲ့ 3.3V to 5V ပေးနိုင်ပါတယ်။ ဒုတိယပင်က data pin ဖြစ်ပြီးတော့ တတိယမြောက်ပင်ကို မသုံးပဲ လွှတ်ထားရပါမယ်။ data pin ကို high ဖြစ်နေစေဖို့ 4.7KΩ resistor တစ်လုံးကို Vcc pin နဲ့ data pin ကြားမှာ pull-up resistor အဖြစ် ချိတ်ဆက်ပေးသင့်ပြီး 5KΩ သို့မဟုတ် 10KΩ တန်ဖိုးရှိတဲ့ resistor လည်း အသုံးပြုနိုင်ပါတယ်။ pin ၃ပင်တည်း ပါတဲ့ breakout board ပုံစံ DHT11 sensor တွေလည်း ထွက်ရှိပြီး ပုံ(၇.၁) မှာ ပြထားတဲ့ ပုံစံမျိုး အသုံးပြုမယ်ဆိုရင်တော့ pull-up resistor တစ်လုံး ပါဝင်တပ်ဆင်ပြီးသားဖြစ်လို့ ထပ်မံတပ်ဆင်ပေးဖို့ မလိုတော့ပါဘူး။
+
+<p align="center">
+<img src="/assets/img/dht11/dht11.png">
+<br>
+<a>ပုံ(၇.၁)၊ DHT11 Sensor 3-wire Module</a>
+</p>
+
+<p align="center">
+<img src="/assets/img/dht11/rpi_dht11.png">
+<br>
+<a>ပုံ(၇.၂)၊ Raspberry Pi တွင် DHT11 Sensor ချိတ်ဆက်ခြင်း</a>
+</p>
+
+data pin ကို ပုံ(၇.၂) အတိုင်း GPIO 17 (Physical pin 11) မှာ တပ်ဆင်ပြီးတဲ့ နောက် DHT11 အတွက် Library ဖိုင်ကို ရေးသားတည်ဆောက်ကြပါမယ်။ DHT11 Sensor က single bus data format ကို အသုံးပြုပြီး Raspberry Pi နဲ့ ဆက်သွယ်ခြင်း ဖြစ်ပြီးတော့ အောက်ပါအတိုင်း data format အပိုင်း၅ပိုင်း ခွဲပြီး Raspberry Pi ဆီကို transmit ပြုလုပ်ပါတယ်။
+
+* 8-bit integral humidity data
+* 8-bit decimal humidity data
+* 8-bit integral temperature data
+* 8-bit decimal temperature data
+* 8-bit check sum
+
+Transmit ပြုလုပ်တဲ့ communication process တစ်ခုချင်းစီဟာ 4 miliseconds ခန့် ကြာမြင့်ပါတယ်။ နောက်ဆုံး data format ဖြစ်တဲ့ check sum ကတော့ data transmission ပြုလုပ်ခြင်း မှန်မမှန် စစ်ဆေးပေးတဲ့ error check sum တစ်ခု ဖြစ်ပြီး humidity နဲ့ temperature data format တွေဖြစ်တဲ့ အပေါ်၄ခု ပေါင်းခြင်း ရဲ့ lower 8-bit နဲ့ ညီမျှတယ်ဆိုရင် transmission ပြုလုပ်ခြင်း အောင်မြင်ပြီး ဒေတာ တွေ မှန်ကန်စွာ ဖော်ပြပေးမှာ ဖြစ်ပါတယ်။
+
+ဒီလို ဒေတာတွေ transmit မပြုလုပ်ခင် ပုံမှန်အားဖြင့် data pin က high ဖြစ်နေမှာ ဖြစ်ပြီး၊ DHT11 နဲ့ Raspberry Pi အကြား ချိတ်ဆက်မှုကို စတင်လိုက်တဲ့အခါ Raspberry Pi က data pin ကို pull-down ဖြစ်စေပြီး 18 milliseconds ကြာတဲ့ low voltage signal တစ်ခု ပေးပို့ပါတယ်။ ဒါကို Start Signal လို့ ခေါ်ပြီးတော့၊ ဒီ Signal ကို DHT11 က detect ဖြစ်သွားတဲ့အခါ Raspberry Pi က data pin ကို pull-up ပြန်ဖြစ်သွားစေပြီး၊ 20 to 40 microseconds အထိ ကြာအောင် DHT11 ရဲ့ response ကို စောင့်ပါတယ်။
+
+DHT11 Sensor ဘက်ခြမ်းမှာလည်း bit တစ်ခုကို 50 microseconds ကြာတဲ့ low voltage level တစ်ခု စပို့ပြီး နောက်ဆုံးမှာ high voltage level တစ်ခု အဆုံးသတ် ပို့ပါတယ်။ data bit 1 or 0 ခွဲခြားခြင်းကတော့ 26 to 28 µs ကြာတဲ့ high voltage length တစ်ခုဆိုရင် 0 လို့ သတ်မှတ်ပြီး၊ 70 µs အထိ ကြာတဲ့ high voltage length ဆိုရင်တော့ 1 လို့ ခွဲခြားသတ်မှတ်ပါတယ်။ ဒီလို ဒေတာ တန်ဖိုးတွေ bit by bit (Low, High) ပေးပို့ပြီး 40 bit (8 bit x 5 data format) ရရှိလာတဲ့အခါ အပိုင်း၅ပိုင်းခွဲခြားလိုက်ပါတယ်။
+
+နောက်ဆုံးရရှိလာတဲ့ data format ၅ပိုင်းရဲ့ Byte (8-bits) တစ်ခုချင်းစီကို Array တစ်ခုထဲမှာ သိုလှောင်ပြီး array ရဲ့ ပထမ  index  ဖြစ်တဲ့ 8-bit integral humidity data တန်ဖိုးနဲ့ တတိယ index ဖြစ်တဲ့ 8-bit integral temperature data တန်ဖိုး တွေကို ထုတ်ယူကာ ပြသပေးရမှာ ဖြစ်ပါတယ်။
+
+DHT11 Sensor ရဲ့ အထက်ပါအချက်အလက်တွေပေါ် မူတည်ပြီး Library ကို အောက်ပါအတိုင်း တည်ဆောက်အသုံးပြုနိုင်ပါတယ်။ ဖိုင်နာမည်ကို dht11.py လို့ ပေးပြီး Sensor တန်ဖိုး ဖတ်မယ့် Program ထဲမှာ import ပြုလုပ်ကာ သုံးစွဲနိုင်ပါတယ်။
+
+`$ sudo nano dht11.py`
+
+{% highlight python %}
+import time
+import RPi.GPIO as GPIO
+class DHT11Result:
+  ERR_NO_ERROR = 0
+  ERR_MISSING_DATA = 1
+  ERR_CRC = 2
+  error_code = ERR_NO_ERROR
+  temperature = -1
+  humidity = -1
+  def __init__(self,error_code,temperature,humidity):
+    self.error_code = error_code
+    self.temperature = temperature
+    self.humidity = humidity
+  def is_valid(self):
+    return self.error_code==DHT11Result.ERR_NO_ERROR
+class DHT11:
+  __pin = 0
+  def __init__(self, pin):
+    self.__pin = pin
+  def read(self):
+    GPIO.setup(self.__pin, GPIO.OUT)
+    self.__send_and_sleep(GPIO.HIGH, 0.05)
+    self.__send_and_sleep(GPIO.LOW, 0.02)
+    GPIO.setup(self.__pin, GPIO.IN, GPIO.PUD_UP)
+    data = self.__collect_input()
+    pull_up_lengths = self.\
+    __parse_data_pull_up_lengths(data)
+    if len(pull_up_lengths) != 40:
+      return DHT11Result(DHT11Result.\
+      ERR_MISSING_DATA, 0, 0)
+    bits = self.__calculate_bits(pull_up_lengths)
+    the_bytes = self.__bits_to_bytes(bits)
+    checksum = self.__calculate_checksum(the_bytes)
+    if the_bytes[4] != checksum:
+      return DHT11Result(DHT11Result.ERR_CRC, 0, 0)
+    return DHT11Result(DHT11Result.ERR_NO_ERROR,\
+    the_bytes[2], the_bytes[0])
+  def __send_and_sleep(self, output, sleep):
+    GPIO.output(self.__pin, output)
+    time.sleep(sleep)
+  def __collect_input(self):
+    unchanged_count = 0
+    max_unchanged_count = 100
+    last = -1
+    data = []
+    while True:
+      current = GPIO.input(self.__pin)
+      data.append(current)
+      if last != current:
+        unchanged_count = 0
+        last = current
+      else:
+        unchanged_count += 1
+        if unchanged_count > max_unchanged_count:
+          break
+    return data
+  def __parse_data_pull_up_lengths(self, data):
+    STATE_INIT_PULL_DOWN = 1
+    STATE_INIT_PULL_UP = 2
+    STATE_DATA_FIRST_PULL_DOWN = 3
+    STATE_DATA_PULL_UP = 4
+    STATE_DATA_PULL_DOWN = 5
+    state = STATE_INIT_PULL_DOWN
+    lengths = []
+    current_length = 0
+    for i in range(len(data)):
+      current = data[i]
+      current_length += 1
+      if state == STATE_INIT_PULL_DOWN:
+        if current == GPIO.LOW:
+          state = STATE_INIT_PULL_UP
+          continue
+        else:
+          continue
+      if state == STATE_INIT_PULL_UP:
+        if current == GPIO.HIGH:
+          state = STATE_DATA_FIRST_PULL_DOWN
+          continue
+        else:
+          continue
+      if state == STATE_DATA_FIRST_PULL_DOWN:
+        if current == GPIO.LOW:
+          state = STATE_DATA_PULL_UP
+          continue
+        else:
+          continue
+      if state == STATE_DATA_PULL_UP:
+        if current == GPIO.HIGH:
+          current_length = 0
+          state = STATE_DATA_PULL_DOWN
+          continue
+        else:
+          continue
+      if state == STATE_DATA_PULL_DOWN:
+         if current == GPIO.LOW:
+          lengths.append(current_length)
+          state = STATE_DATA_PULL_UP
+          continue
+        else:
+          continue
+    return lengths
+  def __calculate_bits(self, pull_up_lengths):
+    shortest_pull_up = 1000
+    longest_pull_up = 0
+    for i in range(0, len(pull_up_lengths)):
+      length = pull_up_lengths[i]
+      if length < shortest_pull_up:
+        shortest_pull_up = length
+      if length > longest_pull_up:
+        longest_pull_up = length
+    halfway = shortest_pull_up + \
+    (longest_pull_up - shortest_pull_up) / 2
+    bits = []
+    for i in range(0, len(pull_up_lengths)):
+      bit = False
+      if pull_up_lengths[i] > halfway:
+        bit = True
+      bits.append(bit)
+    return bits
+  def __bits_to_bytes(self, bits):
+    the_bytes = []
+    byte = 0
+    for i in range(0, len(bits)):
+      byte = byte << 1
+      if (bits[i]):
+        byte = byte | 1
+      else:
+        byte = byte | 0
+      if ((i + 1) % 8 == 0):
+        the_bytes.append(byte)
+        byte = 0
+    return the_bytes
+  def __calculate_checksum(self, the_bytes):
+    return the_bytes[0] + the_bytes[1] + \
+    the_bytes[2] + the_bytes[3] & 255
+{% endhighlight %}
+
+dht11.py Library ဖိုင် တည်ဆောက်ပြီးသွားရင် temperature နဲ့ humidity တန်ဖိုးတွေ ဖတ်ကြည့်ဖို့ Library ဖိုင်နဲ့ directory အတူတူအောက်မှာ အောက်ပါ python program ကို တည်ဆောက်လိုက်ပါ။
+
+`$ sudo nano dht11_sensor.py`
+
+{% highlight python %}
+import dht11
+import time
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BCM)
+instance = dht11.DHT11(17)
+while 1:
+  result = instance.read()
+  error = result.error_code
+  if error == 0:
+    print 'Temperature =',result.temperature,'C'
+    print 'Humidity =',result.humidity,'%'
+    time.sleep(1)
+  else:
+    print "Please Wait"
+    time.sleep(1)
+{% endhighlight %}
+
+Program ထဲမှာ ထည့်ထားတဲ့ error_code ကတော့ Library ဖိုင်မှာ ဖော်ပြခဲ့သလို check sum စစ်ဆေးခြင်း ဖြစ်ပြီး DHT11 Sensor မှ data transmission မှန်ကန်ရင် Temperature နဲ့ Humidity ကို ဖော်ပြပေးမှာဖြစ်ပြီး၊ data missing ဖြစ်ခြင်းကြောင့် error တန်ဖိုး တစ်ခုခုရရှိခဲ့ပါက Please Wait လို့ print ပြနေမှာ ဖြစ်ပါတယ်။
+
+<p align="center">
+<img src="/assets/img/dht11/dht11_test.png">
+<br>
+<a>ပုံ(၇.၃) ၊ DHT11 Sensor စမ်းသပ်ခြင်း</a>
+</p>
