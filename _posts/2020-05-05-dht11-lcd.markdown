@@ -217,6 +217,6 @@ LCD မှာ ဖော်ပြနိုင်ဖို့အတွက်ကတ
 
 အထက်ပါအတိုင်း ဒေါင်းလုပ်ရယူပြီးရင် dht11_with_lcd directory ထဲသို့ ဝင်ပြီး စမ်းသပ်ကြည့်နိုင်ပါပြီ။
 
-#### cd dht11_with_lcd
+#### cd dht11LCD
 
 #### sudo python dht11_with_lcd.py
