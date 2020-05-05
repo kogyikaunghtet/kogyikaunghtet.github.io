@@ -41,7 +41,7 @@ DHT11 Sensor ဘက်ခြမ်းမှာလည်း bit တစ်ခု�
 
 DHT11 Sensor ရဲ့ အထက်ပါအချက်အလက်တွေပေါ် မူတည်ပြီး Library ကို အောက်ပါအတိုင်း တည်ဆောက်အသုံးပြုနိုင်ပါတယ်။ ဖိုင်နာမည်ကို dht11.py လို့ ပေးပြီး Sensor တန်ဖိုး ဖတ်မယ့် Program ထဲမှာ import ပြုလုပ်ကာ သုံးစွဲနိုင်ပါတယ်။
 
-`$ sudo nano dht11.py`
+#### $ sudo nano dht11.py
 
 {% highlight python %}
 import time
@@ -183,7 +183,7 @@ class DHT11:
 
 dht11.py Library ဖိုင် တည်ဆောက်ပြီးသွားရင် temperature နဲ့ humidity တန်ဖိုးတွေ ဖတ်ကြည့်ဖို့ Library ဖိုင်နဲ့ directory အတူတူအောက်မှာ အောက်ပါ python program ကို တည်ဆောက်လိုက်ပါ။
 
-`$ sudo nano dht11_sensor.py`
+#### $ sudo nano dht11_sensor.py
 
 {% highlight python %}
 import dht11
@@ -213,10 +213,10 @@ Program ထဲမှာ ထည့်ထားတဲ့ error_code ကတော�
 
 LCD မှာ ဖော်ပြနိုင်ဖို့အတွက်ကတော့ Raspberry Pi မှာ LCD အတွက် RPLCD Library ထည့်သွင်းထားဖို့လိုမှာ ဖြစ်ပြီး Program အပြည့်အစုံကို အောက်ပါ Repository မှာ ဒေါင်းလုပ်ရယူပြီး စမ်းသပ်ကြည့်နိုင်ပါတယ်။ LCD ကိုတော့ 8bit I/O Expander Module နဲ့ တွဲဖက် အသုံးပြုပြထားပါတယ်။
 
-`git clone https://github.com/kogyikaunghtet/dht11_with_lcd`
+#### git clone https://github.com/kogyikaunghtet/dht11_with_lcd
 
 အထက်ပါအတိုင်း ဒေါင်းလုပ်ရယူပြီးရင် dht11_with_lcd directory ထဲသို့ ဝင်ပြီး စမ်းသပ်ကြည့်နိုင်ပါပြီ။
 
-`cd dht11_with_lcd`
+#### cd dht11_with_lcd
 
-`sudo python dht11_with_lcd.py`
+#### sudo python dht11_with_lcd.py
