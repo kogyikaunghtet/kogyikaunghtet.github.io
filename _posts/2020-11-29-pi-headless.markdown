@@ -3,20 +3,22 @@ layout: post
 title: Raspberry Pi ကို Monitor မပါပဲ ဘယ်လို Setup လုပ်မလဲ?
 date: 2020-11-29 13:32:20 +0630
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: headless/pi_setup.jpg # Add image post (optional)
+img: headless/test.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Raspberry Pi, headless, network, setup]
 ---
 Raspberry Pi ကို ပထမဆုံးအကြိမ်အဖြစ် စတင်အသုံးပြုမယ့် သူတွေအနေနဲ့ First Time Setup ပြုလုပ်ဖို့ ပုံမှန်အားဖြင့် Keyboard, Mouse, Monitor စသဖြင့် လိုအပ်လေ့ရှိပါတယ်။ ဒီလို Keyboard, Mouse, Monitor တွေ မချိတ်ဆက်ထားတဲ့ အချိန်မှာ တခြားကွန်ပျူတာ တစ်လုံး မှတဆင့် Raspberry Pi ကို Network ချိတ်ဆက်ပြီး ထိန်းချုပ်အသုံးပြုနိုင်ခြင်းကို “headless အသုံးပြုခြင်း” လို့ ေခါ်ပါတယ်။ headless ချိတ်ဆက်အသုံးပြုနိုင်ဖို့ လိုအပ်တဲ့ Remote Access အတွက် SSH (သို့မဟုတ်) VNC ဟာ Raspbian OS မှာ default အားဖြင့် disable ဖြစ်နေပါတယ်။ SSH ကို enable ပြုလုပ်ဖို့၊ Wifi ချိတ်ဆက်ဖို့နဲ့၊ Static IP address သတ်မှတ်ပြင်ဆင်ဖို့ Keyboard, Mouse, Monitor တွေ မရှိတဲ့အချိန်မှာ နက်ဝက်ကြိုး (Ethernet Cable) ရှိရုံနဲ့ First time setup ပြုလုပ်လို့ ရပါတယ်။
 
-Raspbian OS download ရယူခြင်းနဲ့ SD card ပေါ်မှာ Raspbian OS တပ်ဆင်ခြင်း အတွက် ကိုတော့ ဒီနေရာ (https://kogyikaunghtet.github.io/sha-check/) မှာ ဖတ်ရှုနိုင်ပါတယ်။
+Raspbian OS download ရယူခြင်းနဲ့ SD card ပေါ်မှာ Raspbian OS တပ်ဆင်ခြင်း အတွက် ကိုတော့ <a style="text-decoration:none" href="https://kogyikaunghtet.github.io/sha-check/">ဒီနေရာ</a> မှာ ဖတ်ရှုနိုင်ပါတယ်။
 
 Raspbian OS ကို SD card ပေါ်မှာ တင်ပြီးတဲ့နောက် ကွန်ပျူတာကနေ SD card ကို မဖြုတ်သေးပဲ /boot ဆိုတဲ့ directory ရဲ့ အောက်မှာ ssh ဆိုတဲ့ နာမည်နဲ့ ဖိုင်အလွတ်တစ်ခုကို ဖန်တီးပေးရပါမယ်။ ဒီလို ssh ဆိုတဲ့ ဖိုင်တစ်ခုကို /boot directory အောက်မှာ တည်ဆောက် ပေးလိုက်ခြင်းအားဖြင့် Raspbian OS ပထမဆုံးအကြိမ် boot တက်လာတဲ့ အခါမှာ SSH (Secure SHell) ကို enable ပြုလုပ်ပြီးသား ဖြစ်သွားစေပါတယ်။ ssh ဖိုင် တည်ဆောက်တဲ့ အခါ File Name မှာ “.txt” , “.exe” စသဖြင့် မည်သည့် file extension မျှ မပါဝင်စေရပါဘူး။
 
 ကွန်ပျူတာမှာ Ubuntu OS အသုံးပြုသူများ အနေနဲ့ terminal မှာ အောက်ပါ command သုံးပြီး တည်ဆောက်နိုင်ပါတယ်။
+
 `$ touch ssh`
 
 Windows OS အသုံးပြုသူများကတော့ cmd မှာ အောက်ပါ command သုံးပြီး တည်ဆောက်နိုင်ပါတယ်။
+
 `Type NUL >> ssh`
 
 ပြီးတဲ့နောက်မှာတော့ ကွန်ပျူတာကနေ SD card ကို ဖြုတ်ပြီး Raspberry Pi ရဲ့ SD card slot မှာ တပ်ဆင်နိုင်ပါပြီ။ Raspberry Pi ရဲ့ Ethernet Port နဲ့ Laptop ရဲ့ Ethernet Port ကို RJ45 Ethernet Cable (နက်ဝက်ကြိုး) တစ်ချောင်း အသုံးပြုပြီး ချိတ်ဆက်ထားလိုက်ပါ။ ပြီးရင် Raspberry Pi ကို Power ပေးနိုင်ပါပြီ။
