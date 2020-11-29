@@ -2,8 +2,8 @@
 layout: post
 title: Raspberry Pi ကို Monitor မပါပဲ ဘယ်လို Setup လုပ်မလဲ?
 date: 2020-11-29 13:32:20 +0630
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: headless/test.jpg # Add image post (optional)
+description: Raspberry Pi Headless Setup
+img: headless/pi_setup.jpg
 fig-caption: # Add figcaption (optional)
 tags: [Raspberry Pi, headless, network, setup]
 ---
