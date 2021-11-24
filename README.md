@@ -1,1 +1,1 @@
-https://kogyikaunghtet.github.io
+https://kogyikaunghtet.com
