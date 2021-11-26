@@ -6,7 +6,6 @@ description: Color sensing with Raspberry Pi
 img: TCS3200/color-rpi.jpg
 fig-caption: # Add figcaption (optional)
 tags: [Raspberry Pi, sensor]
-categories: [Raspberry Pi, sensor]
 ---
 Raspberry Pi မှာ Red, Green, Blue (RGB) စတဲ့ အရောင်တွေ ခွဲခြားပြီး color detect ပြုလုပ်နိုင်ဖို့ TCS3200 ဆိုတဲ့ color sensor ကို RobotDyn နဲ့ Waveshare က ထုတ်တဲ့ အမျိုးအစား ၂မျိုးရှိပြီး နှစ်သက်ရာ ရွေးချယ်အသုံးပြု နိုင်ပါတယ်။ TCS3200 အပြင် ဈေးနှုန်းသင့်တဲ့ TCS230 color sensor ကိုလည်း သုံးနိုင်ပါတယ်။ ဒီအမျိုးအစား ၂ခုလုံးမှာ built-in white LED light ၄လုံးစီ ပါရှိပြီးတော့ color sensor ဟာ RGB အရောင်တွေအပေါ်မှာ အလင်းပြန်မှုပေါ် မူတည်ပြီး color detect ပြုလုပ်ခြင်း ဖြစ်တဲ့အတွက် ပတ်ဝန်းကျင်ရဲ့ အလင်းရောင် ပြောင်းလဲမှုပေါ်မူတည်ပြီး calibrate လုပ်ထားတဲ့ RGB တန်ဖိုးတွေ အပြောင်းအလဲ ဖြစ်နိုင်တယ်ဆိုတာကို သတိထားရပါမယ်။
 
