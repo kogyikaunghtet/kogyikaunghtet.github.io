@@ -23,21 +23,11 @@ analytics: # Google Analytics
 # Build Settings
 markdown: kramdown
 plugins:
-  - jekyll-archives
   - jekyll-sitemap
   - jekyll-paginate
   - jemoji
 
 paginate: 8
 paginate_path: "/page/:num"
-
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layout: category_archives
-  permalinks:
-    category: /categories/:name/
-    tag: /tags/:name/
 
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
