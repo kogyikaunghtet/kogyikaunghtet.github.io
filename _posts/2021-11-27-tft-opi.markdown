@@ -8,7 +8,7 @@ fig-caption: ili9486 TFT display running htop command
 tags: [Orange Pi, Displays, TFT]
 ---
 
-### 4inch TFT Display | Driver: ILI9486
+#### <span style="color:e89253">4inch TFT Display | Driver: ILI9486</span>
 
 | ILI9486 Pin Symbol | Orange Pi Zero Pin |
 | :---------------: | :---------------: |
@@ -45,7 +45,7 @@ $ sudo modprobe fbtft_device custom name=fb_ili9486 gpios=dc:3,reset:0,led:6 spe
 
 ----------------
 
-### 2.8inch TFT Display | Driver: ILI9341
+#### <span style="color:e89253">2.8inch TFT Display | Driver: ILI9341</span>
 
 | ILI9341 Pin Symbol | Orange Pi Zero Pin |
 | :---------------: | :---------------: |
@@ -74,7 +74,7 @@ $ sudo modprobe fbtft_device custom name=fb_ili9341 gpios=dc:3,reset:0,led:6 spe
 
 ----------------
 
-### 2.2inch TFT Display | Driver: BD663474
+#### <span style="color:e89253">2.2inch TFT Display | Driver: BD663474</span>
 
 | BD663474 Pin No. | Symbol | Orange Pi Zero Pin |
 | :---------------: | :---------------: | :---------------: |
@@ -102,7 +102,7 @@ $ sudo modprobe fbtft_device custom name=fb_bd663474 gpios=dc:3,reset:0,led:6 sp
 
 ----------------
 
-### 1.5inch RGB OLED Display | Driver: SSD1351
+#### <span style="color:e89253">1.5inch RGB OLED Display | Driver: SSD1351</span>
 
 | SSD1351 Pin Symbol | Orange Pi Zero Pin |
 | :---------------: | :---------------: |
@@ -129,4 +129,4 @@ $ sudo modprobe fbtft_device custom name=fb_ssd1351 gpios=dc:3,reset:0 speed=160
 
 ----------------
 
-### Nokia 5110 Graphic LCD | Internal Controller: PCD8544
+#### <span style="color:e89253">Nokia 5110 Graphic LCD | Internal Controller: PCD8544</span>
