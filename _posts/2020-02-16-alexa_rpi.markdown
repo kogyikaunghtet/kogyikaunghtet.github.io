@@ -10,7 +10,7 @@ tags: [Raspberry Pi, Smart Home]
 Voice controlled home automation system using Amazon Alexa and Raspberry Pi
 
 <center>
-<video width="640" height="360" controls>
+<video width=100% height=auto controls>
   <source src="/assets/img/video/alexa_pi.mp4" type="video/mp4">
 </video>
 </center>
