@@ -22,7 +22,7 @@ tags: [Orange Pi, Displays, TFT]
 
 `$ sudo modprobe fbtft_device custom name=fb_ili9486 gpios=dc:3,reset:0,led:6 speed=16000000 busnum=1 rotate=90`
 
-`con2fbmap 1 8`
+`$ con2fbmap 1 8`
 
 <p align="center">
 <img src="/assets/img/opi_tft/ili9486_htop.jpg">
@@ -30,7 +30,7 @@ tags: [Orange Pi, Displays, TFT]
 <a>ili9486 TFT display running htop command</a>
 </p>
 
-`FRAMEBUFFER=/dev/fb8 startx`
+`$ FRAMEBUFFER=/dev/fb8 startx`
 
 <p align="center">
 <img src="/assets/img/opi_tft/ili9486_xfce.jpg">
@@ -53,7 +53,7 @@ tags: [Orange Pi, Displays, TFT]
 
 `$ sudo modprobe fbtft_device custom name=fb_ili9341 gpios=dc:3,reset:0,led:6 speed=16000000 busnum=1 rotate=90`
 
-`FRAMEBUFFER=/dev/fb8 startx`
+`$ FRAMEBUFFER=/dev/fb8 startx`
 
 <p align="center">
 <img src="#">
@@ -75,7 +75,7 @@ tags: [Orange Pi, Displays, TFT]
 
 `$ sudo modprobe fbtft_device custom name=fb_bd663474 gpios=dc:3,reset:0,led:6 speed=16000000 busnum=1 rotate=270`
 
-`FRAMEBUFFER=/dev/fb8 startx`
+`$ FRAMEBUFFER=/dev/fb8 startx`
 
 <p align="center">
 <img src="/assets/img/opi_tft/bd663474_xfce.jpg">
@@ -96,7 +96,7 @@ tags: [Orange Pi, Displays, TFT]
 
 `$ sudo modprobe fbtft_device custom name=fb_ssd1351 gpios=dc:3,reset:0 speed=16000000 busnum=1 rotate=0`
 
-`con2fbmap 1 8`
+`$ con2fbmap 1 8`
 
 <p align="center">
 <img src="/assets/img/opi_tft/ssd1351_login.jpg">
