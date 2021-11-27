@@ -1,0 +1,106 @@
+---
+layout: post
+title: TFT displays for Orange Pi zero
+date: 2021-11-27 16:32:20 +0630
+description: ili9486, ili9341, bd663474 TFT displays and ssd1351 OLED display for Orange Pi zero
+img: opi_tft/ili9486_htop.jpg
+fig-caption: ili9486 TFT display running htop command
+tags: [Orange Pi, Displays, TFT]
+---
+
+| ILI9486 Pin Symbol | Orange Pi Zero Pin |
+| ------------- | ------------- |
+| GND | GND |
+| 5V | 5V |
+| LCD_BL | PWM1/**PA06** |
+| LCD_RST | UART2_TX/**PA00** |
+| MISO | SPI1_MISO/**PA16** |
+| MOSI | SPI1_MOSI/**PA15** |
+| SCLK | SPI1_CLK/**PA14** |
+| LCD_CS | SPI1_CS/**PA13** |
+| LCD_DC | UART2_CTS/**PA03** |
+
+`$ sudo modprobe fbtft_device custom name=fb_ili9486 gpios=dc:3,reset:0,led:6 speed=16000000 busnum=1 rotate=90`
+
+`con2fbmap 1 8`
+
+<p align="center">
+<img src="/assets/img/opi_tft/ili9486_htop.jpg">
+<br>
+<a>ili9486 TFT display running htop command</a>
+</p>
+
+`FRAMEBUFFER=/dev/fb8 startx`
+
+<p align="center">
+<img src="/assets/img/opi_tft/ili9486_xfce.jpg">
+<br>
+<a>ili9486 TFT display running debian xfce desktop</a>
+</p>
+<br>
+
+| ILI9341 Pin Symbol | Orange Pi Zero Pin |
+| ------------- | ------------- |
+| GND | GND |
+| VCC | 5V |
+| LED | PWM1/**PA06** |
+| RESET | UART2_TX/**PA00** |
+| SDO(MISO) | SPI1_MISO/**PA16** |
+| SDI(MOSI) | SPI1_MOSI/**PA15** |
+| SCK | SPI1_CLK/**PA14** |
+| CS | SPI1_CS/**PA13** |
+| DC | UART2_CTS/**PA03** |
+
+`$ sudo modprobe fbtft_device custom name=fb_ili9341 gpios=dc:3,reset:0,led:6 speed=16000000 busnum=1 rotate=90`
+
+`FRAMEBUFFER=/dev/fb8 startx`
+
+<p align="center">
+<img src="#">
+<br>
+<a>ili9341 TFT display running debian xfce desktop</a>
+</p>
+<br>
+
+| BD663474 Pin No. | Symbol | Orange Pi Zero Pin |
+| ------------- | ------------- | ------------- |
+| 1 or 2 | GND | GND |
+| 3 or 4 | 3.3V | 3.3V |
+| 5 or 6 | PWM | PWM1/**PA06** |
+| 31 or 32 | RESET | UART2_TX/**PA00** |
+| 33 | MISO | SPI1_MOSI/**PA15** |
+| 35 | SCK | SPI1_CLK/**PA14** |
+| 37 or 38 | CS | SPI1_CS/**PA13** |
+| 39 or 40 | RS or DC | UART2_CTS/**PA03** |
+
+`$ sudo modprobe fbtft_device custom name=fb_bd663474 gpios=dc:3,reset:0,led:6 speed=16000000 busnum=1 rotate=270`
+
+`FRAMEBUFFER=/dev/fb8 startx`
+
+<p align="center">
+<img src="/assets/img/opi_tft/bd663474_xfce.jpg">
+<br>
+<a>BD 663474 TFT display running debian xfce desktop</a>
+</p>
+<br>
+
+| SSD1351 Pin Symbol | Orange Pi Zero Pin |
+| ------------- | ------------- |
+| GND | GND |
+| VCC | 5V |
+| RST | UART2_TX/**PA00** |
+| DIN | SPI1_MISO/**PA16** |
+| CLK | SPI1_CLK/**PA14** |
+| CS | SPI1_CS/**PA13** |
+| DC | UART2_CTS/**PA03** |
+
+`$ sudo modprobe fbtft_device custom name=fb_ssd1351 gpios=dc:3,reset:0 speed=16000000 busnum=1 rotate=0`
+
+`con2fbmap 1 8`
+
+<p align="center">
+<img src="/assets/img/opi_tft/ssd1351_login.jpg">
+<br>
+<a>SSD1351 OLED display running Armbian CLI mode</a>
+</p>
+<br>
