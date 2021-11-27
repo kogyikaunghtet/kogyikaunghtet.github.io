@@ -9,7 +9,7 @@ tags: [Orange Pi, Displays, TFT]
 ---
 
 | ILI9486 Pin Symbol | Orange Pi Zero Pin |
-| ------------- | ------------- |
+| :---------------: | :---------------: |
 | GND | GND |
 | 5V | 5V |
 | LCD_BL | PWM1/**PA06** |
@@ -42,7 +42,7 @@ $ sudo modprobe fbtft_device custom name=fb_ili9486 gpios=dc:3,reset:0,led:6 spe
 </p>
 
 | ILI9341 Pin Symbol | Orange Pi Zero Pin |
-| ------------- | ------------- |
+| :---------------: | :---------------: |
 | GND | GND |
 | VCC | 5V |
 | LED | PWM1/**PA06** |
@@ -67,7 +67,7 @@ $ sudo modprobe fbtft_device custom name=fb_ili9341 gpios=dc:3,reset:0,led:6 spe
 </p>
 
 | BD663474 Pin No. | Symbol | Orange Pi Zero Pin |
-| ------------- | ------------- | ------------- |
+| :---------------: | :---------------: | :---------------: |
 | 1 or 2 | GND | GND |
 | 3 or 4 | 3.3V | 3.3V |
 | 5 or 6 | PWM | PWM1/**PA06** |
@@ -91,7 +91,7 @@ $ sudo modprobe fbtft_device custom name=fb_bd663474 gpios=dc:3,reset:0,led:6 sp
 </p>
 
 | SSD1351 Pin Symbol | Orange Pi Zero Pin |
-| ------------- | ------------- |
+| :---------------: | :---------------: |
 | GND | GND |
 | VCC | 5V |
 | RST | UART2_TX/**PA00** |
@@ -113,15 +113,3 @@ $ sudo modprobe fbtft_device custom name=fb_ssd1351 gpios=dc:3,reset:0 speed=160
 <a><b>Figure:</b> SSD1351 OLED display running Debian CLI mode</a>
 </p>
 
-|-----------------+------------+-----------------+----------------|
-| Default aligned |Left aligned| Center aligned  | Right aligned  |
-|-----------------|:-----------|:---------------:|---------------:|
-| First body part |Second cell | Third cell      | fourth cell    |
-| Second line     |foo         | **strong**      | baz            |
-| Third line      |quux        | baz             | bar            |
-|-----------------+------------+-----------------+----------------|
-| Second body     |            |                 |                |
-| 2 line          |            |                 |                |
-|=================+============+=================+================|
-| Footer row      |            |                 |                |
-|-----------------+------------+-----------------+----------------|
