@@ -8,6 +8,8 @@ fig-caption: ili9486 TFT display running htop command
 tags: [Orange Pi, Displays, TFT]
 ---
 
+### 4inch TFT Display | Driver: ILI9486
+
 | ILI9486 Pin Symbol | Orange Pi Zero Pin |
 | :---------------: | :---------------: |
 | GND | GND |
@@ -41,6 +43,8 @@ $ sudo modprobe fbtft_device custom name=fb_ili9486 gpios=dc:3,reset:0,led:6 spe
 <a><b>Figure:</b> ili9486 TFT display running debian xfce desktop</a>
 </p>
 
+### 2.8inch TFT Display | Driver: ILI9341
+
 | ILI9341 Pin Symbol | Orange Pi Zero Pin |
 | :---------------: | :---------------: |
 | GND | GND |
@@ -66,6 +70,8 @@ $ sudo modprobe fbtft_device custom name=fb_ili9341 gpios=dc:3,reset:0,led:6 spe
 <a><b>Figure:</b> ili9341 TFT display running debian xfce desktop</a>
 </p>
 
+### 2.2inch TFT Display | Driver: BD663474
+
 | BD663474 Pin No. | Symbol | Orange Pi Zero Pin |
 | :---------------: | :---------------: | :---------------: |
 | 1 or 2 | GND | GND |
@@ -90,6 +96,8 @@ $ sudo modprobe fbtft_device custom name=fb_bd663474 gpios=dc:3,reset:0,led:6 sp
 <a><b>Figure:</b> BD 663474 TFT display running debian xfce desktop</a>
 </p>
 
+### 1.5inch RGB OLED Display | Driver: SSD1351
+
 | SSD1351 Pin Symbol | Orange Pi Zero Pin |
 | :---------------: | :---------------: |
 | GND | GND |
@@ -113,3 +121,4 @@ $ sudo modprobe fbtft_device custom name=fb_ssd1351 gpios=dc:3,reset:0 speed=160
 <a><b>Figure:</b> SSD1351 OLED display running Debian CLI mode</a>
 </p>
 
+### Nokia 5110 Graphic LCD | Internal Controller: PCD8544

@@ -26,7 +26,7 @@ E-Paper (Electronic paper) ကို Electrophoretic display လို့လည�
 E-paper display ကို Raspberry Pi နဲ့ ချိတ်ဆက်အသုံးပြုဖို့ Waveshare က ထုတ်တဲ့ display module အရွယ်အစားမျိုးစုံကို အသုံးပြုနိုင်ပြီး ယခု အသုံးပြု ပြသွားမှာက 296×128 pixels, 2.9inch အရွယ်အစားရှိတဲ့ E-paper display module ဖြစ်ပါတယ်။ SPI interface နဲ့ ချိတ်ဆက်ရမှာ ဖြစ်ပြီးတော့ display color အနေနဲ့ အနီရောင်၊ အနက်ရောင်နဲ့ နောက်ခံအဖြူရောင် ဖော်ပြနိုင်ပါတယ်။ Ultra low power consumption ဖြစ်ပြီး ပုံမှန်အားဖြင့် display refresh ပြုလုပ်တဲ့ အချိန်မှသာ 26.4mW ခန့်ပဲ သုံးစွဲပါတယ်။ Display Module ရဲ့ Pin တွေကို Raspberry Pi နဲ့ အောက်ပါအတိုင်း ချိတ်ဆက်ပေးရပါမယ်။
 
 | E-Paper Display Module Pin  | Raspberry Pi Pin |
-| ------------- | ------------- |
+| :---------------: | :---------------: |
 | BUSY  | BCM24 (Physical pin 18)  |
 | RST  | BCM17 (Physical pin 11)  |
 | DC  | BCM25 (Physical pin 22)  |
