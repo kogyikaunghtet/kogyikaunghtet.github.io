@@ -56,7 +56,7 @@ tags: [Orange Pi, Displays, TFT]
 `$ FRAMEBUFFER=/dev/fb8 startx`
 
 <p align="center">
-<img src="#">
+<img src="/assets/img/opi_tft/ili9341_htop.jpg">
 <br>
 <a>ili9341 TFT display running debian xfce desktop</a>
 </p>
@@ -73,7 +73,9 @@ tags: [Orange Pi, Displays, TFT]
 | 37 or 38 | CS | SPI1_CS/**PA13** |
 | 39 or 40 | RS or DC | UART2_CTS/**PA03** |
 
-`$ sudo modprobe fbtft_device custom name=fb_bd663474 gpios=dc:3,reset:0,led:6 speed=16000000 busnum=1 rotate=270`
+~~~~~~~~
+$ sudo modprobe fbtft_device custom name=fb_bd663474 gpios=dc:3,reset:0,led:6 speed=16000000 busnum=1 rotate=270
+~~~~~~~~
 
 `$ FRAMEBUFFER=/dev/fb8 startx`
 
@@ -101,6 +103,6 @@ tags: [Orange Pi, Displays, TFT]
 <p align="center">
 <img src="/assets/img/opi_tft/ssd1351_login.jpg">
 <br>
-<a>SSD1351 OLED display running Armbian CLI mode</a>
+<a>SSD1351 OLED display running Debian CLI mode</a>
 </p>
 <br>
