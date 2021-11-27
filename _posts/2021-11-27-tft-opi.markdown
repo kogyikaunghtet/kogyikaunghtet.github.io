@@ -30,7 +30,7 @@ $ sudo modprobe fbtft_device custom name=fb_ili9486 gpios=dc:3,reset:0,led:6 spe
 <p align="center">
 <img src="/assets/img/opi_tft/ili9486_htop.jpg">
 <br>
-<a>*Figure:* ili9486 TFT display running htop command</a>
+<a><b>Figure:</b> ili9486 TFT display running htop command</a>
 </p>
 
 `$ FRAMEBUFFER=/dev/fb8 startx`
@@ -38,7 +38,7 @@ $ sudo modprobe fbtft_device custom name=fb_ili9486 gpios=dc:3,reset:0,led:6 spe
 <p align="center">
 <img src="/assets/img/opi_tft/ili9486_xfce.jpg">
 <br>
-<a>*Figure:* ili9486 TFT display running debian xfce desktop</a>
+<a><b>Figure:</b> ili9486 TFT display running debian xfce desktop</a>
 </p>
 
 | ILI9341 Pin Symbol | Orange Pi Zero Pin |
@@ -63,7 +63,7 @@ $ sudo modprobe fbtft_device custom name=fb_ili9341 gpios=dc:3,reset:0,led:6 spe
 <p align="center">
 <img src="/assets/img/opi_tft/ili9341_htop.jpg">
 <br>
-<a>*Figure:* ili9341 TFT display running debian xfce desktop</a>
+<a><b>Figure:</b> ili9341 TFT display running debian xfce desktop</a>
 </p>
 
 | BD663474 Pin No. | Symbol | Orange Pi Zero Pin |
@@ -87,7 +87,7 @@ $ sudo modprobe fbtft_device custom name=fb_bd663474 gpios=dc:3,reset:0,led:6 sp
 <p align="center">
 <img src="/assets/img/opi_tft/bd663474_xfce.jpg">
 <br>
-<a>*Figure:* BD 663474 TFT display running debian xfce desktop</a>
+<a><b>Figure:</b> BD 663474 TFT display running debian xfce desktop</a>
 </p>
 
 | SSD1351 Pin Symbol | Orange Pi Zero Pin |
@@ -110,5 +110,5 @@ $ sudo modprobe fbtft_device custom name=fb_ssd1351 gpios=dc:3,reset:0 speed=160
 <p align="center">
 <img src="/assets/img/opi_tft/ssd1351_login.jpg">
 <br>
-<a>*Figure:* SSD1351 OLED display running Debian CLI mode</a>
+<a><b>Figure:</b> SSD1351 OLED display running Debian CLI mode</a>
 </p>
