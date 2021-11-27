@@ -72,7 +72,7 @@ tags: [Orange Pi, Displays, TFT]
 | 35 | SCK | SPI1_CLK/**PA14** |
 | 37 or 38 | CS | SPI1_CS/**PA13** |
 | 39 or 40 | RS or DC | UART2_CTS/**PA03** |
-
+<br>
 ~~~~~~~~
 $ sudo modprobe fbtft_device custom name=fb_bd663474 gpios=dc:3,reset:0,led:6 speed=16000000 busnum=1 rotate=270
 ~~~~~~~~
