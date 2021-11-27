@@ -20,7 +20,10 @@ tags: [Orange Pi, Displays, TFT]
 | LCD_CS | SPI1_CS/**PA13** |
 | LCD_DC | UART2_CTS/**PA03** |
 
-`$ sudo modprobe fbtft_device custom name=fb_ili9486 gpios=dc:3,reset:0,led:6 speed=16000000 busnum=1 rotate=90`
+အောက်ပါ command ဖြင့် FBTFT device module ကို Linux Kernel သို့ ထည့်ပါ။
+~~~~~~~~
+$ sudo modprobe fbtft_device custom name=fb_ili9486 gpios=dc:3,reset:0,led:6 speed=16000000 busnum=1 rotate=90
+~~~~~~~~
 
 `$ con2fbmap 1 8`
 
@@ -51,7 +54,10 @@ tags: [Orange Pi, Displays, TFT]
 | CS | SPI1_CS/**PA13** |
 | DC | UART2_CTS/**PA03** |
 
-`$ sudo modprobe fbtft_device custom name=fb_ili9341 gpios=dc:3,reset:0,led:6 speed=16000000 busnum=1 rotate=90`
+အောက်ပါ command ဖြင့် FBTFT device module ကို Linux Kernel သို့ ထည့်ပါ။
+~~~~~~~~
+$ sudo modprobe fbtft_device custom name=fb_ili9341 gpios=dc:3,reset:0,led:6 speed=16000000 busnum=1 rotate=90
+~~~~~~~~
 
 `$ FRAMEBUFFER=/dev/fb8 startx`
 
@@ -73,7 +79,7 @@ tags: [Orange Pi, Displays, TFT]
 | 37 or 38 | CS | SPI1_CS/**PA13** |
 | 39 or 40 | RS or DC | UART2_CTS/**PA03** |
 
-<br>
+အောက်ပါ command ဖြင့် FBTFT device module ကို Linux Kernel သို့ ထည့်ပါ။
 ~~~~~~~~
 $ sudo modprobe fbtft_device custom name=fb_bd663474 gpios=dc:3,reset:0,led:6 speed=16000000 busnum=1 rotate=270
 ~~~~~~~~
@@ -97,7 +103,10 @@ $ sudo modprobe fbtft_device custom name=fb_bd663474 gpios=dc:3,reset:0,led:6 sp
 | CS | SPI1_CS/**PA13** |
 | DC | UART2_CTS/**PA03** |
 
-`$ sudo modprobe fbtft_device custom name=fb_ssd1351 gpios=dc:3,reset:0 speed=16000000 busnum=1 rotate=0`
+အောက်ပါ command ဖြင့် FBTFT device module ကို Linux Kernel သို့ ထည့်ပါ။
+~~~~~~~~
+$ sudo modprobe fbtft_device custom name=fb_ssd1351 gpios=dc:3,reset:0 speed=16000000 busnum=1 rotate=0
+~~~~~~~~
 
 `$ con2fbmap 1 8`
 
