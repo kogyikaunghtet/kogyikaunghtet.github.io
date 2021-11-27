@@ -8,7 +8,7 @@ fig-caption: ili9486 TFT display running htop command
 tags: [Orange Pi, Displays, TFT]
 ---
 
-#### <span style="color:blue">4inch TFT Display | Driver: ILI9486</span>
+### <span style="color:blue; opacity: 0.50;">4inch TFT Display | Driver: ILI9486</span>
 
 | ILI9486 Pin Symbol | Orange Pi Zero Pin |
 | :---------------: | :---------------: |
