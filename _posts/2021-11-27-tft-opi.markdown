@@ -10,6 +10,8 @@ tags: [Orange Pi, Displays, TFT]
 
 ### <center><span style="color:red; opacity: 0.50;">4inch TFT Display | Driver: ILI9486</span>
 
+fbtft_device module ကို Linux Kernel 5.4 က စပြီး Support မပေးတော့ပါဘူး။ ဒါကြောင့် <a style="text-decoration:none" href="https://archive.armbian.com/orangepizero/archive/">Armbian Archive Storage</a> မှာ Linux Kernel 5.4 ရဲ့ အောက် version တွေကို ရှာဖွေပြီး download ရယူထားနိုင်ပါတယ်။ ယခု Guide မှာ စမ်းသပ်ထားတဲ့ Debian Kernel version ကတော့ 3.4 ဖြစ်ပြီးတော့ <a style="text-decoration:none" href="https://archive.armbian.com/orangepizero/archive/Armbian_5.59_Orangepizero_Debian_jessie_default_3.4.113.7z">ဒီနေရာ</a>မှာ တိုက်ရိုက် ဒေါင်းနိုင်ပါတယ်။ File size 203MB ရှိပါတယ်။ Download ရယူပြီးရင် Extract ပြုလုပ်ကာ <a style="text-decoration:none" href="https://www.balena.io/etcher/">balenaEtcher</a> software အသုံးပြုပြီး SD card အတွင်းသို့ ထည့်သွင်းလိုက်ပါ။ Orange Pi စတင် အသုံးပြုခြင်း Getting Started Guide ကိုတော့ <a style="text-decoration:none" href="#">ဒီနေရာ</a>မှာ အရင်ဖတ်ရှုနိုင်ပါတယ်။
+
 | ILI9486 Pin Symbol | Orange Pi Zero Pin |
 | :---------------: | :---------------: |
 | GND | GND |
@@ -21,6 +23,12 @@ tags: [Orange Pi, Displays, TFT]
 | SCLK | SPI1_CLK/**PA14** |
 | LCD_CS | SPI1_CS/**PA13** |
 | LCD_DC | UART2_CTS/**PA03** |
+
+<p align="center">
+<img src="/assets/img/opi_tft/ili9486_spi_config.jpg">
+<br>
+<a><b>Figure:</b>SPI Config Switch ၃ခုကို ICSP ဘက်သို့ မထားရန် သတိပြုပါ။</a>
+</p>
 
 အောက်ပါ command ဖြင့် FBTFT device module ကို Linux Kernel သို့ ထည့်ပါ။
 ~~~~~~~~
