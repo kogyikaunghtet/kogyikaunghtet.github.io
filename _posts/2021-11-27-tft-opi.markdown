@@ -88,7 +88,7 @@ $ sudo modprobe fbtft_device custom name=fb_ili9486 gpios=dc:3,reset:0,led:6 spe
 <a><b>Figure:</b> framebuffer device list</a>
 </p>
 
-**/dev/fb0** က first framebuffer device ဖြစ်ပါတယ်။ အကယ်၍ Raspberry Pi မှာ ဆိုရင် HDMI Display တပ်ဆင်ထားပါက `$ con2fbmap 1 0` command ဟာ video driver ကို HDMI display ဆီသို့ output ထုတ်ရန် ခိုင်းစေခြင်း ဖြစ်ပါတယ်။ အောက်ပါ ပုံမှာ system-monitor process-viewer command ဖြစ်တဲ့ `htop` ကို run ပြ ထားပါတယ်။ TFT display ပေါ်က console မှာ စာရိုက်နိုင်ဖို့အတွက် Orange Pi Zero ရဲ့ USB port မှာ Keyboard တပ်ဆင်ထားဖို့တော့ လိုပါမယ်။
+**/dev/fb0** က first framebuffer device ဖြစ်ပါတယ်။ အကယ်၍ Raspberry Pi မှာ ဆိုရင် HDMI Display တပ်ဆင်ထားပါက `$ con2fbmap 1 0` command ဟာ video driver ကို HDMI display ဆီသို့ output ထုတ်ရန် ခိုင်းစေခြင်း ဖြစ်ပါတယ်။ command မှာ ဒုတိယ argument ကို မထည့်ပဲ `con2fbmap 1` လို့ပဲ ရိုက်ပါက first framebuffer device ကိုပဲ map ပြုလုပ်ပေးမှာ ဖြစ်ပါတယ်။ အောက်ပါ ပုံမှာတော့ system-monitor process-viewer command ဖြစ်တဲ့ `htop` ကို run ပြ ထားပါတယ်။ TFT display ပေါ်က console မှာ စာရိုက်နိုင်ဖို့အတွက် Orange Pi Zero ရဲ့ USB port မှာ Keyboard တိုက်ရိုက် တပ်ဆင်ထားဖို့တော့ လိုပါမယ်။
 
 <p align="center">
 <img src="/assets/img/opi_tft/ili9486_htop.jpg">
