@@ -252,7 +252,7 @@ $ sudo modprobe fbtft_device custom name=fb_ssd1351 gpios=dc:3,reset:0 speed=160
 ----------------
 ### <center><span style="color:red; opacity: 0.50;">Nokia 5110 Graphic LCD | Internal Controller: PCD8544</span>
 
-<table class="wikitable" style="width:600px;">
+<table style="width:100%;">
 <tr>
 <th colspan="4"> <center>2x13 Header</center>
 </th></tr>
@@ -347,3 +347,63 @@ $ sudo modprobe fbtft_device custom name=fb_ssd1351 gpios=dc:3,reset:0 speed=160
 <td> 26 </td>
 <td> SIM_DET/PA_EINT10 / PA10 / GPIO10
 </td></tr></table>
+
+<p>The Orange Pi Zero has another 13-pin, 0.1" header with several low-speed interfaces.</p>
+
+<table style="width:100%;">
+<tr>
+<th colspan="2"> 1x13 Header
+</th></tr>
+<tr>
+<td> 1 </td>
+<td> <i>5V</i>
+</td></tr>
+<tr>
+<td> 2 </td>
+<td> <i>GND</i>
+</td></tr>
+<tr>
+<td> 3 </td>
+<td> USB-DM2
+</td></tr>
+<tr>
+<td> 4 </td>
+<td> USB-DP2
+</td></tr>
+<tr>
+<td> 5 </td>
+<td> USB-DM3
+</td></tr>
+<tr>
+<td> 6 </td>
+<td> USB-DP3
+</td></tr>
+<tr>
+<td> 7 </td>
+<td> LINEOUTR
+</td></tr>
+<tr>
+<td> 8 </td>
+<td> LINEOUTL
+</td></tr>
+<tr>
+<td> 9 </td>
+<td>  TV-OUT
+</td></tr>
+<tr>
+<td> 10 </td>
+<td> MIC-BIAS
+</td></tr>
+<tr>
+<td> 11 </td>
+<td> MIC1P
+</td></tr>
+<tr>
+<td> 12 </td>
+<td> MIC1N
+</td></tr>
+<tr>
+<td> 13 </td>
+<td> CIR-RX</td>
+</tr></table>
+
