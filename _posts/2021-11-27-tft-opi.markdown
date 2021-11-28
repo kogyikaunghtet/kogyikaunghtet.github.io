@@ -242,7 +242,7 @@ $ sudo modprobe fbtft_device custom name=fb_bd663474 gpios=dc:3,reset:0,led:6 sp
 
 ### <center><span style="color:red; opacity: 0.50;">1.5inch RGB OLED Display | Driver: SSD1351</span>
 
-TFT Display များသာမက OLED Display လည်း လက်ထဲရှိနေတဲ့အတွက် တစ်ခါတည်း စမ်းသပ်ကြည့်ထားပါတယ်။ SSD1351 OLED Display Module နဲ့ စမ်းသပ်လိုတယ်ဆိုရင် အောက်ပါအတိုင်း လုပ်ဆောင်ပါ။
+OLED Display လည်း အဆင်သင့်ရှိနေတဲ့အတွက် Orange Pi Zero နဲ့ အတူ တစ်ခါတည်း စမ်းသပ်ကြည့်ထားပါတယ်။ SSD1351 OLED Display Module နဲ့ စမ်းသပ်လိုတယ်ဆိုရင် အောက်ပါအတိုင်း လုပ်ဆောင်ပါ။
 
 | SSD1351 Pin Symbol | Orange Pi Zero Pin |
 | :---------------: | :---------------: |
