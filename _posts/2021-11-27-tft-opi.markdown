@@ -268,8 +268,3 @@ $ sudo modprobe fbtft_device custom name=fb_ssd1351 gpios=dc:3,reset:0 speed=160
 <br>
 <a><b>Figure:</b> SSD1351 OLED display running Debian CLI mode</a>
 </p>
-
-----------------
-
-### <center><span style="color:red; opacity: 0.50;">Nokia 5110 Graphic LCD | Internal Controller: PCD8544</span>
-
