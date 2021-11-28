@@ -26,7 +26,7 @@ Orange Pi Zero မှာ Raspberry Pi ကဲ့သို့ HDMI port မပါ�
 | LCD_CS | SPI1_CS/**PA13** |
 | LCD_DC | UART2_CTS/**PA03** |
 
-ဒီ TFT Display Shield ကို အသုံးပြုရင် သတိပြုရမယ့် အချက်က - Shield ရဲ့ နောက်ဘက်မှာပါတဲ့ SPI config switch ၃ခုကို SCLK\D12, MISO\D12, MOSI\D11 ဘက်မှာ ထားရှိရမှာ ဖြစ်ပါတယ်။
+ဒီ TFT Display Shield ကို အသုံးပြုရင် သတိပြုရမယ့် အချက်က - Shield ရဲ့ နောက်ဘက်မှာပါတဲ့ SPI config switch ၃ခုကို SCLK\D13, MISO\D12, MOSI\D11 ဘက်မှာ ထားရှိရမှာ ဖြစ်ပါတယ်။
 
 <p align="center">
 <img src="/assets/img/opi_tft/ili9486_spi_config.jpg">
@@ -64,7 +64,7 @@ param_spidev_spi_bus=0
 ~~~~~~~~
 $ sudo modprobe fbtft_device custom name=fb_ili9486 gpios=dc:3,reset:0,led:6 speed=16000000 busnum=1 rotate=90
 ~~~~~~~~
-ပြီးနောက် Linux Kernel သို့ fbtft device driver ရောက် မရောက်ကို `dmesg` (diagnostic message) command အသုံးပြုကာ စစ်ဆေးနိုင်ပါတယ်။
+ပြီးနောက် Linux Kernel ထဲသို့ fbtft device driver ရောက် မရောက်ကို `dmesg` (diagnostic message) command အသုံးပြုကာ စစ်ဆေးနိုင်ပါတယ်။
 
 `$ dmesg | grep fbtft`
 
@@ -172,7 +172,10 @@ EndSection
 အားလုံးပြီးလို့ reboot ချလိုက်ရင် Permanent အဖြစ် XFCE Desktop GUI တက်ပါပြီ။
 
 ----------------
+
 ### <center><span style="color:red; opacity: 0.50;">2.8inch TFT Display | Driver: ILI9341</span>
+
+နောက်ထပ် စမ်းသပ်ထားတဲ့ TFT display ကတော့ 2.8inch, driver: ili9341 ဖြစ်ပါတယ်။ ချိတ်ဆက်ပုံကတော့ အောက်ပါ table အတိုင်းဖြစ်ပြီး ကျန်လုပ်ငန်းစဉ်များနဲ့ သိသင့်တာတွေကတော့ ili9486 TFT မှာ ဖော်ပြခဲ့တာတွေနဲ့ အတူတူပါပဲ။
 
 | ILI9341 Pin Symbol | Orange Pi Zero Pin |
 | :---------------: | :---------------: |
@@ -191,15 +194,23 @@ EndSection
 $ sudo modprobe fbtft_device custom name=fb_ili9341 gpios=dc:3,reset:0,led:6 speed=16000000 busnum=1 rotate=90
 ~~~~~~~~
 
+ပြီးနောက် အောက်ပါ command ဖြင့် XFCE Desktop GUI ကို ဖော်ပြနိုင်ပါပြီ။
+
 `$ FRAMEBUFFER=/dev/fb8 startx`
 
 <p align="center">
-<img src="/assets/img/opi_tft/ili9341_htop.jpg">
+<img src="/assets/img/opi_tft/ili9341_xfce.jpg">
 <br>
 <a><b>Figure:</b> ili9341 TFT display running debian xfce desktop</a>
 </p>
+
+CLI mode ဖြင့် ဖော်ပြလိုရင်တော့ `$ con2fbmap 1 8` command အသုံးပြုလိုက်ရုံပါပဲ။ Permanent Setup များအတွက်ကတော့ ili9486 မှာ ဖော်ပြခဲ့တဲ့အတိုင်းပါပဲ။ Permanent Setup Configuration setting များမှာ သက်ဆိုင်ရာ ကိုယ့်ရဲ့ TFT Driver နံပါတ်များ ပြောင်းလဲ ရေးသားပေးဖို့တော့ လိုပါမယ်။
+
 ----------------
+
 ### <center><span style="color:red; opacity: 0.50;">2.2inch TFT Display | Driver: BD663474</span>
+
+ဒီ BD663474 TFT display ကတော့ waveshare ကထုတ်တဲ့ <a style="text-decoration:none" href="https://www.waveshare.com/2.2inch-320x240-Touch-LCD-A.htm">2.2inch 320x240 Touch LCD (A)</a> အမျိုးအစား ဖြစ်ပါတယ်။ သူ့ကို waveshare website မှာ ဖော်ပြထားတာကတော့ 3.3V power supply နဲ့ အလုပ်လုပ်တယ် ဆိုပေမယ့် စမ်းသပ်ကြည့်တဲ့အခါ 5V နဲ့မှ ကောင်းစွာ အလုပ်လုပ်တာ တွေ့ရပါတယ်။ ဒီအမျိုးအစား အသုံးပြုဖြစ်တယ် ဆိုရင်တော့ အောက်ပါအတိုင်း ချိတ်ဆက်ပြီး စမ်းသပ်ကြည့်နိုင်ပါတယ်။
 
 | BD663474 Pin No. | Symbol | Orange Pi Zero Pin |
 | :---------------: | :---------------: | :---------------: |
@@ -217,6 +228,8 @@ $ sudo modprobe fbtft_device custom name=fb_ili9341 gpios=dc:3,reset:0,led:6 spe
 $ sudo modprobe fbtft_device custom name=fb_bd663474 gpios=dc:3,reset:0,led:6 speed=16000000 busnum=1 rotate=270
 ~~~~~~~~
 
+အထက်မှာ ဖော်ပြခဲ့ပြီးတဲ့ Guide အတိုင်း ဆက်လက် စမ်းသပ်ကြည့်ပါ။
+
 `$ FRAMEBUFFER=/dev/fb8 startx`
 
 <p align="center">
@@ -224,15 +237,19 @@ $ sudo modprobe fbtft_device custom name=fb_bd663474 gpios=dc:3,reset:0,led:6 sp
 <br>
 <a><b>Figure:</b> BD 663474 TFT display running debian xfce desktop</a>
 </p>
+
 ----------------
+
 ### <center><span style="color:red; opacity: 0.50;">1.5inch RGB OLED Display | Driver: SSD1351</span>
+
+TFT Display များသာမက OLED Display လည်း လက်ထဲရှိနေတဲ့အတွက် တစ်ခါတည်း စမ်းသပ်ကြည့်ထားပါတယ်။ SSD1351 OLED Display Module နဲ့ စမ်းသပ်လိုတယ်ဆိုရင် အောက်ပါအတိုင်း လုပ်ဆောင်ပါ။
 
 | SSD1351 Pin Symbol | Orange Pi Zero Pin |
 | :---------------: | :---------------: |
 | GND | GND |
 | VCC | 5V |
 | RST | UART2_TX/**PA00** |
-| DIN | SPI1_MISO/**PA16** |
+| DIN | SPI1_MOSI/**PA15** |
 | CLK | SPI1_CLK/**PA14** |
 | CS | SPI1_CS/**PA13** |
 | DC | UART2_CTS/**PA03** |
@@ -242,6 +259,8 @@ $ sudo modprobe fbtft_device custom name=fb_bd663474 gpios=dc:3,reset:0,led:6 sp
 $ sudo modprobe fbtft_device custom name=fb_ssd1351 gpios=dc:3,reset:0 speed=16000000 busnum=1 rotate=0
 ~~~~~~~~
 
+အထက်မှာ ဖော်ပြခဲ့ပြီးတဲ့ Guide အတိုင်း ဆက်လက် စမ်းသပ်ကြည့်ပါ။
+
 `$ con2fbmap 1 8`
 
 <p align="center">
@@ -249,161 +268,8 @@ $ sudo modprobe fbtft_device custom name=fb_ssd1351 gpios=dc:3,reset:0 speed=160
 <br>
 <a><b>Figure:</b> SSD1351 OLED display running Debian CLI mode</a>
 </p>
+
 ----------------
+
 ### <center><span style="color:red; opacity: 0.50;">Nokia 5110 Graphic LCD | Internal Controller: PCD8544</span>
-
-<table style="width:100%;">
-<tr>
-<th colspan="4"> <center>2x13 Header</center>
-</th></tr>
-<tr>
-<td> 1 </td>
-<td> <i>3.3V</i>
-</td>
-<td> 2 </td>
-<td> <i>5V</i>
-</td></tr>
-<tr>
-<td> 3 </td>
-<td> TWI0_SDA/PA12
-</td>
-<td> 4 </td>
-<td> <i>5V</i>
-</td></tr>
-<tr>
-<td> 5 </td>
-<td> TWI0_SCK/PA11
-</td>
-<td> 6 </td>
-<td> <i>GND</i>
-</td></tr>
-<tr>
-<td> 7 </td>
-<td> PWM1/PA06
-</td>
-<td> 8 </td>
-<td> UART1_TX/PG06
-</td></tr>
-<tr>
-<td> 9 </td>
-<td>  <i>GND</i>
-</td>
-<td> 10 </td>
-<td> UART1_RX/PG07
-</td></tr>
-<tr>
-<td> 11 </td>
-<td> UART2_RX/PA01
-</td>
-<td> 12 </td>
-<td> SIM_CLK/PA_EINT7/PA07
-</td></tr>
-<tr>
-<td> 13 </td>
-<td> UART2_TX/PA00
-</td>
-<td> 14 </td>
-<td> <i>GND</i>
-</td></tr>
-<tr>
-<td> 15 </td>
-<td> UART2_CTS/PA03
-</td>
-<td> 16 </td>
-<td> TWI1-SDA/PA19
-</td></tr>
-<tr>
-<td> 17 </td>
-<td> <i>3.3V</i>
-</td>
-<td> 18 </td>
-<td>  TWI1-SCK/PA18
-</td></tr>
-<tr>
-<td> 19 </td>
-<td> SPI1_MOSI/PA15
-</td>
-<td> 20 </td>
-<td> <i>GND</i>
-</td></tr>
-<tr>
-<td> 21 </td>
-<td> SPI1_MISO/PA16
-</td>
-<td> 22 </td>
-<td> UART2_RTS/PA02
-</td></tr>
-<tr>
-<td> 23 </td>
-<td> SPI1_CLK/PA14
-</td>
-<td> 24 </td>
-<td> SPI1_CS/PA13
-</td></tr>
-<tr>
-<td> 25 </td>
-<td> <i>GND</i>
-</td>
-<td> 26 </td>
-<td> SIM_DET/PA_EINT10/PA10
-</td></tr></table>
-
-<p>The Orange Pi Zero has another 13-pin, 0.1" header with several low-speed interfaces.</p>
-
-<table style="width:100%;">
-<tr>
-<th colspan="2"> <center>1x13 Header</center>
-</th></tr>
-<tr>
-<td> 1 </td>
-<td> <i>5V</i>
-</td></tr>
-<tr>
-<td> 2 </td>
-<td> <i>GND</i>
-</td></tr>
-<tr>
-<td> 3 </td>
-<td> USB-DM2
-</td></tr>
-<tr>
-<td> 4 </td>
-<td> USB-DP2
-</td></tr>
-<tr>
-<td> 5 </td>
-<td> USB-DM3
-</td></tr>
-<tr>
-<td> 6 </td>
-<td> USB-DP3
-</td></tr>
-<tr>
-<td> 7 </td>
-<td> LINEOUTR
-</td></tr>
-<tr>
-<td> 8 </td>
-<td> LINEOUTL
-</td></tr>
-<tr>
-<td> 9 </td>
-<td>  TV-OUT
-</td></tr>
-<tr>
-<td> 10 </td>
-<td> MIC-BIAS
-</td></tr>
-<tr>
-<td> 11 </td>
-<td> MIC1P
-</td></tr>
-<tr>
-<td> 12 </td>
-<td> MIC1N
-</td></tr>
-<tr>
-<td> 13 </td>
-<td> IR-RX</td>
-</tr></table>
 
