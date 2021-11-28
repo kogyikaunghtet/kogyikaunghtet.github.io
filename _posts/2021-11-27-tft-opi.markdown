@@ -8,9 +8,11 @@ fig-caption: ili9486 TFT display running htop command
 tags: [Orange Pi, Displays, TFT]
 ---
 
+Orange Pi Zero မှာ Raspberry Pi ကဲ့သို့ HDMI port မပါဝင်တဲ့အတွက် AV cable အသုံးပြုပြီး CRT (Cathode-Ray-Tube) TV တွေမှာ ချိတ်ဆက်အသုံးပြုကြပါတယ်။ GUI mode အသုံးပြုလို့ ကောင်းတဲ့ နောက်တစ်နည်းက TFT Display တစ်မျိုးမျိုးနဲ့ ချိတ်ဆက်ပြီး သုံးတဲ့နည်း ဖြစ်ပါတယ်။ SPI bus ပါဝင်တဲ့ TFT LCD များကို ရွေးချယ်အသုံးပြုနိုင်ပြီး၊ fbtft driver ထည့်သွင်းကာ အလွယ်တကူ ချိတ်ဆက်နိုင်ပါတယ်။ fbtft ဆိုတာကတော့ SPI bus အသုံးပြု ထိန်းချုပ်နိုင်တဲ့ small TFT display module အမျိုးမျိုးအတွက် Linux Framebuffer driver ဖြစ်ပါတယ်။ TFT display driver အတော်များများကို support ပေးထားပါတယ်။ ကိုယ့်ရဲ့ TFT LCD driver ကို supported list ထဲမှာ ပါ မပါ စစ်ဆေးချင်ရင် <a href="https://github.com/torvalds/linux/tree/master/drivers/staging/fbtft">ဒီနေရာ</a>မှာ ရှာဖွေစစ်ဆေးလို့ ရပါတယ်။ သတိပြုရမယ့် အချက်ကတော့ fbtft_device module ကို Linux Kernel 5.4 ကနေ စပြီး Support မပေးတော့ပါဘူး (see <a href="https://github.com/notro/fbtft/wiki#fbtft_device-and-flexfb-are-gone-in-54">fbtft wiki</a>)။ ဒါကြောင့် <a href="https://archive.armbian.com/orangepizero/archive/">Armbian Archive Storage</a> မှာ Linux Kernel 5.4 ရဲ့ အောက် version တစ်ခုခုကို ရှာဖွေပြီး download ရယူထားနိုင်ပါတယ်။ ယခု Guide မှာ စမ်းသပ်ထားတဲ့ Debian Kernel version ကတော့ 3.4 ဖြစ်ပြီး <a href="https://archive.armbian.com/orangepizero/archive/Armbian_5.59_Orangepizero_Debian_jessie_default_3.4.113.7z">ဒီနေရာ</a>မှာ တိုက်ရိုက် ဒေါင်းယူနိုင်ပါတယ်။ File size 203MB ရှိပါတယ်။ Download ရယူပြီးရင် Extract ပြုလုပ်ကာ <a href="https://www.balena.io/etcher/">balenaEtcher</a> software အသုံးပြုပြီး SD card အတွင်းသို့ ထည့်သွင်းလိုက်ပါ။ Orange Pi စတင် အသုံးပြုခြင်း Getting Started Guide ကိုတော့ <a href="#">ဒီနေရာ</a>မှာ အရင်ဖတ်ရှုနိုင်ပါတယ်။
+
 ### <center><span style="color:red; opacity: 0.50;">4inch TFT Display | Driver: ILI9486</span>
 
-fbtft_device module ကို Linux Kernel 5.4 က စပြီး Support မပေးတော့ပါဘူး (<a href="https://github.com/notro/fbtft/wiki#fbtft_device-and-flexfb-are-gone-in-54">fbtft wiki</a>)။ ဒါကြောင့် <a style="text-decoration:none" href="https://archive.armbian.com/orangepizero/archive/">Armbian Archive Storage</a> မှာ Linux Kernel 5.4 ရဲ့ အောက် version တွေကို ရှာဖွေပြီး download ရယူထားနိုင်ပါတယ်။ ယခု Guide မှာ စမ်းသပ်ထားတဲ့ Debian Kernel version ကတော့ 3.4 ဖြစ်ပြီးတော့ <a style="text-decoration:none" href="https://archive.armbian.com/orangepizero/archive/Armbian_5.59_Orangepizero_Debian_jessie_default_3.4.113.7z">ဒီနေရာ</a>မှာ တိုက်ရိုက် ဒေါင်းနိုင်ပါတယ်။ File size 203MB ရှိပါတယ်။ Download ရယူပြီးရင် Extract ပြုလုပ်ကာ <a style="text-decoration:none" href="https://www.balena.io/etcher/">balenaEtcher</a> software အသုံးပြုပြီး SD card အတွင်းသို့ ထည့်သွင်းလိုက်ပါ။ Orange Pi စတင် အသုံးပြုခြင်း Getting Started Guide ကိုတော့ <a style="text-decoration:none" href="#">ဒီနေရာ</a>မှာ အရင်ဖတ်ရှုနိုင်ပါတယ်။
+ဒီ TFT Display ကတော့ Waveshare က ထုတ်တဲ့ <a href="https://www.waveshare.com/4inch-tft-touch-shield.htm">4inch TFT Touch Shield</a> ဖြစ်ပြီး၊ Arduino Uno or Mega နဲ့ compatible ဖြစ်အောင် ထုတ်ထားတဲ့ Shield ဖြစ်ပါတယ်။ LCD Controller Driver ကတော့ ILI9486 ဖြစ်ပါတယ်။ အောက်ပါ Table မှာ ပြထားတဲ့အတိုင်း TFT Shield ကို Orange Pi Zero နဲ့ ချိတ်ဆက်လိုက်ပါ။
 
 | ILI9486 Pin Symbol | Orange Pi Zero Pin |
 | :---------------: | :---------------: |
@@ -24,24 +26,77 @@ fbtft_device module ကို Linux Kernel 5.4 က စပြီး Support မ�
 | LCD_CS | SPI1_CS/**PA13** |
 | LCD_DC | UART2_CTS/**PA03** |
 
+ဒီ TFT Display Shield ကို အသုံးပြုရင် သတိပြုရမယ့် အချက်က - Shield ရဲ့ နောက်ဘက်မှာပါတဲ့ SPI config switch ၃ခုကို SCLK\D12, MISO\D12, MOSI\D11 ဘက်မှာ ထားရှိရမှာ ဖြစ်ပါတယ်။
+
 <p align="center">
 <img src="/assets/img/opi_tft/ili9486_spi_config.jpg">
 <br>
-<a><b>Figure:</b>SPI Config Switch ၃ခုကို ICSP ဘက်သို့ မထားရန် သတိပြုပါ။</a>
+<a><b>Figure:</b> SPI Config Switch ၃ခုကို ICSP ဘက်သို့ မထားမိစေရန် သတိပြုပါ။</a>
 </p>
 
-အောက်ပါ command ဖြင့် FBTFT device module ကို Linux Kernel သို့ ထည့်ပါ။
+Orange Pi Zero မှာ SPI enable ဖြစ် မဖြစ် စစ်ဆေးရန် အောက်ပါ command အတိုင်း စစ်ဆေးပါ။
+
+`$ ls /dev/spi*`
+
+<p align="center">
+<img src="/assets/img/opi_tft/spi_list.png">
+<br>
+<a><b>Figure:</b> SPI List</a>
+</p>
+
+အကယ်၍ `ls /dev/spi*` command နဲ့ စစ်ဆေးကြည့်တဲ့အခါ SPI port များကို မမြင်ရဘူးဆိုရင် `/boot/armbianEnv.txt` ဖိုင်ထဲမှာ SPI parameter များကို ထည့်သွင်းပေးဖို့ လိုပါတယ်။ အောက်ပါ command နဲ့ armbianEnv.txt ဖိုင်ကို ဖွင့်ပါ။
+
+`sudo nano /boot/armbianEnv.txt`
+
+ပြီးနောက် အောက်ပါ SPI parameter ၂ကြောင်းကို အောက်ဆုံးတွင် ထည့်သွင်းကာ save ပြုလုပ်ပေးလိုက်ပြီး reboot လုပ်ပါ။
+~~~~~~~~
+overlays=spi-spidev
+param_spidev_spi_bus=0
+~~~~~~~~
+
+<p align="center">
+<img src="/assets/img/opi_tft/spi_enable.png">
+<br>
+<a><b>Figure:</b> SPI parameter</a>
+</p>
+
+အောက်ပါ `modeprobe` command ဖြင့် FBTFT device module ကို Linux Kernel သို့ ထည့်ပါ။ (`modeprobe` command ကို loadable kernel module များ add or remove လုပ်ရန် အသုံးပြုပါတယ်။) အကယ်၍ LCD_DC, LCD_RST, LCD_BL pin တို့ကို table မှာ ပြထားတဲ့ နံပါတ်များအတိုင်း မတပ်ဘူးဆိုရင် command ရဲ့ **gpios=** အနောက်မှာလည်း ကိုယ်အသုံးပြုတဲ့ pin နံပါတ်များကို ပြောင်းလဲ ရေးသားပေးရပါမယ်။ **rotate=** parameter ရဲ့ အနောက်မှာလည်း `0, 90, 180, 270` စသဖြင့် တန်ဖိုးထည့်ကာ display ကို နှစ်သက်သလို rotate နိုင်ပါတယ်။
 ~~~~~~~~
 $ sudo modprobe fbtft_device custom name=fb_ili9486 gpios=dc:3,reset:0,led:6 speed=16000000 busnum=1 rotate=90
 ~~~~~~~~
+ပြီးနောက် Linux Kernel သို့ fbtft device driver ရောက် မရောက်ကို `dmesg` (diagnostic message) command အသုံးပြုကာ စစ်ဆေးနိုင်ပါတယ်။
+
+`$ dmesg | grep fbtft`
+
+<p align="center">
+<img src="/assets/img/opi_tft/dmesg_fbtft.png">
+<br>
+<a><b>Figure:</b> dmesg command</a>
+</p>
+
+ဒါဆိုရင် CLI console ကို framebuffer device တစ်ခုဖြစ်တဲ့ TFT Display Module ပေါ်မှာ ဖော်ပြလို့ ရပြီ ဖြစ်ပါတယ်။ CLI console ကို framebuffer device ပေါ်မှာ ဖော်ပြရန် `con2fbmap` command အသုံးပြုနိုင်ပါတယ်။
 
 `$ con2fbmap 1 8`
+ 
+အထက်ပါ command ရဲ့ ဒုတိယ argument ဖြစ်တဲ့ **8** က **/dev/fb8** directory ကို ရည်ညွှန်းပါတယ်။ framebuffer device တွေဟာ hardware device တွေ ဖြစ်လို့၊ hardware device file တွေကို စုစည်းသိမ်းဆည်းပေးထားတဲ့ **/dev** directory အောက်မှာ **fb** ဆိုတဲ့ နာမည်နဲ့ တည်ရှိပါတယ်။ အောက်ပါ command နဲ့ **/dev** directory အောက်က **fb device** တွေကို စစ်ကြည့်လို့ ရပါတယ်။
+
+`$ ls /dev/fb*`
+
+<p align="center">
+<img src="/assets/img/opi_tft/fb_ls.png">
+<br>
+<a><b>Figure:</b> framebuffer device list</a>
+</p>
+
+**/dev/fb0** က first framebuffer device ဖြစ်ပါတယ်။ အကယ်၍ Raspberry Pi မှာ ဆိုရင် HDMI Display တပ်ဆင်ထားပါက `$ con2fbmap 1 0` command ဟာ video driver ကို HDMI display ဆီသို့ output ထုတ်ရန် ခိုင်းစေခြင်း ဖြစ်ပါတယ်။ အောက်ပါ ပုံမှာ system-monitor process-viewer command ဖြစ်တဲ့ `htop` ကို run ပြ ထားပါတယ်။ TFT display ပေါ်က console မှာ စာရိုက်နိုင်ဖို့အတွက် Orange Pi Zero ရဲ့ USB port မှာ Keyboard တပ်ဆင်ထားဖို့တော့ လိုပါမယ်။
 
 <p align="center">
 <img src="/assets/img/opi_tft/ili9486_htop.jpg">
 <br>
 <a><b>Figure:</b> ili9486 TFT display running htop command</a>
 </p>
+
+`$ sudo apt-get install xorg lightdm xfce4 tango-icon-theme gnome-icon-theme`
 
 `$ FRAMEBUFFER=/dev/fb8 startx`
 
@@ -51,8 +106,9 @@ $ sudo modprobe fbtft_device custom name=fb_ili9486 gpios=dc:3,reset:0,led:6 spe
 <a><b>Figure:</b> ili9486 TFT display running debian xfce desktop</a>
 </p>
 
-----------------
+### <center><span style="color:blue; opacity: 0.50;">Permanent Setup</span>
 
+----------------
 ### <center><span style="color:red; opacity: 0.50;">2.8inch TFT Display | Driver: ILI9341</span>
 
 | ILI9341 Pin Symbol | Orange Pi Zero Pin |
@@ -79,9 +135,7 @@ $ sudo modprobe fbtft_device custom name=fb_ili9341 gpios=dc:3,reset:0,led:6 spe
 <br>
 <a><b>Figure:</b> ili9341 TFT display running debian xfce desktop</a>
 </p>
-
 ----------------
-
 ### <center><span style="color:red; opacity: 0.50;">2.2inch TFT Display | Driver: BD663474</span>
 
 | BD663474 Pin No. | Symbol | Orange Pi Zero Pin |
