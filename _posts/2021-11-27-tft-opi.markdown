@@ -1,8 +1,8 @@
 ---
 layout: post
-title: TFT displays for Orange Pi zero
+title: TFT displays for Orange Pi Zero
 date: 2021-11-27 16:32:20 +0630
-description: ili9486, ili9341, bd663474 TFT displays and ssd1351 OLED display for Orange Pi zero
+description: ili9486, ili9341, bd663474 TFT displays and ssd1351 OLED display for Orange Pi Zero
 img: opi_tft/ili9486_htop.jpg
 fig-caption: ili9486 TFT display running htop command
 tags: [Orange Pi, Displays, TFT]
