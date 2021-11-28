@@ -60,7 +60,7 @@ param_spidev_spi_bus=0
 <a><b>Figure:</b> SPI parameter</a>
 </p>
 
-အောက်ပါ `modeprobe` command ဖြင့် FBTFT device module ကို Linux Kernel သို့ ထည့်ပါ။ (`modeprobe` command ကို loadable kernel module များ add or remove လုပ်ရန် အသုံးပြုပါတယ်။) အကယ်၍ LCD_DC, LCD_RST, LCD_BL pin တို့ကို table မှာ ပြထားတဲ့ နံပါတ်များအတိုင်း မတပ်ဘူးဆိုရင် command ရဲ့ **gpios=** အနောက်မှာလည်း ကိုယ်အသုံးပြုတဲ့ pin နံပါတ်များကို ပြောင်းလဲ ရေးသားပေးရပါမယ်။ **rotate=** parameter ရဲ့ အနောက်မှာလည်း `0, 90, 180, 270` စသဖြင့် တန်ဖိုးထည့်ကာ display ကို နှစ်သက်သလို rotate နိုင်ပါတယ်။
+အောက်ပါ `modeprobe` command ဖြင့် FBTFT device module ကို Linux Kernel သို့ ထည့်ပါ။ ( `modeprobe` command ကို loadable kernel module များ add or remove လုပ်ရန် အသုံးပြုပါတယ်။) အကယ်၍ LCD_DC, LCD_RST, LCD_BL pin တို့ကို table မှာ ပြထားတဲ့ နံပါတ်များအတိုင်း မတပ်ဘူးဆိုရင် command ရဲ့ **gpios=** အနောက်မှာလည်း ကိုယ်အသုံးပြုတဲ့ pin နံပါတ်များကို ပြောင်းလဲ ရေးသားပေးရပါမယ်။ **rotate=** parameter ရဲ့ အနောက်မှာလည်း `0, 90, 180, 270` စသဖြင့် တန်ဖိုးထည့်ကာ display ကို နှစ်သက်သလို rotate နိုင်ပါတယ်။
 ~~~~~~~~
 $ sudo modprobe fbtft_device custom name=fb_ili9486 gpios=dc:3,reset:0,led:6 speed=16000000 busnum=1 rotate=90
 ~~~~~~~~
@@ -96,7 +96,40 @@ $ sudo modprobe fbtft_device custom name=fb_ili9486 gpios=dc:3,reset:0,led:6 spe
 <a><b>Figure:</b> ili9486 TFT display running htop command</a>
 </p>
 
+### <center><span style="color:blue; opacity: 0.50;">Permanent Setup for Console Mode</span>
+
+ဆက်လက်ပြီး CLI mode နဲ့ permanent boot တက်နိုင်ဖို့ setup လုပ်ပါမယ်။ အောက်ပါ command အတိုင်း new file တည်ဆောက်ပါ။
+
+`$ sudo nano /etc/modules-load.d/fbtft.conf`
+
+အောက်ပါ content ကို ရေးထည့်ပြီး save ပါ။
+
+`fbtft_device`
+
+နောက်ထပ် new file တစ်ခု ထပ်တည်ဆောက်ပါမယ်။
+
+`$ sudo nano /etc/modprobe.d/fbtft.conf`
+
+fbtft_device အတွက် အောက်ပါ configuration ကို ထည့်ပြီး save ပါ။
+~~~~~~~~
+options fbtft_device custom name=fb_ili9486 gpios=dc:3,reset:0,led:6 speed=16000000 busnum=1 rotate=90
+~~~~~~~~
+
+နောက်ဆုံးတစ်ခု အနေနဲ့ **/boot/armbianEnv.txt** file ကို ဖွင့်ပါ။
+
+`$ sudo nano /boot/armbianEnv.txt`
+
+armbianEnv.txt ဖိုင်ရဲ့ အောက်ဆုံးမှာ အောက်ပါ argument ကို ထည့်ပါ။
+
+`extraargs="fbcon=map:8"`
+
+အားလုံးပြီးရင် reboot ချလို့ရပါပြီ။
+
+Console Mode မဟုတ်ပဲ Desktop GUI အသွင်အပြင်နဲ့ အသုံးပြုချင်တယ်ဆိုရင်တော့ X.org Server, Light Display Manager, XFCE Desktop Environment နဲ့ icon theme တွေ ထည့်ဖို့ လိုအပ်ပါမယ်။ အောက်ပါ command အတိုင်း install လုပ်လိုက်ပါ။
+
 `$ sudo apt-get install xorg lightdm xfce4 tango-icon-theme gnome-icon-theme`
+
+ပြီးနောက် အောက်ပါအတိုင်း `startx` command အသုံးပြုပြီး X session ကို initialize လုပ်လို့ ရပါပြီ။
 
 `$ FRAMEBUFFER=/dev/fb8 startx`
 
@@ -106,8 +139,37 @@ $ sudo modprobe fbtft_device custom name=fb_ili9486 gpios=dc:3,reset:0,led:6 spe
 <a><b>Figure:</b> ili9486 TFT display running debian xfce desktop</a>
 </p>
 
-### <center><span style="color:blue; opacity: 0.50;">Permanent Setup</span>
+### <center><span style="color:blue; opacity: 0.50;">Permanent Setup for XFCE Desktop</span>
 
+XFCE Desktop အသွင်အပြင် ကို Permanent boot setup အတွက် အောက်ပါဖိုင်ကို တည်ဆောက်ပါ။
+
+`$ sudo nano /etc/modprobe.d/fbtft.conf`
+
+**fbtft.conf** ဖိုင်အတွင်းသို့ အောက်ပါ configuration ကို ထည့်ပါ။
+~~~~~~~~
+options fbtft_device custom name=fb_ili9486 gpios=dc:3,reset:0,led:6 speed=16000000 busnum=1 rotate=90
+~~~~~~~~
+ဆက်လက်ပြီး အောက်ပါ ဖိုင်ကို တည်ဆောက်ပါ။
+
+`$ sudo nano /etc/modules-load.d/fbtft.conf`
+
+အောက်ပါ content ကို ရေးထည့်ပြီး save ပါ။
+
+`fbtft_device`
+
+နောက်ဆုံးအနေနဲ့ အောက်ပါဖိုင်ကို တည်ဆောက်ပါ။
+
+`$ sudo nano /usr/share/X11/xorg.conf.d/99-fbdev.conf`
+
+အောက်ပါ setting ကို ရေးထည့်ပြီး save ပါ။
+~~~~~~~~
+Section "Device"
+  Identifier "myfb"
+  Driver "fbdev"
+  Option "fbdev" "/dev/fb8"
+EndSection
+~~~~~~~~
+အားလုံးပြီးလို့ reboot ချလိုက်ရင် Permanent အဖြစ် XFCE Desktop GUI တက်ပါပြီ။
 ----------------
 ### <center><span style="color:red; opacity: 0.50;">2.8inch TFT Display | Driver: ILI9341</span>
 
@@ -161,9 +223,7 @@ $ sudo modprobe fbtft_device custom name=fb_bd663474 gpios=dc:3,reset:0,led:6 sp
 <br>
 <a><b>Figure:</b> BD 663474 TFT display running debian xfce desktop</a>
 </p>
-
 ----------------
-
 ### <center><span style="color:red; opacity: 0.50;">1.5inch RGB OLED Display | Driver: SSD1351</span>
 
 | SSD1351 Pin Symbol | Orange Pi Zero Pin |
@@ -188,7 +248,5 @@ $ sudo modprobe fbtft_device custom name=fb_ssd1351 gpios=dc:3,reset:0 speed=160
 <br>
 <a><b>Figure:</b> SSD1351 OLED display running Debian CLI mode</a>
 </p>
-
 ----------------
-
 ### <center><span style="color:red; opacity: 0.50;">Nokia 5110 Graphic LCD | Internal Controller: PCD8544</span>
