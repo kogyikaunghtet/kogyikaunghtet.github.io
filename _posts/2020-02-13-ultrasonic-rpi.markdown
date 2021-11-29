@@ -25,7 +25,7 @@ Ultrasonic Sensor ကို Power Supply ပေးတဲ့အခါ သူ့�
 
 <center><img src="https://latex.codecogs.com/svg.latex?\Large&space;Vo ut=V in\frac{R2}{R1 + R2}" title="Large&space;Vo ut=V in\frac{R2}{R1 + R2}" /></center>
 <br>
-<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;V out=5V \frac{1.5KΩ}{680Ω + 1.5KΩ}=3.44V" title="Large&space;V out=5V \frac{1.5KΩ}{680Ω + 1.5KΩ}=3.44V" /></center>
+<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;V out=5V \frac{1.5K\Omega }{680\Omega  + 1.5K\Omega }=3.44V" title="Large&space;V out=5V \frac{1.5K\Omega }{680\Omega  + 1.5K\Omega }=3.44V" /></center>
 
 <p align="center">
 <img src="/assets/img/ultrasonic/ult_rpi.jpg">
