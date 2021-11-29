@@ -13,7 +13,7 @@ Ultrasonic Sensor ရဲ့ pin တွေကို ကြည့်ရင် Vcc,
 
 Distance တွက်ထုတ်ဖို့ လိုအပ်တဲ့ pulse duration ကို သိရပြီဆိုရင် Speed of Sound တန်ဖိုးကိုတော့ ပျမ်းမျှ 343 m/s ကို ယူသုံးနိုင်ပါတယ်။ ဒီတန်ဖိုးက ပျမ်းမျှတန်ဖိုးသာ ဖြစ်ပြီး အပူချိန် 20°C ရှိတဲ့ ခြောက်သွေ့တဲ့ လေထုထဲက Speed of sound တန်ဖိုးသာ ဖြစ်ပါတယ်။ လေထုအပူချိန် အပြောင်းအလဲ၊ လေထုစိုထိုင်းဆ အတိုးအလျော့တွေပေါ်မူတည်ပြီး Speed of sound တန်ဖိုး ပြောင်းလဲနိုင်ပေမယ့် အနီးစပ်ဆုံးတန်ဖိုးဖြစ်တဲ့ 343 m/s ကိုပဲအသုံးပြုကြပါမယ်။ Unit ကိုတော့ cm (centimeter) နဲ့ပဲ ထွက်စေလိုတဲ့အတွက် ဒဿမတန်ဖိုး ၂လုံး ရွှေ့ရမှာ ဖြစ်လို့ 34300 cm/s ဖြစ်သွားပါမယ်။ ဒါပေမယ့် Echo pin ကနေ တွက်ထုတ်ပေးတဲ့ Pulse Duration ဟာ Transmitter ကနေ ultrasound wave ထွက်သွားပြီးနောက် obstacle ကို ရိုက်ခတ်ပြီး ပြန်လာတဲ့ အချိန်ကို ပေးနေတာ ဖြစ်လို့ Duration တန်ဖိုးက အသွား၁ဆ၊ အပြန်၁ဆ ဖြစ်နေပါတယ်။ ဒါကြောင့် Pulse Duration တန်ဖိုးကို ၂နဲ့ စားပေးရမှာ ဖြစ်ပြီး အောက်မှာ ပြသထားတဲ့ ညီမျှခြင်းအတိုင်း တွက်လိုက်ရင် Speed of Sound တန်ဖိုးက 17150 cm/s ကိုသာ ထည့်သုံးရတော့မှာ ဖြစ်ပါတယ်။
 
-<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;34300=\frac{Distance}{Pulse Duration/2}" title="Large&space;34300=\frac{Distance}{Pulse Duration/2}" /></center>
+<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;34300=\frac{Distance}{Pulse Duration/2}" title="equation" /></center>
 <br>
 <center><img src="https://latex.codecogs.com/svg.latex?\Large&space;17150=\frac{Distance}{Pulse Duration}" title="Large&space;17150=\frac{Distance}{Pulse Duration}" /></center>
 
