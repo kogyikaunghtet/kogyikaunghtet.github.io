@@ -15,17 +15,17 @@ Distance တွက်ထုတ်ဖို့ လိုအပ်တဲ့ pulse 
 
 <center><img src="https://latex.codecogs.com/svg.latex?\Large&space;34300=\frac{Distance}{Pulse Duration/2}" title="equation" /></center>
 <br>
-<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;17150=\frac{Distance}{Pulse Duration}" title="Large&space;17150=\frac{Distance}{Pulse Duration}" /></center>
+<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;17150=\frac{Distance}{Pulse Duration}" title="equation" /></center>
 
 Transmitter pin ဖြစ်တဲ့ Trig pin ကနေ Ultrasound Wave တစ်ခု ထုတ်လွှင့်ဖို့ အတွက်ကတော့ 0.1MHz တန်ဖိုးရှိတဲ့ Frequency Pulse တစ်ခု ထုတ်လွှတ် ပေးရင် လုံလောက်ပါတယ်။ Frequency ပုံသေနည်းအရ F=1/T ဖြစ်လို့ 10µs (0.00001 second) ခန့် High ပေးလိုက်ရင် 0.1MHz Frequency ထွက်ပါပြီ။
 
-<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;Frequency=\frac{1}{0.00001 second}=0.1MHz" title="Large&space;Frequency=\frac{1}{0.00001 second}=0.1MHz" /></center>
+<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;Frequency=\frac{1}{0.00001 second}=0.1MHz" title="equation" /></center>
 
 Ultrasonic Sensor ကို Power Supply ပေးတဲ့အခါ သူ့ရဲ့ working voltage က 5V အပြည့်အဝ ရမှ အလုပ်လုပ်ဆောင်နိုင်တာဖြစ်လို့ Vcc ကို Raspberry Pi ရဲ့ 5V သို့ ချိတ်ဆက်ပေးရပါမယ်။ သို့ပေမယ့် Raspberry Pi ရဲ့ GPIO pin တွေက logic voltage 3.3V သာလျှင်ရှိတာကြောင့် သတိပြုရမယ့်အချက်တွေ ရှိပါတယ်။ Echo pin က sensor ကနေ output ထွက်မယ့် pin ဖြစ်ပြီး Raspberry Pi ဆီသို့ input signal အနေနဲ့ ဝင်မှာဖြစ်လို့ 5V signal pulse တွေ ဝင်ခိုင်းလို့ မရပါဘူး။ ဒါကြောင့် Raspberry Pi ရဲ့ GPIO pin ဆီကို ချိတ်ဆက်တဲ့အခါ All About Raspberry Pi စာအုပ်ရဲ့ အခန်း(၅)မှာ ဖော်ပြခဲ့သလိုမျိုး resistor ၂လုံး သုံးပြီး Potential divider တည်ဆောက်ကာ ချိတ်ဆက်ပေးရပါမယ်။ R1 တန်ဖိုးကို 1.5KΩ အသုံးပြုပြီး၊ R2 တန်ဖိုးကို 680Ω အသုံးပြုပါက 3.44V ဝန်းကျင်ရမှာ ဖြစ်လို့ Echo pin ကို Raspberry Pi ရဲ့ GPIO မှာ ချိတ်ဆက်ဖို့ အဆင်ပြေသွားပါလိမ့်မယ်။
 
-<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;Vo ut=V in\frac{R2}{R1 + R2}" title="Large&space;Vo ut=V in\frac{R2}{R1 + R2}" /></center>
+<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;Vo ut=V in\frac{R2}{R1 + R2}" title="equation" /></center>
 <br>
-<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;V out=5V \frac{1.5K\Omega }{680\Omega  + 1.5K\Omega }=3.44V" title="Large&space;V out=5V \frac{1.5K\Omega }{680\Omega  + 1.5K\Omega }=3.44V" /></center>
+<center><img src="https://latex.codecogs.com/svg.latex?\Large&space;V out=5V \frac{1.5K\Omega }{680\Omega  + 1.5K\Omega }=3.44V" title="equation" /></center>
 
 <p align="center">
 <img src="/assets/img/ultrasonic/ult_rpi.jpg">
