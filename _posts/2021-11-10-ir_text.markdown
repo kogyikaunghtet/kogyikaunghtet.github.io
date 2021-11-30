@@ -1,0 +1,32 @@
+---
+layout: post
+title: Text Transfers using IR
+date: 2021-11-10 16:32:20 +0630
+description: Transmit and Receive Text Over IR Signals with an Arduino
+img: ir_text/IR_Keyboard_head.jpg
+fig-caption: #
+tags: [arduino, IR, sensors]
+---
+
+<p align="center">
+<img src="/assets/img/ir_text/IR_Keyboard.jpg">
+<br>
+<a><b>Figure:</b> Transmit and Receive Text Over IR Signals with an Arduino</a>
+</p>
+
+## Download require libraries
+`git clone https://github.com/Arduino-IRremote/Arduino-IRremote`
+  
+`git clone https://github.com/PaulStoffregen/PS2Keyboard`
+
+`git clone https://github.com/WickedLukas/Newliquidcrystal_1.3.5`
+  
+## Library Installation
+
+* Open Arduino IDE (Arduino Software)
+
+* Sketch > Include Library > Add .Zip Library
+
+* and choose library zip file.
+
+* Done.
