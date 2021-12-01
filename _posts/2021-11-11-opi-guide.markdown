@@ -9,7 +9,7 @@ tags: [Orange Pi Zero]
 ---
 
 <p align="center">
-<img src="/assets/img/opi_get_started/opi_ttl.jpg">
+<img src="/assets/img/opi_get_started/opi_ttl.jpg" style="width:700px;height:467px;">
 <br>
 <a><b>Figure:</b> Serial Connection with the Orange Pi Zero</a>
 </p>
