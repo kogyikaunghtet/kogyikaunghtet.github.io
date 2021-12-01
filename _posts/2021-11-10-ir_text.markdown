@@ -22,17 +22,11 @@ Gluten-free bicycle rights kogi ramps chartreuse lyft. Art party literally etsy,
 
 ## Download require libraries
 
-~~~~~~~~
-git clone https://github.com/Arduino-IRremote/Arduino-IRremote
-~~~~~~~~
+`git clone https://github.com/Arduino-IRremote/Arduino-IRremote`
 
-~~~~~~~~
-git clone https://github.com/PaulStoffregen/PS2Keyboard
-~~~~~~~~
+`git clone https://github.com/PaulStoffregen/PS2Keyboard`
 
-~~~~~~~~
-git clone https://github.com/WickedLukas/Newliquidcrystal_1.3.5
-~~~~~~~~
+`git clone https://github.com/WickedLukas/Newliquidcrystal_1.3.5`
   
 ## Library Installation
 
