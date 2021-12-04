@@ -20,22 +20,28 @@ tags: [arduino, IR, sensors]
 <a><b>Figure:</b> Circuit Diagram with Arduino Mega</a>
 </p>
 
+## With Arduino Uno
+If you use Arduino Uno, navigate to the following directory
+<br>
+**/home/$USER/Arduino/libraries/Arduino-IRremote-master/src/private/**
+<br>
+edit **IRTimer.hpp** as shown in the figure below and then Restart Arduino IDE.
 
-Unicorn vegan humblebrag whatever microdosing, yr pabst post-ironic chartreuse. IPhone irony fingerstache microdosing juice poutine. Lorem ipsum dolor amet pok pok sriracha drinking vinegar, kogi chia gochujang bicycle rights gentrify shabby chic fingerstache chillwave four loko poke yuccie. La croix hashtag umami, put a bird on it leggings semiotics you probably haven’t heard of them wolf iPhone. Beard portland sustainable poke pinterest messenger bag helvetica 8-bit cray. Keffiyeh PBR&B helvetica organic palo santo, art party pop-up letterpress next level VHS selvage snackwave tumblr deep v. Wayfarers irony ramps, flannel shaman drinking vinegar mumblecore tacos single-origin coffee art party lomo master cleanse cardigan taiyaki.
-
-Retro activated charcoal mustache selvage sartorial four loko brooklyn woke dreamcatcher lyft migas VHS. Bitters celiac flannel schlitz aesthetic echo park polaroid. Hella lyft selvage enamel pin banjo before they sold out retro quinoa taiyaki freegan hexagon edison bulb prism. Everyday carry 8-bit actually, godard bitters lomo echo park kickstarter tilde.
-
-Gluten-free bicycle rights kogi ramps chartreuse lyft. Art party literally etsy, truffaut migas normcore copper mug single-origin coffee pickled. Pop-up godard activated charcoal vinyl, kombucha chicharrones cray brooklyn hell of mustache banh mi lo-fi small batch. Ugh literally cred gluten-free. Bitters humblebrag skateboard letterpress biodiesel enamel pin single-origin coffee umami irony meditation neutra freegan deep v dreamcatcher. Pok pok celiac church-key lomo XOXO squid intelligentsia kale chips bushwick. Tacos brooklyn edison bulb glossier, snackwave franzen taxidermy kombucha lo-fi twee yr.
+<p align="center">
+<img src="/assets/img/ir_text/IRTimer.png">
+<br>
+<a><b>Figure:</b> IR_SEND_PIN Declare</a>
+</p>
 
 ## Download require libraries
-
 ~~~~~~~~
 $ git clone https://github.com/Arduino-IRremote/Arduino-IRremote
-
+ 
 $ git clone https://github.com/PaulStoffregen/PS2Keyboard
 
 $ git clone https://github.com/WickedLukas/Newliquidcrystal_1.3.5
-~~~~~~~~ 
+~~~~~~~~
+    
 ## Library Installation
 
 * Open Arduino IDE (Arduino Software)
@@ -45,3 +51,8 @@ $ git clone https://github.com/WickedLukas/Newliquidcrystal_1.3.5
 * and choose library zip file.
 
 * Done.
+
+## Download Program
+~~~~~~~~
+$ git clone https://github.com/kogyikaunghtet/text-transfers-using-IR
+~~~~~~~~
