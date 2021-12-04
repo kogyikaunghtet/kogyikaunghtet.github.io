@@ -17,7 +17,7 @@ tags: [arduino, IR, sensors]
 <p align="center">
 <img src="/assets/img/ir_text/ir_circuit.jpg">
 <br>
-<a><b>Figure:</b> Circuit Diagram with Arduino Mega 2560</a>
+<a><b>Figure:</b> Circuit Diagram with Arduino Mega</a>
 </p>
 
 
@@ -30,17 +30,12 @@ Gluten-free bicycle rights kogi ramps chartreuse lyft. Art party literally etsy,
 ## Download require libraries
 
 ~~~~~~~~
-git clone https://github.com/Arduino-IRremote/Arduino-IRremote
-~~~~~~~~
-<br>
-~~~~~~~~
-git clone https://github.com/PaulStoffregen/PS2Keyboard
-~~~~~~~~
-<br>
-~~~~~~~~
-git clone https://github.com/WickedLukas/Newliquidcrystal_1.3.5
+$ git clone https://github.com/Arduino-IRremote/Arduino-IRremote
+
+$ git clone https://github.com/PaulStoffregen/PS2Keyboard
+
+$ git clone https://github.com/WickedLukas/Newliquidcrystal_1.3.5
 ~~~~~~~~ 
-<br>
 ## Library Installation
 
 * Open Arduino IDE (Arduino Software)
