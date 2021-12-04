@@ -70,7 +70,7 @@ def setup():
   print("\n")
 def loop():
   temp = 1
-  while(1):  
+  while(1):
     GPIO.output(s2,GPIO.LOW)
     GPIO.output(s3,GPIO.LOW)
     time.sleep(0.3)

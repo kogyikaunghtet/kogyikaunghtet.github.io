@@ -55,7 +55,9 @@ Raspberry Pi ကို ကွန်ပျူတာနဲ့ အထက်ပါ�
 
 Raspberry Pi ကို ပါဝါပေးပြီးနောက် Raspbian OS တက်လာတဲ့အချိန်မှာ ကိုယ် ချိတ်ဆက်စေလိုတဲ့ wifi ကို အလိုအလျောက် connect ဖြစ်စေဖို့၊ multiple wifi network အချက်အလက်တွေ ဖြည့်သွင်းထားပြီး ပထမ ဦးစားပေး၊ ဒုတိယ ဦးစားပေး ချိတ်ဆက်နိုင်စေဖို့နဲ့ hidden ဖြစ်နေတဲ့ wifi network တွေကို ချိတ်နိုင်ဖို့ wpa_supplicant Configuration File ထဲမှာ သတ်မှတ် ပြင်ဆင် ထားနိုင်ပါတယ်။ nano text editor အသုံးပြုပြီး wpa_supplicant.conf ကို အောက်ပါ command အတိုင်း ဖွင့်လိုက်ပါ။
 
-`$ sudo nano /etc/wpa_supplicant/wpa_supplicant.conf`
+~~~~~~~~
+$ sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+~~~~~~~~
 
 Default အနေနဲ့ wpa_supplicant.conf ဖိုင်ရဲ့ အပေါ်ဆုံးမှာ အောက်ပါလိုင်း ၂လိုင်း ရှိနေပါလိမ့်မယ်။
 
