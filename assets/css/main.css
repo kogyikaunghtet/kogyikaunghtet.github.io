@@ -1265,13 +1265,6 @@ a.newer-posts:hover {
   border-bottom: 1px solid #a0a0a0;
 }
 
-.page-footer a:hover {
-  color: #fff;
-  background-color: #fa5305;
-  border-bottom: 3px solid #fa5305;
-  text-decoration: none;
-}
-
 .page-footer .page-share {
   margin-bottom: 10px;
   text-align: left;
@@ -1310,7 +1303,7 @@ a.newer-posts:hover {
 }
 
 .page-footer .page-tag a:hover {
-  text-decoration: underline;
+  background-color: #ecf0f1;
 }
 
 /* - - - - - - - - - - Tag Styles - - - - - - - - - - */
