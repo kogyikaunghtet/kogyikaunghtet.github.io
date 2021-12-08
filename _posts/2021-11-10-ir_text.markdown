@@ -8,11 +8,9 @@ fig-caption: #
 tags: [Arduino, IR, Sensor]
 ---
 
-<p align="center">
-<img src="/assets/img/ir_text/IR_Keyboard.jpg">
-<br>
-<a><b>Figure:</b> Transmit and Receive Text Over IR Signals with an Arduino</a>
-</p>
+<div class="responsive-embed flex-video">
+<iframe width="640" height="360" src="https://www.youtube.com/embed/69sT6WVUgx4" title="YouTube video player" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+</div>
 
 <p align="center">
 <img src="/assets/img/ir_text/ir_circuit.jpg">
@@ -56,7 +54,3 @@ $ git clone https://github.com/WickedLukas/Newliquidcrystal_1.3.5
 ~~~~~~~~
 $ git clone https://github.com/kogyikaunghtet/text-transfers-using-IR
 ~~~~~~~~
-<br>
-<div class="responsive-embed flex-video">
-<iframe width="640" height="360" src="https://www.youtube.com/embed/69sT6WVUgx4" title="YouTube video player" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-</div>
