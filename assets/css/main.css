@@ -1265,7 +1265,7 @@ a.newer-posts:hover {
   border-bottom: 1px solid #a0a0a0;
 }
 
-.page-footer:hover {
+.page-footer a:hover {
   color: #fff;
   background-color: #fa5305;
   border-bottom: 3px solid #fa5305;
