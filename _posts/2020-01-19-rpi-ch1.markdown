@@ -39,4 +39,4 @@ Raspberry Pi 4 မတိုင်ခင်က ထွက်ရှိခဲ့တ�
 <a>ပုံ(၁.၄) ၊ Raspberry Pi 3 Model B+</a>
 </p>
 
-အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://kogyikaunghtet.github.io/OS/">၁.၁ Operating Systems</a>
+အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://kogyikaunghtet.com/OS/">၁.၁ Operating Systems</a>

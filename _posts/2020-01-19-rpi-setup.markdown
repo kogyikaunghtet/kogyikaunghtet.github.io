@@ -65,4 +65,4 @@ Configuration Tool မှာ mouse နဲ့ ရွှေ့လို့ click �
 <a>ပုံ(၁.၁၈) ၊ Expand Filesystem ကို ရွေးချယ်ခြင်း</a>
 </p>
 
-အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://kogyikaunghtet.github.io/gparted-format/">၁.၃ SD card အား Gparted ဖြင့် format ချခြင်း</a>
+အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://kogyikaunghtet.com/gparted-format/">၁.၃ SD card အား Gparted ဖြင့် format ချခြင်း</a>

@@ -39,4 +39,4 @@ while 1:
 <a>ပုံ(၁.၂၈) ၊ CPU temperature စစ်ဆေးခြင်း</a>
 </p>
 
-အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://kogyikaunghtet.github.io/rpi-pc-os/">၁.၅ Raspbian OS အား PC တွင် အသုံးပြုခြင်း</a>
+အခန်း(၁)အား ဆက်လက်ဖတ်ရှုရန် - <a style="text-decoration:none" href="https://kogyikaunghtet.com/rpi-pc-os/">၁.၅ Raspbian OS အား PC တွင် အသုံးပြုခြင်း</a>

@@ -7,9 +7,15 @@ img: headless/pi_setup.jpg
 fig-caption: # Add figcaption (optional)
 tags: [Raspberry Pi, headless, network, setup]
 ---
+<center>
+<div class="responsive-embed flex-video">
+<iframe width="640" height="360" src="https://www.youtube.com/embed/WKqquA9yrGQ" title="YouTube video player" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+</div>
+</center>
+
 Raspberry Pi ကို ပထမဆုံးအကြိမ်အဖြစ် စတင်အသုံးပြုမယ့် သူတွေအနေနဲ့ First Time Setup ပြုလုပ်ဖို့ ပုံမှန်အားဖြင့် Keyboard, Mouse, Monitor စသဖြင့် လိုအပ်လေ့ရှိပါတယ်။ ဒီလို Keyboard, Mouse, Monitor တွေ မချိတ်ဆက်ထားတဲ့ အချိန်မှာ တခြားကွန်ပျူတာ တစ်လုံး မှတဆင့် Raspberry Pi ကို Network ချိတ်ဆက်ပြီး ထိန်းချုပ်အသုံးပြုနိုင်ခြင်းကို “headless အသုံးပြုခြင်း” လို့ ေခါ်ပါတယ်။ headless ချိတ်ဆက်အသုံးပြုနိုင်ဖို့ လိုအပ်တဲ့ Remote Access အတွက် SSH (သို့မဟုတ်) VNC ဟာ Raspbian OS မှာ default အားဖြင့် disable ဖြစ်နေပါတယ်။ SSH ကို enable ပြုလုပ်ဖို့၊ Wifi ချိတ်ဆက်ဖို့နဲ့၊ Static IP address သတ်မှတ်ပြင်ဆင်ဖို့ Keyboard, Mouse, Monitor တွေ မရှိတဲ့အချိန်မှာ နက်ဝက်ကြိုး (Ethernet Cable) ရှိရုံနဲ့ First time setup ပြုလုပ်လို့ ရပါတယ်။
 
-Raspbian OS download ရယူခြင်းနဲ့ SD card ပေါ်မှာ Raspbian OS တပ်ဆင်ခြင်း အတွက် ကိုတော့ <a style="text-decoration:none" href="https://kogyikaunghtet.github.io/sha-check/">ဒီနေရာ</a> မှာ ဖတ်ရှုနိုင်ပါတယ်။
+Raspbian OS download ရယူခြင်းနဲ့ SD card ပေါ်မှာ Raspbian OS တပ်ဆင်ခြင်း အတွက် ကိုတော့ <a style="text-decoration:none" href="https://kogyikaunghtet.com/sha-check/">ဒီနေရာ</a> မှာ ဖတ်ရှုနိုင်ပါတယ်။
 
 Raspbian OS ကို SD card ပေါ်မှာ တင်ပြီးတဲ့နောက် ကွန်ပျူတာကနေ SD card ကို မဖြုတ်သေးပဲ /boot ဆိုတဲ့ directory ရဲ့ အောက်မှာ ssh ဆိုတဲ့ နာမည်နဲ့ ဖိုင်အလွတ်တစ်ခုကို ဖန်တီးပေးရပါမယ်။ ဒီလို ssh ဆိုတဲ့ ဖိုင်တစ်ခုကို /boot directory အောက်မှာ တည်ဆောက် ပေးလိုက်ခြင်းအားဖြင့် Raspbian OS ပထမဆုံးအကြိမ် boot တက်လာတဲ့ အခါမှာ SSH (Secure SHell) ကို enable ပြုလုပ်ပြီးသား ဖြစ်သွားစေပါတယ်။ ssh ဖိုင် တည်ဆောက်တဲ့ အခါ File Name မှာ “.txt” , “.exe” စသဖြင့် မည်သည့် file extension မျှ မပါဝင်စေရပါဘူး။
 
