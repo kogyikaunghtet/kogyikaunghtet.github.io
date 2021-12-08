@@ -5,7 +5,7 @@ date: 2020-02-14 13:32:20 +0630
 description: 
 img: turbidity/clear.jpg
 fig-caption: # Add figcaption (optional)
-tags: [Raspberry Pi, Displays]
+tags: [Arduino, Sensor]
 ---
 Turbidity ဆိုသည်မှာ ရေထဲတွင်ရှိနေသော မျက်စိဖြင့် မြင်နိုင်/မမြင်နိုင်သော အရာဝတ္ထုပစ္စည်းများ (mainly suspended particles & colloids) များကြောင့် ဖြစ်ပေါ်လာသော ရေနောက်ကျိခြင်းကို ခေါ်ဆိုခြင်း ဖြစ်ပါတယ်။ Unit ကိုတော့ NTU (Nephelometric Turbidity Unit) နဲ့ တိုင်းတာကြပါတယ်။ ရေ၏သန့်ရှင်းမှုကို Turbidity ကို ကြည့်ပြီး အကြမ်းဖျဉ်း သိရှိနိုင်ပါတယ်။ ပြင်ပအရာဝတ္ထုပစ္စည်းများ ပျော်ဝင်မှုများလေ၊ ရေနောက်ကျိမှု Turbidity ပိုများလေ ဖြစ်ပါတယ်။ Turbidity ကို ဖြစ်စေတဲ့ အရာတွေကတော့ အဓိကအားဖြင့် –
 * (1) Phytoplankton လို့ ခေါ်တဲ့ အဏုဇီဝ ရေမှော်အပင်လေးများကြောင့်
