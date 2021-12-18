@@ -8,12 +8,22 @@ fig-caption: #
 tags: [Arduino, IR, Sensor]
 ---
 
+IR (Infrared) Transmitter & Receiver Sensor အသုံးပြုပြီး Arduino ၂ခုကြားမှာ Text Transfer ပြုလုပ်ပေးတဲ့ Project လေးတစ်ခု ပြုလုပ်ကြည့်ကြပါမယ်။ စမ်းသပ်ပြုလုပ်ဖို့အတွက်ကတော့ အောက်ပါပစ္စည်းတွေ ၂ခုစီ လိုအပ်ပါမယ်။
+
+   * Arduino Uno or Mega
+   * IR Transmitter Sensor
+   * IR Receiver Sensor
+   * LCD 16x2 or 20x4
+   * 8bit I/O Expander Module
+   * USB 2.0 Female Header Adapter
+   * USB or PS2 Keyboard
+   * Jumper Wires
+
 <div class="responsive-embed flex-video">
 <iframe width="640" height="360" src="https://www.youtube.com/embed/69sT6WVUgx4" title="YouTube video player" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 </div>
 
-<iframe src="https://create.arduino.cc/editor/kogyikaunghtet/d0256594-c948-46f4-a58d-914e8280acd0/preview?embed" style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-			
+Arduino Mega သုံးတယ်ဆိုရင် အောက်ပါ Circuit Diagram အတိုင်း ချိတ်ဆက်နိုင်ပါတယ်။
 
 <p align="center">
 <img src="/assets/img/ir_text/ir_circuit.jpg">
@@ -21,21 +31,7 @@ tags: [Arduino, IR, Sensor]
 <a><b>Figure:</b> Circuit Diagram with Arduino Mega</a>
 </p>
 
-## With Arduino Uno
-If you use Arduino Uno, navigate to the following directory
-<br>
-**/home/$USER/Arduino/libraries/Arduino-IRremote-master/src/private/**
-<br>
-edit **IRTimer.hpp** as shown in the figure below and then Restart Arduino IDE.
-
-<p align="center">
-<img src="/assets/img/ir_text/IRTimer.png">
-<br>
-<a><b>Figure:</b> IR_SEND_PIN Declare</a>
-</p>
-
-<iframe src="https://create.arduino.cc/editor/kogyikaunghtet/102950fd-0c3d-4d19-8762-e7e1377e3caf/preview?embed" style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
-			
+ပြီးရင် လိုအပ်မယ့် Library တွေကို ဒေါင်းလုပ်ရယူပြီး ထည့်ထားလိုက်ပါ။
 
 ## Download require libraries
 ~~~~~~~~
@@ -56,7 +52,28 @@ $ git clone https://github.com/WickedLukas/Newliquidcrystal_1.3.5
 
 * Done.
 
-## Download Program
+<iframe src="https://create.arduino.cc/editor/kogyikaunghtet/d0256594-c948-46f4-a58d-914e8280acd0/preview?embed" style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+Arduino Uno အသုံးပြုတယ်ဆိုရင်တော့ IRremote Library ထဲမှာ အောက်ပါအတိုင်း configure လုပ်ပေးဖို့ လိုပါမယ်။ PS2Keyboard Library မှာ USB ရဲ့ Data Pin (D-) နဲ့ IRQ Pin (D+) တို့ကို Arduino Uno ရဲ့ Interrupt pin တွေ ဖြစ်တဲ့ Digital pin 2 နဲ့ 3 ကို အသုံးပြုထားတာ ဖြစ်လို့၊ ပြောင်းလဲပေးလို့ ရတဲ့ IR Transmitter Pin နံပါတ်ကို IRremote Library ထဲမှာ သွားပြောင်းပေးလိုက်တာ ဖြစ်ပါတယ်။ **Arduino Mega သုံးရင်တော့ Library တွေထဲမှာ ဘာမှ ပြောင်းလဲပေးစရာ မလိုပါ**
+
+## With Arduino Uno
+If you use Arduino Uno, navigate to the following directory
+<br>
+**/home/$USER/Arduino/libraries/Arduino-IRremote-master/src/private/**
+<br>
+edit **IRTimer.hpp** as shown in the figure below and then Restart Arduino IDE.
+
+<p align="center">
+<img src="/assets/img/ir_text/IRTimer.png">
+<br>
+<a><b>Figure:</b> IR_SEND_PIN ပြောင်းလဲခြင်း</a>
+</p>
+
+Arduino Uno သုံးတဲ့သူတွေအတွက် Code ကတော့ အောက်ပါအတိုင်း ဖြစ်ပါတယ်။
+
+<iframe src="https://create.arduino.cc/editor/kogyikaunghtet/102950fd-0c3d-4d19-8762-e7e1377e3caf/preview?embed" style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+
+## Download all Sketches
 ~~~~~~~~
 $ git clone https://github.com/kogyikaunghtet/text-transfers-using-IR
 ~~~~~~~~
