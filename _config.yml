@@ -1,5 +1,5 @@
 title: Kaung Htet Htun
-description: > #You cannot create experience. You must undergo it.
+description: > #
 permalink: ':title/'
 #baseurl: "/blog" # the subpath of your site, e.g. /blog
 #url: "https://kogyikaunghtet.ubuntu-mm.net" # the base hostname & protocol for your site, e.g. http://example.com
@@ -7,7 +7,7 @@ site-twitter: #if your site has a twitter account, enter it here
 
 author: Kaung Htet Htun
 author-img: khh.jpg 
-about-author: I am an embedded hardware enthusiast. Always hungry to keep learning.
+about-author: I am an embedded hardware enthusiast, author of "all about Raspberry Pi" book, founder of Phoewa Science.
 social-twitter:
 social-facebook: kaung2013
 social-github: kogyikaunghtet
