@@ -20,7 +20,7 @@ IR (Infrared) Transmitter & Receiver Sensor အသုံးပြုပြီး
    * Jumper Wires
 
 <div class="responsive-embed flex-video">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/69sT6WVUgx4" title="YouTube video player" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/69sT6WVUgx4" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 </div>
 
 Arduino Mega သုံးတယ်ဆိုရင် အောက်ပါ Circuit Diagram အတိုင်း ချိတ်ဆက်နိုင်ပါတယ်။
