@@ -1,4 +1,12 @@
 <head>
+  <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+  <script src="./node_modules/intersection-observer/intersection-observer.js"></script>
+  <script src="./node_modules/resize-observer-polyfill/dist/ResizeObserver.js"></script>
+  <script src="./node_modules/fullscreen-polyfill/dist/fullscreen.polyfill.js"></script>
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+  <script nomodule
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 	<meta charset="utf-8">
 	<title>{% if page.title %}{{page.title}} - {{site.title}}{% else %}{{site.title}}{% endif %}</title>
 
