@@ -1,19 +1,12 @@
 ---
 layout: post
-title: Getting Started with Orange Pi Zero
-date: 2021-11-11 16:32:20 +0630
-description: Orange Pi Zero Getting Started Guide
-img: opi_get_started/opi_led.jpg
+title: 3D Model for Kicad
+date: 2022-4-27 16:32:20 +0630
+description: 3D Model for Kicad
+img: model/kicad.png
 fig-caption: #
-tags: [Orange Pi Zero]
+tags: [Kicad, PCB]
 ---
-
-<p align="center">
-<img src="/assets/img/opi_get_started/opi_ttl.jpg">
-<br>
-<a><b>Figure:</b> Serial Connection with the Orange Pi Zero</a>
-</p>
-
 Unicorn vegan humblebrag whatever microdosing, yr pabst post-ironic chartreuse. IPhone irony fingerstache microdosing juice poutine. Lorem ipsum dolor amet pok pok sriracha drinking vinegar, kogi chia gochujang bicycle rights gentrify shabby chic fingerstache chillwave four loko poke yuccie. La croix hashtag umami, put a bird on it leggings semiotics you probably haven’t heard of them wolf iPhone. Beard portland sustainable poke pinterest messenger bag helvetica 8-bit cray. Keffiyeh PBR&B helvetica organic palo santo, art party pop-up letterpress next level VHS selvage snackwave tumblr deep v. Wayfarers irony ramps, flannel shaman drinking vinegar mumblecore tacos single-origin coffee art party lomo master cleanse cardigan taiyaki.
 
 <p align="center">
