@@ -1500,6 +1500,6 @@ a.newer-posts:hover {
   }
 .horizontal_scroll {
   overflow:auto;
-  width: 100%;
+  width: device-width;
   height: 100%;
 }
