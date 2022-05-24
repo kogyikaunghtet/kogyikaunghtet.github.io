@@ -54,7 +54,7 @@ OUT | BCMGPIO 25
 
 `$ sudo nano raw_rgb.py`
 
-<pre><code class="language-python">
+<pre><code class="language-python line-numbers">
 import RPi.GPIO as GPIO
 import time
 s2 = 23
