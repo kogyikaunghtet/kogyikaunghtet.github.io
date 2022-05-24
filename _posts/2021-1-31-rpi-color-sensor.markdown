@@ -54,8 +54,7 @@ OUT | BCMGPIO 25
 
 `$ sudo nano raw_rgb.py`
 
-<pre><code class="language-python line-numbers">
-import RPi.GPIO as GPIO
+<pre><code class="language-python line-numbers" data-prismjs-copy="Copy the Code">import RPi.GPIO as GPIO
 import time
 s2 = 23
 s3 = 24
@@ -120,8 +119,7 @@ raw_rgb.py ကို run ပြီး အနီရောင် စာရွက�
 
 `$ sudo nano color_detector.py`
 
-<pre><code class="language-python">
-import RPi.GPIO as GPIO
+<pre><code class="language-python">import RPi.GPIO as GPIO
 import time
 s2 = 23
 s3 = 24
