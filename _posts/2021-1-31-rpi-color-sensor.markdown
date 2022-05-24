@@ -122,6 +122,7 @@ raw_rgb.py ကို run ပြီး အနီရောင် စာရွက�
 
 `$ sudo nano color_detector.py`
 
+<div class="responsive-embed flex-video">
 <pre><code class="language-python">
 import RPi.GPIO as GPIO
 import time
@@ -184,6 +185,7 @@ if __name__=='__main__':
     except KeyboardInterrupt:
        endprogram()
 </code></pre>
+</div>
 
 `$ sudo python color_detector.py`
 
