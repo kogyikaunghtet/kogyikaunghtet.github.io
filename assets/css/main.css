@@ -1499,7 +1499,7 @@ a.newer-posts:hover {
     height: 100%;
   }
 div.horizontal_scroll {
-  overflow:auto;
+  overflow-x:auto;
   width: device-width;
   height: 100%;
 }
