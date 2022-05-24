@@ -50,7 +50,7 @@ OUT | BCMGPIO 25
 <a>ပုံ ၊ Raspberry Pi နှင့် color sensor ချိတ်ဆက်ခြင်း</a>
 </p>
 
-ချိတ်ဆက်ပြီးတဲ့နောက် color raw data တန်ဖိုးတွေကို အရင်ဆုံးဖတ်ပြီး RGB တန်ဖိုးတွေ calibrate လုပ်ဖို့ အောက်ပါ program ကို တည်ဆောက်လိုက်ပါ။
+ချိတ်ဆက်ပြီးတဲ့နောက် color raw data တန်ဖိုးတွေကို အရင်ဆုံးဖတ်ပြီး RGB တန်ဖိုးတွေ calibrate လုပ်ဖို့ အောက်ပါ program ကို တည်ဆောက်လိုက်ပါ။ aaaaaaaaaaa
 
 `$ sudo nano raw_rgb.py`
 
