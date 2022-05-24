@@ -50,11 +50,11 @@ OUT | BCMGPIO 25
 <a>ပုံ ၊ Raspberry Pi နှင့် color sensor ချိတ်ဆက်ခြင်း</a>
 </p>
 
-ချိတ်ဆက်ပြီးတဲ့နောက် color raw data တန်ဖိုးတွေကို အရင်ဆုံးဖတ်ပြီး RGB တန်ဖိုးတွေ calibrate လုပ်ဖို့ အောက်ပါ program ကို တည်ဆောက်လိုက်ပါ။ aaaaaaa
+ချိတ်ဆက်ပြီးတဲ့နောက် color raw data တန်ဖိုးတွေကို အရင်ဆုံးဖတ်ပြီး RGB တန်ဖိုးတွေ calibrate လုပ်ဖို့ အောက်ပါ program ကို တည်ဆောက်လိုက်ပါ။
 
 `$ sudo nano raw_rgb.py`
 
-<pre><code class="language-python line-numbers">
+{% highlight python %}
 import RPi.GPIO as GPIO
 import time
 s2 = 23
@@ -106,7 +106,7 @@ if __name__=='__main__':
         loop()
     except KeyboardInterrupt:
         endprogram()
-</code></pre>
+{% endhighlight %}
 
 `$ sudo python raw_rgb.py`
 
@@ -120,7 +120,7 @@ raw_rgb.py ကို run ပြီး အနီရောင် စာရွက�
 
 `$ sudo nano color_detector.py`
 
-<pre><code class="language-python">
+{% highlight python %}
 import RPi.GPIO as GPIO
 import time
 s2 = 23
@@ -181,7 +181,7 @@ if __name__=='__main__':
         loop()
     except KeyboardInterrupt:
        endprogram()
-</code></pre>
+{% endhighlight %}
 
 `$ sudo python color_detector.py`
 
