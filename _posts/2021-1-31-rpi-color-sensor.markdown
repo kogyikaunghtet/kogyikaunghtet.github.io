@@ -54,6 +54,7 @@ OUT | BCMGPIO 25
 
 `$ sudo nano raw_rgb.py`
 
+<div class="horizontal_scroll">
 <pre><code class="language-python line-numbers">
 import RPi.GPIO as GPIO
 import time
@@ -107,6 +108,7 @@ if __name__=='__main__':
     except KeyboardInterrupt:
         endprogram()
 </code></pre>
+</div>
 
 `$ sudo python raw_rgb.py`
 
@@ -120,6 +122,7 @@ raw_rgb.py ကို run ပြီး အနီရောင် စာရွက�
 
 `$ sudo nano color_detector.py`
 
+<div class="horizontal_scroll">
 <pre><code class="language-python">
 import RPi.GPIO as GPIO
 import time
@@ -182,6 +185,7 @@ if __name__=='__main__':
     except KeyboardInterrupt:
        endprogram()
 </code></pre>
+</div>
 
 `$ sudo python color_detector.py`
 
