@@ -1365,6 +1365,10 @@ a.newer-posts:hover {
 /* - - - - - - - - - - Media Styles - - - - - - - - - - */
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+  pre code[class*=language-] {
+  width: 992px;
+  overflow: auto;
+}
   .post {
     width: 48%;
     max-width: 100%;
@@ -1391,6 +1395,10 @@ a.newer-posts:hover {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+  pre code[class*=language-] {
+  width: 768px;
+  overflow: auto;
+}
   .sidebar {
     position: relative;
     display: -webkit-box;
@@ -1453,6 +1461,10 @@ a.newer-posts:hover {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  pre code[class*=language-] {
+  width: 480px;
+  overflow: auto;
+}
   .content-box {
     padding: 10px;
   }
@@ -1498,8 +1510,8 @@ a.newer-posts:hover {
     width: 100%;
     height: 100%;
   }
-pre {
+pre code[class*=language-] {
   width: 100%;
   height: 300px;
-  overflow-x: auto;
+  overflow-x: scroll;
 }
