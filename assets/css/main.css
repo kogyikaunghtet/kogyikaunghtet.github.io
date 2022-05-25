@@ -817,13 +817,18 @@ pre {
 }
 
 pre code {
-  border: 5px solid red;
+  border: 0;
   padding-right: 0;
   padding-left: 0;
   overflow: auto;
   white-space: pre-wrap;
   word-wrap: break-word;
   word-break: break-all;
+}
+
+pre .hightlighter {
+  width: 300px;
+  overflow: auto;
 }
 
 table {
