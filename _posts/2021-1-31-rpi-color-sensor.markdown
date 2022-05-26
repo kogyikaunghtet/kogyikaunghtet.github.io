@@ -33,7 +33,6 @@ OE pin ကတော့ 74HC595 နဲ့ PCA9685 မှာ ပါဝင်တဲ
 
 TCS3200 Sensor နဲ့ Raspberry Pi ကို အောက်ပါအတိုင်း ချိတ်ဆက်နိုင်ပြီး Waveshare က ထုတ်တဲ့ TCS3200 အမျိုးအစားမှာတော့ built-in LED ကို 5V မှာ တပ်ဆင်ပြီး အဖွင့်အပိတ် လုပ်နိုင်အောင် LED ဆိုတဲ့ pin တစ်ပင် ပေးထားပါ တယ်။ အသုံးမပြုလိုရင် အလွတ်ထားနိုင်ပါတယ်။
 
-
 TCS3200 Color Sensor Pin | Raspberry Pi Pin
 Gnd | Gnd
 OE | Gnd
@@ -51,6 +50,38 @@ OUT | BCMGPIO 25
 </p>
 
 ချိတ်ဆက်ပြီးတဲ့နောက် color raw data တန်ဖိုးတွေကို အရင်ဆုံးဖတ်ပြီး RGB တန်ဖိုးတွေ calibrate လုပ်ဖို့ အောက်ပါ program ကို တည်ဆောက်လိုက်ပါ။
+
+<pre><code class="language-treeview">root_folder/
+|-- a first folder/
+|   |-- holidays.mov
+|   |-- javascript-file.js
+|   `-- some_picture.jpg
+|-- documents/
+|   |-- spreadsheet.xls
+|   |-- manual.pdf
+|   |-- document.docx
+|   `-- presentation.ppt
+|       `-- test
+|-- empty_folder/
+|-- going deeper/
+|   |-- going deeper/
+|   |   `-- going deeper/
+|   |        `-- going deeper/
+|   |            `-- .secret_file
+|   |-- style.css
+|   `-- index.html
+|-- music and movies/
+|   |-- great-song.mp3
+|   |-- S01E02.new.episode.avi
+|   |-- S01E02.new.episode.nfo
+|   `-- track 1.cda
+|-- .gitignore
+|-- .htaccess
+|-- .npmignore
+|-- archive 1.zip
+|-- archive 2.tar.gz
+|-- logo.svg
+`-- README.md</code></pre>
 
 `$ sudo nano raw_rgb.py`
 
