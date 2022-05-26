@@ -53,7 +53,7 @@ OUT | BCMGPIO 25
 
 `$ sudo nano raw_rgb.py`
 
-<pre><code class="language-python line-numbers">
+<pre><code class="language-python line-numbers highlighter-rouge">
 import RPi.GPIO as GPIO
 import time
 s2 = 23
@@ -119,7 +119,7 @@ raw_rgb.py ကို run ပြီး အနီရောင် စာရွက�
 
 `$ sudo nano color_detector.py`
 
-<pre><code class="language-python line-numbers">
+<pre><code class="language-python line-numbers highlighter-rouge">
 import RPi.GPIO as GPIO
 import time
 s2 = 23
