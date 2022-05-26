@@ -1499,6 +1499,8 @@ a.newer-posts:hover {
     height: 100%;
   }
 .post .post-content pre code[class*=language-] {
-  position: relative;
+  position: absolute;
   overflow: auto;
+  width: 100%;
+  height: 50%;
   }
