@@ -1171,6 +1171,11 @@ footer .copyright {
   margin-top: 0;
 }
 
+.post .post-content pre code[class*=language-] {
+    width: 100%;
+    overflow-x: auto;
+  }
+
 a.older-posts, a.newer-posts {
   font-size: 18px;
   display: inline-block;
@@ -1381,6 +1386,10 @@ a.newer-posts:hover {
   .post .post-content {
     width: 100%;
   }
+  .post .post-content pre code[class*=language-] {
+    width: 100%;
+    overflow-x: auto;
+  }
   .post .post-content .post-title {
     margin: 0 0 5px;
   }
@@ -1472,7 +1481,7 @@ a.newer-posts:hover {
   .post .post-content {
     width: 100%;
   }
-  .post .post-content pre {
+  .post .post-content pre code[class*=language-] {
     width: 100%;
     overflow-x: auto;
   }
