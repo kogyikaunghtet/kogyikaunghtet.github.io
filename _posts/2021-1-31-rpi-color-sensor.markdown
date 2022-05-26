@@ -33,6 +33,7 @@ OE pin ကတော့ 74HC595 နဲ့ PCA9685 မှာ ပါဝင်တဲ
 
 TCS3200 Sensor နဲ့ Raspberry Pi ကို အောက်ပါအတိုင်း ချိတ်ဆက်နိုင်ပြီး Waveshare က ထုတ်တဲ့ TCS3200 အမျိုးအစားမှာတော့ built-in LED ကို 5V မှာ တပ်ဆင်ပြီး အဖွင့်အပိတ် လုပ်နိုင်အောင် LED ဆိုတဲ့ pin တစ်ပင် ပေးထားပါ တယ်။ အသုံးမပြုလိုရင် အလွတ်ထားနိုင်ပါတယ်။
 
+
 TCS3200 Color Sensor Pin | Raspberry Pi Pin
 Gnd | Gnd
 OE | Gnd
@@ -53,7 +54,7 @@ OUT | BCMGPIO 25
 
 `$ sudo nano raw_rgb.py`
 
-<code class="language-python line-numbers">
+<pre><code class="language-python line-numbers">
 import RPi.GPIO as GPIO
 import time
 s2 = 23
@@ -105,7 +106,7 @@ if __name__=='__main__':
         loop()
     except KeyboardInterrupt:
         endprogram()
-</code>
+</code></pre>
 
 `$ sudo python raw_rgb.py`
 
@@ -119,7 +120,7 @@ raw_rgb.py ကို run ပြီး အနီရောင် စာရွက�
 
 `$ sudo nano color_detector.py`
 
-<code class="language-python line-numbers">
+<pre><code class="language-python line-numbers">
 import RPi.GPIO as GPIO
 import time
 s2 = 23
@@ -180,7 +181,7 @@ if __name__=='__main__':
         loop()
     except KeyboardInterrupt:
        endprogram()
-</code>
+</code></pre>
 
 `$ sudo python color_detector.py`
 
