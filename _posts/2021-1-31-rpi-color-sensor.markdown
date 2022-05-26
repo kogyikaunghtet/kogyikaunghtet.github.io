@@ -51,38 +51,6 @@ OUT | BCMGPIO 25
 
 ချိတ်ဆက်ပြီးတဲ့နောက် color raw data တန်ဖိုးတွေကို အရင်ဆုံးဖတ်ပြီး RGB တန်ဖိုးတွေ calibrate လုပ်ဖို့ အောက်ပါ program ကို တည်ဆောက်လိုက်ပါ။
 
-<pre><code class="language-treeview">root_folder/
-|-- a first folder/
-|   |-- holidays.mov
-|   |-- javascript-file.js
-|   `-- some_picture.jpg
-|-- documents/
-|   |-- spreadsheet.xls
-|   |-- manual.pdf
-|   |-- document.docx
-|   `-- presentation.ppt
-|       `-- test
-|-- empty_folder/
-|-- going deeper/
-|   |-- going deeper/
-|   |   `-- going deeper/
-|   |        `-- going deeper/
-|   |            `-- .secret_file
-|   |-- style.css
-|   `-- index.html
-|-- music and movies/
-|   |-- great-song.mp3
-|   |-- S01E02.new.episode.avi
-|   |-- S01E02.new.episode.nfo
-|   `-- track 1.cda
-|-- .gitignore
-|-- .htaccess
-|-- .npmignore
-|-- archive 1.zip
-|-- archive 2.tar.gz
-|-- logo.svg
-`-- README.md</code></pre>
-
 `$ sudo nano raw_rgb.py`
 
 <pre><code class="language-python line-numbers">
