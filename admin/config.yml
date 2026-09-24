@@ -2,7 +2,6 @@ backend:
   name: github
   repo: kogyikaunghtet/kogyikaunghtet.github.io
   branch: master
-  auth_type: token
 
 media_folder: "assets/img"
 public_folder: "/assets/img"
