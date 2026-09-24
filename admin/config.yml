@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: kogyikaunghtet/kogyikaunghtet.github.io
+  repo: kogyikaunghtet/kogyikaunghtet
   branch: master
 
 media_folder: "assets/img"
