@@ -16,7 +16,11 @@ collections:
     extension: "markdown"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Feature Image", name: "image", widget: "image", required: false}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Cover Image", name: "img", widget: "image", required: false} # image အစား img သုံးထားပါသည်
+      - {label: "Figure Caption", name: "fig-caption", widget: "string", required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false} # Tag များထည့်ရန်
       - {label: "Body", name: "body", widget: "markdown"}
