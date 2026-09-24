@@ -12,6 +12,7 @@ collections:
     label: "Blog Posts"
     folder: "_posts"
     create: true
+    format: "frontmatter"
     extension: "markdown"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
